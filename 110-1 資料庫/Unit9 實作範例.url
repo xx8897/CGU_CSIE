@@ -1,0 +1,9 @@
+[DEFAULT]
+BASEURL=https://drive.google.com/folderview?id=0B5h1-mFr9ZcGbGZKU3pCeGlPUGs&usp=sharing
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,11
+[InternetShortcut]
+URL=https://drive.google.com/folderview?id=0B5h1-mFr9ZcGbGZKU3pCeGlPUGs&usp=sharing
+IDList=
+IconFile=https://ssl.gstatic.com/docs/collections/images/favicon_shared.ico
+IconIndex=1
