@@ -1,0 +1,663 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0068)https://bytes.com/topic/c/answers/804871-linux-c-system-call-problem -->
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<!--<base href="https://bytes.com/">--><base href="."><!--[if IE]></base><![endif]--> <title>Linux/C++ system call problem - C / C++</title>  <meta name="keywords" content="Linux,C,system,call,problem, Linux/C++ system call problem, questions, insights, articles, development, programming, business, it, technology, small business"> <meta name="description" content="Linux/C++ system call problem. C / C++ Forums on Bytes."> <meta itemprop="name" content="Linux/C++ system call problem"> <meta itemprop="description" content="C / C++ question on Bytes."> <link rel="canonical" href="./Linux_C++ system call problem - C _ C++_files/Linux_C++ system call problem - C _ C++.html">  <style type="text/css" id="vbulletin_css">
+/**
+* vBulletin 3.7.6 CSS
+* Style: 'bytes.answers'; Style ID: 18
+*/
+@import url("/clientscript/vbulletin_css/style-aa34410b-00018.css");
+</style> <link rel="stylesheet" type="text/css" href="./Linux_C++ system call problem - C _ C++_files/vbulletin_important.css">  <script async="" src="./Linux_C++ system call problem - C _ C++_files/async-ads.js"></script><script src="./Linux_C++ system call problem - C _ C++_files/ca-pub-8550604525820387.js"></script><script async="" src="./Linux_C++ system call problem - C _ C++_files/analytics.js"></script><script type="text/javascript" async="" src="./Linux_C++ system call problem - C _ C++_files/cse.js"></script><script type="text/javascript" src="./Linux_C++ system call problem - C _ C++_files/yahoo-dom-event.js"></script> <script type="text/javascript" src="./Linux_C++ system call problem - C _ C++_files/connection-min.js"></script> <script type="text/javascript" src="./Linux_C++ system call problem - C _ C++_files/CodeTags.js"></script> <script type="text/javascript"> <!--
+var SESSIONURL = "s=0c604a2b17b5d5a1478d1fa6fe2e3dca&";
+var SECURITYTOKEN = "guest";
+var IMGDIR_MISC = "/images/misc";
+var vb_disable_ajax = parseInt("0", 10);
+
+// --> </script> <script type="text/javascript" src="./Linux_C++ system call problem - C _ C++_files/vbulletin_global.js"></script> <link rel="alternate" type="application/rss+xml" title="Bytes RSS Feed" href="https://bytes.com/external.php?type=RSS2"> <link rel="alternate" type="application/rss+xml" title="Bytes - answers - RSS Feed" href="https://bytes.com/external.php?type=RSS2&forumids=308"> <script type="text/javascript" src="./Linux_C++ system call problem - C _ C++_files/vbulletin_post_loader.js"></script> <style type="text/css" id="vbulletin_showthread_css"> <!--
+    
+    #links div { white-space: nowrap; }
+    #links img { vertical-align: middle; }
+    --> </style> <script src="./Linux_C++ system call problem - C _ C++_files/jsapi" type="text/javascript"></script><link type="text/css" href="./Linux_C++ system call problem - C _ C++_files/default+en.css" rel="stylesheet"><link type="text/css" href="./Linux_C++ system call problem - C _ C++_files/default.css" rel="stylesheet"><script type="text/javascript" src="./Linux_C++ system call problem - C _ C++_files/default+en.I.js"></script><style type="text/css">
+.gsc-control-cse {
+font-family: Arial, sans-serif;
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-control-cse .gsc-table-result {
+font-family: Arial, sans-serif;
+}
+input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
+border-color: #444444;
+}
+input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus {
+border-color: #666666;
+background-color: #E69138;
+background-image: none;
+filter: none;
+}
+.gsc-tabHeader.gsc-tabhInactive {
+border-color: #CCCCCC;
+background-color: #FFFFFF;
+}
+.gsc-tabHeader.gsc-tabhActive {
+border-color: #CCCCCC;
+border-bottom-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-tabsArea {
+border-color: #CCCCCC;
+}
+.gsc-webResult.gsc-result,
+.gsc-results .gsc-imageResult {
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-webResult.gsc-result:hover,
+.gsc-imageResult:hover {
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gs-webResult.gs-result a.gs-title:link,
+.gs-webResult.gs-result a.gs-title:link b,
+.gs-imageResult a.gs-title:link,
+.gs-imageResult a.gs-title:link b {
+color: #1155CC;
+}
+.gs-webResult.gs-result a.gs-title:visited,
+.gs-webResult.gs-result a.gs-title:visited b,
+.gs-imageResult a.gs-title:visited,
+.gs-imageResult a.gs-title:visited b {
+color: #1155CC;
+}
+.gs-webResult.gs-result a.gs-title:hover,
+.gs-webResult.gs-result a.gs-title:hover b,
+.gs-imageResult a.gs-title:hover,
+.gs-imageResult a.gs-title:hover b {
+color: #1155CC;
+}
+.gs-webResult.gs-result a.gs-title:active,
+.gs-webResult.gs-result a.gs-title:active b,
+.gs-imageResult a.gs-title:active,
+.gs-imageResult a.gs-title:active b {
+color: #1155CC;
+}
+.gsc-cursor-page {
+color: #1155CC;
+}
+a.gsc-trailing-more-results:link {
+color: #1155CC;
+}
+.gs-webResult .gs-snippet,
+.gs-imageResult .gs-snippet,
+.gs-fileFormatType {
+color: #333333;
+}
+.gs-webResult div.gs-visibleUrl,
+.gs-imageResult div.gs-visibleUrl {
+color: #009933;
+}
+.gs-webResult div.gs-visibleUrl-short {
+color: #009933;
+}
+.gs-webResult div.gs-visibleUrl-short {
+display: none;
+}
+.gs-webResult div.gs-visibleUrl-long {
+display: block;
+}
+.gs-promotion div.gs-visibleUrl-short {
+display: none;
+}
+.gs-promotion div.gs-visibleUrl-long {
+display: block;
+}
+.gsc-cursor-box {
+border-color: #FFFFFF;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-page {
+border-color: #CCCCCC;
+background-color: #FFFFFF;
+color: #1155CC;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-current-page {
+border-color: #CCCCCC;
+background-color: #FFFFFF;
+color: #1155CC;
+}
+.gsc-webResult.gsc-result.gsc-promotion {
+border-color: #F6F6F6;
+background-color: #F6F6F6;
+}
+.gsc-completion-title {
+color: #1155CC;
+}
+.gsc-completion-snippet {
+color: #333333;
+}
+.gs-promotion a.gs-title:link,
+.gs-promotion a.gs-title:link *,
+.gs-promotion .gs-snippet a:link {
+color: #1155CC;
+}
+.gs-promotion a.gs-title:visited,
+.gs-promotion a.gs-title:visited *,
+.gs-promotion .gs-snippet a:visited {
+color: #1155CC;
+}
+.gs-promotion a.gs-title:hover,
+.gs-promotion a.gs-title:hover *,
+.gs-promotion .gs-snippet a:hover {
+color: #1155CC;
+}
+.gs-promotion a.gs-title:active,
+.gs-promotion a.gs-title:active *,
+.gs-promotion .gs-snippet a:active {
+color: #1155CC;
+}
+.gs-promotion .gs-snippet,
+.gs-promotion .gs-title .gs-promotion-title-right,
+.gs-promotion .gs-title .gs-promotion-title-right * {
+color: #333333;
+}
+.gs-promotion .gs-visibleUrl,
+.gs-promotion .gs-visibleUrl-short {
+color: #009933;
+}
+.gsc-input input.gsc-input {
+background: none repeat scroll 0% 0% white !important;
+}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gscsep_a{display:none}.gsq_a{padding:0}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gsfe_a{border:1px solid #b9b9b9;border-top-color:#a0a0a0;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);}.gsfe_b{border:1px solid #4d90fe;outline:none;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);}.gssb_a{padding:0 9px}.gsib_a{padding-right:8px;padding-left:8px}.gsst_a{padding-top:3px}.gssb_e{border:0}.gssb_l{margin:5px 0}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style></head> <body> <div class="codeBlur" id="codeBlur">&nbsp;</div> <div class="codeAbs" id="codeAbs">&nbsp;</div> <div style="margin: 0px 0px 0px 0px; padding:5px 0px 5px 0px; background-color:#2D2D2D; width: 100%; z-index: 10; border-bottom: 3px solid #CCC;"> <table class="tempwrapper"> <tbody><tr> <td width="475px;"> <div style="float:left; color: #fff; font-weight:bold;">
+415,441 Members | 1,592 Online
+</div> </td> <td align="right"> <div id="login_box"> <ul> <li> <a href="https://bytes.com/register/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Join&#39;, &#39;Header Join&#39;, &#39;/topic/c/answers/804871-linux-c-system-call-problem&#39;, 0 );" rel="nofollow" class="btn_awesome btn_orange btn_small">Join Now</a> </li> <li> <a href="https://bytes.com/login/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Login&#39;, &#39;Header Login&#39;, &#39;/topic/c/answers/804871-linux-c-system-call-problem&#39;, 0 );" rel="nofollow">login</a> </li> </ul> </div> </td> </tr> </tbody></table> </div> <div style="clear:both"></div> <div style="margin: 5px 0px 5px 0px; padding:0px 0px 0px 0px; width: 100%; z-index: 10;"> <table class="tempwrapper"> <tbody><tr> <td align="left" width="140px;"> <a href="https://bytes.com/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Logo&#39;, &#39;HomePage&#39;, &#39;/topic/c/answers/804871-linux-c-system-call-problem&#39;, 0 );"><img src="./Linux_C++ system call problem - C _ C++_files/bytes_logo_O1ZMV80SgZEMWccSaEXSPk.png" width="151px" height="44px" border="0" alt="Bytes IT Community" style="padding-top:8px;" title="Bytes IT Community"></a> </td> <td align="left">  <div class="searchbox"> <script>
+  (function() {
+    var cx = '003295604297611128891:3bugolgqcnq';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script> <gcse:searchbox></gcse:searchbox> <div id="___gcse_0"><div class="gsc-control-searchbox-only gsc-control-searchbox-only-en" dir="ltr"><form class="gsc-search-box gsc-search-box-tools" accept-charset="utf-8"><table cellspacing="0" cellpadding="0" class="gsc-search-box"><tbody><tr><td class="gsc-input"><div class="gsc-input-box" id="gsc-iw-id1"><table cellspacing="0" cellpadding="0" id="gs_id50" class="gstl_50 " style="width: 100%; padding: 0px;"><tbody><tr><td id="gs_tti50" class="gsib_a"><input autocomplete="off" type="text" size="10" class="gsc-input" name="search" title="search" id="gsc-i-id1" dir="ltr" spellcheck="false" style="width: 100%; padding: 0px; border: none; margin: 0px; height: auto; outline: none;"></td><td class="gsib_b"><div class="gsst_b" id="gs_st50" dir="ltr"><a class="gsst_a" href="javascript:void(0)" style="display: none;"><span class="gscb_a" id="gs_cb50">×</span></a></div></td></tr></tbody></table></div><input type="hidden" name="bgresponse" id="bgresponse"></td><td class="gsc-search-button"><input type="image" src="./Linux_C++ system call problem - C _ C++_files/search_box_icon.png" class="gsc-search-button gsc-search-button-v2" title="search"></td><td class="gsc-clear-button"><div class="gsc-clear-button" title="clear results">&nbsp;</div></td></tr></tbody></table><table cellspacing="0" cellpadding="0" class="gsc-branding"><tbody><tr style="display: none;"><td class="gsc-branding-user-defined"></td><td class="gsc-branding-text"><div class="gsc-branding-text">powered by</div></td><td class="gsc-branding-img"><img src="./Linux_C++ system call problem - C _ C++_files/small-logo.png" class="gsc-branding-img"></td></tr></tbody></table></form></div></div> </div> <div style="float:right;margin:15px 0px 15px 20px; text-align:left;"> <a href="https://bytes.com/submit/g/308/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Ask&#39;, &#39;Header Ask&#39;, &#39;/topic/c/answers/804871-linux-c-system-call-problem&#39;, 0 );" rel="nofollow" class="btn_awesome btn_green btn_medium">
+                                                Ask Question
+                                            </a> </div>  </td> </tr> <tr> <td colspan="2"> <div class="top_header_topmenu"> <p class="header_nav"> <span class="header_types"> <a href="https://bytes.com/" class="green_tag" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation&#39;, &#39;Home&#39;, &#39;/topic/c/answers/804871-linux-c-system-call-problem&#39;, 0 );">Home</a> <a href="https://bytes.com/answers/" class="green_tag" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation&#39;, &#39;Questions&#39;, &#39;/topic/c/answers/804871-linux-c-system-call-problem&#39;, 0 );">Questions</a> <a href="https://bytes.com/insights/" class="blue_tag" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation&#39;, &#39;Insights&#39;, &#39;/topic/c/answers/804871-linux-c-system-call-problem&#39;, 0 );">Articles</a> <a href="https://bytes.com/browse/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation&#39;, &#39;Browse Topics&#39;, &#39;/topic/c/answers/804871-linux-c-system-call-problem&#39;, 0 );">Browse Topics</a> <a href="https://bytes.com/topic/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation&#39;, &#39;Latest&#39;, &#39;/topic/c/answers/804871-linux-c-system-call-problem&#39;, 0 );">Latest</a> <a href="https://bytes.com/users/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation&#39;, &#39;Top Members&#39;, &#39;/topic/c/answers/804871-linux-c-system-call-problem&#39;, 0 );">Top Members</a> <a href="https://bytes.com/faq.php" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation&#39;, &#39;FAQ&#39;, &#39;/topic/c/answers/804871-linux-c-system-call-problem&#39;, 0 );">FAQ</a> </span> </p> </div> </td> </tr> </tbody></table> </div>  <div style="padding:10px; background-color:#EEE; text-align:center;"> <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-8550604525820387" data-ad-slot="5827826707" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins> <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script> </div> <div class="navtable"> <a href="https://bytes.com/" accesskey="1">home</a> &gt; <a href="https://bytes.com/browse/" accesskey="1">topics</a> <span class="navbar">&gt; <a href="https://bytes.com/topic/c/">c / c++</a></span> <span class="navbar">&gt; <a href="https://bytes.com/topic/c/answers/">questions</a></span>
+
+ &gt; 
+
+	 linux/c++ system call problem
+
+
+
+            
+        
+        
+        
+        
+    
+    
+
+
+
+<div style="clear:both;"></div> </div>  <div class="tempwrapper"> <div style="padding: 15px 0px 15px 20px; margin-top:15px; font-size:1.2em; font-weight: bold; background-color:#ecfdf5; color:#454747"> <div style="width: 180px;display:inline;float:left;"><a href="https://bytes.com/submit/g/308/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Ask&#39;, &#39;CTA Ask&#39;, &#39;/topic/c/answers/804871-linux-c-system-call-problem&#39;, 0 );" rel="nofollow" class="btn_awesome btn_green btn_large">+ Ask a Question</a></div>
+ 
+ Need help? Post your question and get tips &amp; solutions from a community of 415,441 IT Pros &amp; Developers. 
+ It's quick &amp; easy.<br> </div> </div> <table class="maintable"> <tbody><tr> <td valign="top"> <h1 style="font-size: 15pt; padding: 0px 0px 5px 0px; margin-bottom: 10px; border-bottom: 1px solid #ccc;"> <a href="./Linux_C++ system call problem - C _ C++_files/Linux_C++ system call problem - C _ C++.html">Linux/C++ system call problem</a> </h1> <table border="0" cellspacing="0" cellpadding="0"> <tbody><tr> <td style="border-right: 1px solid #ccc; padding-right:10px;" height="1000px" valign="top" width="635px">  <a name="poststop" id="poststop"></a>    <div id="posts" style="padding: 0px; margin: 0px;">  <div id="edit3200847" style="padding:0px 0px 0px 0px; margin: 0px;">  <table id="post3200847" cellpadding="0px" cellspacing="0px" border="0" width="100%" align="center" style="margin-bottom: 10px; clear:both;"> <tbody><tr> <td class="alt2" style="padding:0px">  <div style="margin: 0px 25px 15px 0px; padding-top: 0px;"> <table cellpadding="0" cellspacing="0" border="0" width="100%"> <tbody><tr> <td class="alt2" valign="top" width="55px"> <a href="https://bytes.com/" alt=""><div id="avtr_c" class="avtr_icons"></div></a> <div class="smallfont" style="text-align:right; margin-right:2px;">
+						P: n/a
+					</div> </td> <td class="alt1" valign="top" id="td_post_3200847">  <div style="margin: 0px 0px 0px 15px; width: 505px;"> <a name="post3200847"></a> <div style="font-weight: bold; margin: 0px 0px 0px 0px;"> <span> <a class="bigusername" href="https://bytes.com/register/" rel="nofollow">C++ Newbie</a> </span> </div>  <div style="font-size: 105%; margin: 15px 0px 0px 0px; line-height: 20px; word-wrap: break-word;" id="post_message_3200847">
+
+				
+			
+				 Hi,<br> <br>
+Why doesn't the following C++ program echo the value of 97? If you<br>
+manually "head -3 temp.txt | tail -1" the temp.txt file, you will get<br>
+97. Use it in a system call, and it doesn't work.<br> <br>
+#include &lt;fstream&gt;<br> <br>
+using std::fstream;<br>
+using std::ios;<br> <br>
+int main()<br>
+{<br>
+int i = 0;<br>
+fstream myfile;<br>
+myfile.open ("temp.txt", ios::out);<br>
+while (i &lt; 100)<br>
+{myfile &lt;&lt; i &lt;&lt; "\n";<br>
+i++;<br>
+}<br>
+system ("echo Third last line of file is:");<br>
+system ("tail -3 temp.txt | head -1");<br>
+}<br>
+Thanks.<br> </div>   <div style="line-height: 13px; font-size: 8pt; color: #999999; margin: 15px 0px 0px 0px;">
+							
+							
+							
+							
+								Jun 27 '08
+                                                                #<a href="https://bytes.com/topic/c/answers/804871-linux-c-system-call-problem#post3200847" id="postcount3200847" name="1" title="permalink">1</a> </div>  <div class="actionbuttons"> <div style="float:right;"> <a href="https://bytes.com/register/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Reply&#39;, &#39;Reply Post&#39;, &#39;/topic/c/answers/804871-linux-c-system-call-problem&#39;, 0 );" rel="nofollow">Post Reply</a> </div> </div>  </div></td> </tr> </tbody></table> </div>  </td> </tr> </tbody></table> </div>  <div style="margin: 0px 0px 0px 70px; padding: 0px;font-size: 115%; font-weight: bold; color:#666;">
+
+Share this Question
+
+</div> <div style="margin: 5px 0px 15px 70px;"> <a href="https://www.facebook.com/sharer/sharer.php?u=https://bytes.com/topic/c/answers/804871-linux-c-system-call-problem&t=Linux/C++%20system%20call%20problem" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Share&#39;, &#39;Facebook&#39;, &#39;/topic/c/answers/804871-linux-c-system-call-problem&#39;, 0 );" alt="Share this on facebook"><img src="./Linux_C++ system call problem - C _ C++_files/facebook.png"></a> <a href="http://twitter.com/?status=Linux/C++%20system%20call%20problem%20-%20https://bytes.com/topic/c/answers/804871-linux-c-system-call-problem" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Share&#39;, &#39;Twitter&#39;, &#39;/topic/c/answers/804871-linux-c-system-call-problem&#39;, 0 );" alt="Share this on twitter"><img src="./Linux_C++ system call problem - C _ C++_files/twitter.png"></a> <a href="http://plus.google.com/share?url=https://bytes.com/topic/c/answers/804871-linux-c-system-call-problem" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Share&#39;, &#39;Google Plus&#39;, &#39;/topic/c/answers/804871-linux-c-system-call-problem&#39;, 0 );" alt="Share this on Google+"><img src="./Linux_C++ system call problem - C _ C++_files/gplus-32.png" alt="Share on Google+" title="Share on Google+"></a> <a href="http://www.linkedin.com/cws/share?url=https://bytes.com/topic/c/answers/804871-linux-c-system-call-problem" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Share&#39;, &#39;Linkedin&#39;, &#39;/topic/c/answers/804871-linux-c-system-call-problem&#39;, 0 );" alt="Share this on linkedin"><img src="./Linux_C++ system call problem - C _ C++_files/linkedin.png"></a> </div> <div style="clear:both;"></div> <div style="margin: 20px 0px 5px 0px"> <span style="padding: 0px; margin: 0px 25px 0px 65px;font-size:110%; font-weight:bold;">9 Replies </span> <div style="clear:both;"></div> </div> <hr style="color:#ccc; background-color:#ccc; height:1px; border:none; margin:0px 25px 15px 0px; padding:0px;"> <div style="padding: 0px; margin: 0px 25px 15px 65px; text-align:left;">  <ins class="adsbygoogle" style="display:inline-block;width:500px;height:280px;" data-ad-client="ca-pub-8550604525820387" data-ad-slot="1258026301" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:500px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:500px;background-color:transparent"><iframe width="500" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins> <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script> </div>  <div id="edit3200848" style="padding:0px 0px 0px 0px; margin: 0px;">  <hr style="color:#ccc; background-color:#ccc; height:1px; border:none; margin:0px 25px 0px 0px; padding:0px;"> <table id="post3200848" cellpadding="0px" cellspacing="0px" border="0" width="100%" align="center" style="clear:both;"> <tbody><tr> <td class="alt2" style="padding:0px">  <div style="margin: 15px 25px 15px 0px; padding-top: 0px;"> <table cellpadding="0" cellspacing="0" border="0" width="100%"> <tbody><tr> <td class="alt2" valign="top" width="55px"> <a href="https://bytes.com/" alt=""><div id="avtr_v" class="avtr_icons"></div></a> <div class="smallfont" style="text-align:right; margin-right:2px;">
+						P: n/a
+					</div> </td> <td class="alt1" valign="top" id="td_post_3200848">  <div style="margin: 0px 0px 0px 15px; width: 505px;"> <a name="post3200848"></a> <div style="font-weight: bold; margin: 0px 0px 0px 0px;"> <span> <a class="bigusername" href="https://bytes.com/register/" rel="nofollow">Victor Bazarov</a> </span> </div>  <div style="font-size: 105%; margin: 15px 0px 0px 0px; line-height: 20px; word-wrap: break-word;" id="post_message_3200848">
+
+					
+	
+				 C++ Newbie wrote:
+	<blockquote class="post_quotes">	
+				Why doesn't the following C++ program echo the value of 97? If you<br>
+manually "head -3 temp.txt | tail -1" the temp.txt file, you will get<br>
+97. Use it in a system call, and it doesn't work.<br><br>
+#include &lt;fstream&gt;<br><br>
+using std::fstream;<br>
+using std::ios;<br><br>
+int main()<br>
+{<br>
+int i = 0;<br>
+fstream myfile;<br>
+myfile.open ("temp.txt", ios::out);<br>
+while (i &lt; 100)<br>
+{myfile &lt;&lt; i &lt;&lt; "\n";<br>
+i++;<br>
+}<br>
+system ("echo Third last line of file is:");<br>
+system ("tail -3 temp.txt | head -1");<br>
+}
+</blockquote>
+
+Your question has nothing to do with C++, sorry.  The behaviour of<br>
+the 'system' function is... (you guessed it!) system-specific.  Ask<br>
+in a Linux newsgroup.<br> <br>
+BTW, you forgot to include the necessary header for the 'system'<br>
+function.  IIRC, it's &lt;stddef.h&gt;.<br> <br>
+V<br>
+--<br>
+Please remove capital 'A's when replying by e-mail<br>
+I do not respond to top-posted replies, please don't ask<br> </div>   <div style="line-height: 13px; font-size: 8pt; color: #999999; margin: 15px 0px 0px 0px;">
+							
+							
+							
+							
+								Jun 27 '08
+                                                                #<a href="https://bytes.com/topic/c/answers/804871-linux-c-system-call-problem#post3200848" id="postcount3200848" name="2" title="permalink">2</a> </div>  <div class="actionbuttons"> <div style="float:right;"> </div> </div> </div>  </td> </tr> </tbody></table> </div>  </td> </tr> </tbody></table> </div>  <div id="edit3200849" style="padding:0px 0px 0px 0px; margin: 0px;">  <hr style="color:#ccc; background-color:#ccc; height:1px; border:none; margin:0px 25px 0px 0px; padding:0px;"> <table id="post3200849" cellpadding="0px" cellspacing="0px" border="0" width="100%" align="center" style="clear:both;"> <tbody><tr> <td class="alt2" style="padding:0px">  <div style="margin: 15px 25px 15px 0px; padding-top: 0px;"> <table cellpadding="0" cellspacing="0" border="0" width="100%"> <tbody><tr> <td class="alt2" valign="top" width="55px"> <a href="https://bytes.com/" alt=""><div id="avtr_v" class="avtr_icons"></div></a> <div class="smallfont" style="text-align:right; margin-right:2px;">
+						P: n/a
+					</div> </td> <td class="alt1" valign="top" id="td_post_3200849">  <div style="margin: 0px 0px 0px 15px; width: 505px;"> <a name="post3200849"></a> <div style="font-weight: bold; margin: 0px 0px 0px 0px;"> <span> <a class="bigusername" href="https://bytes.com/register/" rel="nofollow">Victor Bazarov</a> </span> </div>  <div style="font-size: 105%; margin: 15px 0px 0px 0px; line-height: 20px; word-wrap: break-word;" id="post_message_3200849">
+
+					
+	
+				 Victor Bazarov wrote:
+	<blockquote class="post_quotes">	
+				[..]<br>
+BTW, you forgot to include the necessary header for the 'system'<br>
+function.  IIRC, it's &lt;stddef.h&gt;.
+</blockquote>
+
+OK, wrong.  It's &lt;stdlib.h&gt;.<br> <br>
+V<br>
+--<br>
+Please remove capital 'A's when replying by e-mail<br>
+I do not respond to top-posted replies, please don't ask<br> </div>   <div style="line-height: 13px; font-size: 8pt; color: #999999; margin: 15px 0px 0px 0px;">
+							
+							
+							
+							
+								Jun 27 '08
+                                                                #<a href="https://bytes.com/topic/c/answers/804871-linux-c-system-call-problem#post3200849" id="postcount3200849" name="3" title="permalink">3</a> </div>  <div class="actionbuttons"> <div style="float:right;"> </div> </div> </div>  </td> </tr> </tbody></table> </div>  </td> </tr> </tbody></table> </div>  <div id="edit3200850" style="padding:0px 0px 0px 0px; margin: 0px;">  <hr style="color:#ccc; background-color:#ccc; height:1px; border:none; margin:0px 25px 0px 0px; padding:0px;"> <table id="post3200850" cellpadding="0px" cellspacing="0px" border="0" width="100%" align="center" style="clear:both;"> <tbody><tr> <td class="alt2" style="padding:0px">  <div style="margin: 15px 25px 15px 0px; padding-top: 0px;"> <table cellpadding="0" cellspacing="0" border="0" width="100%"> <tbody><tr> <td class="alt2" valign="top" width="55px"> <a href="https://bytes.com/" alt=""><div id="avtr_p" class="avtr_icons"></div></a> <div class="smallfont" style="text-align:right; margin-right:2px;">
+						P: n/a
+					</div> </td> <td class="alt1" valign="top" id="td_post_3200850">  <div style="margin: 0px 0px 0px 15px; width: 505px;"> <a name="post3200850"></a> <div style="font-weight: bold; margin: 0px 0px 0px 0px;"> <span> <a class="bigusername" href="https://bytes.com/register/" rel="nofollow">Pascal J. Bourguignon</a> </span> </div>  <div style="font-size: 105%; margin: 15px 0px 0px 0px; line-height: 20px; word-wrap: break-word;" id="post_message_3200850">
+
+					
+	
+				 "C++ Newbie" &lt;ne********@googlemail.comwrites:<br> <blockquote class="post_quotes">	
+				Hi,<br><br>
+Why doesn't the following C++ program echo the value of 97? If you<br>
+manually "head -3 temp.txt | tail -1" the temp.txt file, you will get<br>
+97. Use it in a system call, and it doesn't work.<br><br>
+#include &lt;fstream&gt;<br><br>
+using std::fstream;<br>
+using std::ios;<br><br>
+int main()<br>
+{<br>
+int i = 0;<br>
+fstream myfile;<br>
+myfile.open ("temp.txt", ios::out);<br>
+while (i &lt; 100)<br>
+	{myfile &lt;&lt; i &lt;&lt; "\n";<br>
+	i++;<br>
+	}<br>
+system ("echo Third last line of file is:");<br>
+system ("tail -3 temp.txt | head -1");<br>
+}<br>
+
+Thanks.
+</blockquote>
+
+"Buffer".<br> <br>
+Use flush or close the file before tail.<br> <br>
+--<br>
+__Pascal Bourguignon__<br> </div>   <div style="line-height: 13px; font-size: 8pt; color: #999999; margin: 15px 0px 0px 0px;">
+							
+							
+							
+							
+								Jun 27 '08
+                                                                #<a href="https://bytes.com/topic/c/answers/804871-linux-c-system-call-problem#post3200850" id="postcount3200850" name="4" title="permalink">4</a> </div>  <div class="actionbuttons"> <div style="float:right;"> </div> </div> </div>  </td> </tr> </tbody></table> </div>  </td> </tr> </tbody></table> </div>  <div id="edit3200851" style="padding:0px 0px 0px 0px; margin: 0px;">  <hr style="color:#ccc; background-color:#ccc; height:1px; border:none; margin:0px 25px 0px 0px; padding:0px;"> <table id="post3200851" cellpadding="0px" cellspacing="0px" border="0" width="100%" align="center" style="clear:both;"> <tbody><tr> <td class="alt2" style="padding:0px">  <div style="margin: 15px 25px 15px 0px; padding-top: 0px;"> <table cellpadding="0" cellspacing="0" border="0" width="100%"> <tbody><tr> <td class="alt2" valign="top" width="55px"> <a href="https://bytes.com/" alt=""><div id="avtr_a" class="avtr_icons"></div></a> <div class="smallfont" style="text-align:right; margin-right:2px;">
+						P: n/a
+					</div> </td> <td class="alt1" valign="top" id="td_post_3200851">  <div style="margin: 0px 0px 0px 15px; width: 505px;"> <a name="post3200851"></a> <div style="font-weight: bold; margin: 0px 0px 0px 0px;"> <span> <a class="bigusername" href="https://bytes.com/register/" rel="nofollow">Alf P. Steinbach</a> </span> </div>  <div style="font-size: 105%; margin: 15px 0px 0px 0px; line-height: 20px; word-wrap: break-word;" id="post_message_3200851">
+
+					
+	
+				 * C++ Newbie:
+	<blockquote class="post_quotes">	
+				&gt;<br>
+Why doesn't the following C++ program echo the value of 97? If you<br>
+manually "head -3 temp.txt | tail -1" the temp.txt file, you will get<br>
+97. Use it in a system call, and it doesn't work.<br><br>
+#include &lt;fstream&gt;<br><br>
+using std::fstream;<br>
+using std::ios;<br><br>
+int main()<br>
+{<br>
+int i = 0;
+</blockquote>
+
+This variable has no business being declared at this point.<br> <br>
+Declare it in the head of the 'for' loop you should have been using instead of<br>
+'while'.<br> <br> <blockquote class="post_quotes">	
+				fstream myfile;<br>
+myfile.open ("temp.txt", ios::out);
+</blockquote>
+
+Just use an ofstream,<br> <br>
+ofstream myfile( "temp.txt" );<br> <blockquote class="post_quotes">	
+				while (i &lt; 100)<br>
+	{myfile &lt;&lt; i &lt;&lt; "\n";<br>
+	i++;<br>
+	}
+</blockquote>
+
+At this point it might be a good idea to close the file or at least flush the<br>
+file buffers.<br> <br> <blockquote class="post_quotes">	
+				system ("echo Third last line of file is:");<br>
+system ("tail -3 temp.txt | head -1");
+</blockquote>
+
+The effect of the system call is, as one might guess from the function's name,<br>
+system dependent.<br> <br>
+But even if it worked as written, i.e. that that command is passed to some<br>
+command interpreter, that's not the command you state you're giving manually.<br> <br> <blockquote class="post_quotes">	
+				}<br>
+
+Thanks.
+</blockquote>
+
+Well, you're welcome.<br>
+Cheers, &amp; hth.,<br> <br>
+- Alf<br> </div>   <div style="line-height: 13px; font-size: 8pt; color: #999999; margin: 15px 0px 0px 0px;">
+							
+							
+							
+							
+								Jun 27 '08
+                                                                #<a href="https://bytes.com/topic/c/answers/804871-linux-c-system-call-problem#post3200851" id="postcount3200851" name="5" title="permalink">5</a> </div>  <div class="actionbuttons"> <div style="float:right;"> </div> </div> </div>  </td> </tr> </tbody></table> </div>  </td> </tr> </tbody></table> </div>  <div id="edit3200855" style="padding:0px 0px 0px 0px; margin: 0px;">  <hr style="color:#ccc; background-color:#ccc; height:1px; border:none; margin:0px 25px 0px 0px; padding:0px;"> <table id="post3200855" cellpadding="0px" cellspacing="0px" border="0" width="100%" align="center" style="clear:both;"> <tbody><tr> <td class="alt2" style="padding:0px">  <div style="margin: 15px 25px 15px 0px; padding-top: 0px;"> <table cellpadding="0" cellspacing="0" border="0" width="100%"> <tbody><tr> <td class="alt2" valign="top" width="55px"> <a href="https://bytes.com/" alt=""><div id="avtr_s" class="avtr_icons"></div></a> <div class="smallfont" style="text-align:right; margin-right:2px;">
+						P: n/a
+					</div> </td> <td class="alt1" valign="top" id="td_post_3200855">  <div style="margin: 0px 0px 0px 15px; width: 505px;"> <a name="post3200855"></a> <div style="font-weight: bold; margin: 0px 0px 0px 0px;"> <span> <a class="bigusername" href="https://bytes.com/register/" rel="nofollow">Sherman Pendley</a> </span> </div>  <div style="font-size: 105%; margin: 15px 0px 0px 0px; line-height: 20px; word-wrap: break-word;" id="post_message_3200855">
+
+					
+	
+				 "Victor Bazarov" &lt;v.********@comAcast.netwrites:<br> <blockquote class="post_quotes">	
+				Victor Bazarov wrote:
+	<blockquote class="post_quotes">	
+				&gt;[..]<br>BTW, you forgot to include the necessary header for the 'system'<br>function.  IIRC, it's &lt;stddef.h&gt;.
+</blockquote> <br>
+OK, wrong.  It's &lt;stdlib.h&gt;.
+</blockquote>
+
+Shouldn't that be &lt;cstdlibwhen included from C++?<br> <br>
+sherm--<br> <br>
+--<br>
+My blog: <a rel="nofollow" href="http://shermspace.blogspot.com/" target="_blank">http://shermspace.blogspot.com</a><br>
+Cocoa programming in Perl: <a rel="nofollow" href="http://camelbones.sourceforge.net/" target="_blank">http://camelbones.sourceforge.net</a><br> </div>   <div style="line-height: 13px; font-size: 8pt; color: #999999; margin: 15px 0px 0px 0px;">
+							
+							
+							
+							
+								Jun 27 '08
+                                                                #<a href="https://bytes.com/topic/c/answers/804871-linux-c-system-call-problem#post3200855" id="postcount3200855" name="6" title="permalink">6</a> </div>  <div class="actionbuttons"> <div style="float:right;"> </div> </div> </div>  </td> </tr> </tbody></table> </div>  </td> </tr> </tbody></table> </div>  <div id="edit3200856" style="padding:0px 0px 0px 0px; margin: 0px;">  <hr style="color:#ccc; background-color:#ccc; height:1px; border:none; margin:0px 25px 0px 0px; padding:0px;"> <table id="post3200856" cellpadding="0px" cellspacing="0px" border="0" width="100%" align="center" style="clear:both;"> <tbody><tr> <td class="alt2" style="padding:0px">  <div style="margin: 15px 25px 15px 0px; padding-top: 0px;"> <table cellpadding="0" cellspacing="0" border="0" width="100%"> <tbody><tr> <td class="alt2" valign="top" width="55px"> <a href="https://bytes.com/" alt=""><div id="avtr_a" class="avtr_icons"></div></a> <div class="smallfont" style="text-align:right; margin-right:2px;">
+						P: n/a
+					</div> </td> <td class="alt1" valign="top" id="td_post_3200856">  <div style="margin: 0px 0px 0px 15px; width: 505px;"> <a name="post3200856"></a> <div style="font-weight: bold; margin: 0px 0px 0px 0px;"> <span> <a class="bigusername" href="https://bytes.com/register/" rel="nofollow">Andrew Koenig</a> </span> </div>  <div style="font-size: 105%; margin: 15px 0px 0px 0px; line-height: 20px; word-wrap: break-word;" id="post_message_3200856">
+
+					
+	
+				 "Victor Bazarov" &lt;v.********@comAcast.netwrote in message<br>
+news:fu**********@news.datemas.de...<br> <blockquote class="post_quotes"> <blockquote class="post_quotes">	
+				&gt;Why doesn't the following C++ program echo the value of 97? If you<br>manually "head -3 temp.txt | tail -1" the temp.txt file, you will get<br>97. Use it in a system call, and it doesn't work.<br><br>#include &lt;fstream&gt;<br><br>using std::fstream;<br>using std::ios;<br><br>int main()<br>{<br>int i = 0;<br>fstream myfile;<br>myfile.open ("temp.txt", ios::out);<br>while (i &lt; 100)<br>{myfile &lt;&lt; i &lt;&lt; "\n";<br>i++;<br>}<br>system ("echo Third last line of file is:");<br>system ("tail -3 temp.txt | head -1");<br>}
+</blockquote> </blockquote> <blockquote class="post_quotes">	
+				Your question has nothing to do with C++, sorry.  The behaviour of<br>
+the 'system' function is... (you guessed it!) system-specific.  Ask<br>
+in a Linux newsgroup.
+</blockquote>
+
+Actually, it might have something to do with C++, because part of how C++ is<br>
+defined is that it is not required to write information into a file until<br>
+you flush the file's buffer.  So it is at least possible that the reason the<br>
+program is failing is that the calls to "system" are happening at a point<br>
+when the file does not contain its intended contents.<br> <br>
+You might try changing the program as follows:<br> <br>
+while (i &lt; 100) {<br>
+myfile &lt;&lt; i &lt;&lt; "\n";<br>
+i++;<br>
+}<br>
+myfile &lt;&lt; std::flush;<br> <br>
+and see if it now dows what you intend.<br> </div>   <div style="line-height: 13px; font-size: 8pt; color: #999999; margin: 15px 0px 0px 0px;">
+							
+							
+							
+							
+								Jun 27 '08
+                                                                #<a href="https://bytes.com/topic/c/answers/804871-linux-c-system-call-problem#post3200856" id="postcount3200856" name="7" title="permalink">7</a> </div>  <div class="actionbuttons"> <div style="float:right;"> </div> </div> </div>  </td> </tr> </tbody></table> </div>  </td> </tr> </tbody></table> </div>  <div id="edit3200865" style="padding:0px 0px 0px 0px; margin: 0px;">  <hr style="color:#ccc; background-color:#ccc; height:1px; border:none; margin:0px 25px 0px 0px; padding:0px;"> <table id="post3200865" cellpadding="0px" cellspacing="0px" border="0" width="100%" align="center" style="clear:both;"> <tbody><tr> <td class="alt2" style="padding:0px">  <div style="margin: 15px 25px 15px 0px; padding-top: 0px;"> <table cellpadding="0" cellspacing="0" border="0" width="100%"> <tbody><tr> <td class="alt2" valign="top" width="55px"> <a href="https://bytes.com/" alt=""><div id="avtr_p" class="avtr_icons"></div></a> <div class="smallfont" style="text-align:right; margin-right:2px;">
+						P: n/a
+					</div> </td> <td class="alt1" valign="top" id="td_post_3200865">  <div style="margin: 0px 0px 0px 15px; width: 505px;"> <a name="post3200865"></a> <div style="font-weight: bold; margin: 0px 0px 0px 0px;"> <span> <a class="bigusername" href="https://bytes.com/register/" rel="nofollow">Pete Becker</a> </span> </div>  <div style="font-size: 105%; margin: 15px 0px 0px 0px; line-height: 20px; word-wrap: break-word;" id="post_message_3200865">
+
+					
+	
+				 On 2008-04-18 11:14:13 -0400, Sherman Pendley &lt;sp******@dot-app.orgsaid:<br> <blockquote class="post_quotes">	
+				"Victor Bazarov" &lt;v.********@comAcast.netwrites:<br> <blockquote class="post_quotes">	
+				&gt;Victor Bazarov wrote:
+	<blockquote class="post_quotes">	
+				&gt;&gt;[..]<br>BTW, you forgot to include the necessary header for the 'system'<br>function.  IIRC, it's &lt;stddef.h&gt;.
+</blockquote> <br>OK, wrong.  It's &lt;stdlib.h&gt;.
+</blockquote> <br>
+Shouldn't that be &lt;cstdlibwhen included from C++?<br> </blockquote>
+
+Both are valid. The C library isn't going to go away anytime soon.<br> <br>
+--<br>
+Pete<br>
+Roundhouse Consulting, Ltd. (<a rel="nofollow" href="http://www.versatilecoding.com/" target="_blank">www.versatilecoding.com</a>) Author of "The<br>
+Standard C++ Library Extensions: a Tutorial and Reference<br>
+(<a rel="nofollow" href="http://www.petebecker.com/tr1book" target="_blank">www.petebecker.com/tr1book</a>)<br> <br> </div>   <div style="line-height: 13px; font-size: 8pt; color: #999999; margin: 15px 0px 0px 0px;">
+							
+							
+							
+							
+								Jun 27 '08
+                                                                #<a href="https://bytes.com/topic/c/answers/804871-linux-c-system-call-problem#post3200865" id="postcount3200865" name="8" title="permalink">8</a> </div>  <div class="actionbuttons"> <div style="float:right;"> </div> </div> </div>  </td> </tr> </tbody></table> </div>  </td> </tr> </tbody></table> </div>  <div id="edit3200903" style="padding:0px 0px 0px 0px; margin: 0px;">  <hr style="color:#ccc; background-color:#ccc; height:1px; border:none; margin:0px 25px 0px 0px; padding:0px;"> <table id="post3200903" cellpadding="0px" cellspacing="0px" border="0" width="100%" align="center" style="clear:both;"> <tbody><tr> <td class="alt2" style="padding:0px">  <div style="margin: 15px 25px 15px 0px; padding-top: 0px;"> <table cellpadding="0" cellspacing="0" border="0" width="100%"> <tbody><tr> <td class="alt2" valign="top" width="55px"> <a href="https://bytes.com/" alt=""><div id="avtr_j" class="avtr_icons"></div></a> <div class="smallfont" style="text-align:right; margin-right:2px;">
+						P: n/a
+					</div> </td> <td class="alt1" valign="top" id="td_post_3200903">  <div style="margin: 0px 0px 0px 15px; width: 505px;"> <a name="post3200903"></a> <div style="font-weight: bold; margin: 0px 0px 0px 0px;"> <span> <a class="bigusername" href="https://bytes.com/register/" rel="nofollow">James Kanze</a> </span> </div>  <div style="font-size: 105%; margin: 15px 0px 0px 0px; line-height: 20px; word-wrap: break-word;" id="post_message_3200903">
+
+					
+	
+				 On 18 avr, 16:07, "Alf P. Steinbach" &lt;al...@start.nowrote:
+	<blockquote class="post_quotes">	
+				* C++ Newbie:
+	<blockquote class="post_quotes">	
+				 Why doesn't the following C++ program echo the value of 97?<br>
+ If you manually "head -3 temp.txt | tail -1" the temp.txt<br>
+ file, you will get 97. Use it in a system call, and it<br>
+ doesn't work.
+</blockquote> </blockquote> <blockquote class="post_quotes"> <blockquote class="post_quotes">	
+				 #include &lt;fstream&gt;
+</blockquote> </blockquote> <blockquote class="post_quotes"> <blockquote class="post_quotes">	
+				 using std::fstream;<br>
+ using std::ios;
+</blockquote> </blockquote> <blockquote class="post_quotes"> <blockquote class="post_quotes">	
+				 int main()<br>
+ {<br>
+ int i = 0;
+</blockquote> </blockquote> <blockquote class="post_quotes">	
+				This variable has no business being declared at this point.
+</blockquote> <blockquote class="post_quotes">	
+				Declare it in the head of the 'for' loop you should have been<br>
+using instead of 'while'.
+</blockquote> <blockquote class="post_quotes"> <blockquote class="post_quotes">	
+				 fstream myfile;<br>
+ myfile.open ("temp.txt", ios::out);
+</blockquote> </blockquote> <blockquote class="post_quotes">	
+				Just use an ofstream,
+</blockquote> <blockquote class="post_quotes">	
+				   ofstream myfile( "temp.txt" );
+</blockquote>
+
+And check for errors afterwards.<br> <blockquote class="post_quotes"> <blockquote class="post_quotes">	
+				 while (i &lt; 100)<br>
+    {myfile &lt;&lt; i &lt;&lt; "\n";<br>
+    i++;<br>
+    }
+</blockquote> </blockquote> <blockquote class="post_quotes">	
+				At this point it might be a good idea to close the file or at<br>
+least flush the file buffers.
+</blockquote>
+
+Again, and check for errors afterwards.  Writes have been known<br>
+to fail.<br> <blockquote class="post_quotes"> <blockquote class="post_quotes">	
+				 system ("echo Third last line of file is:");<br>
+ system ("tail -3 temp.txt | head -1");
+</blockquote> </blockquote> <blockquote class="post_quotes">	
+				The effect of the system call is, as one might guess from the<br>
+function's name, system dependent.
+</blockquote> <blockquote class="post_quotes">	
+				But even if it worked as written, i.e. that that command is<br>
+passed to some command interpreter, that's not the command you<br>
+state you're giving manually.
+</blockquote>
+
+Yes, but in this case, this is the correct command, and what he<br>
+stated he gave manually is wrong:-).<br> <br>
+In fact, the problem is obvious: when he invokes his command<br>
+here, the file has not yet been flushed, and so the OS hasn't<br>
+yet received the data.  When he enters the command manually, the<br>
+program has terminated, the return from main has closed the<br>
+file, and if he doesn't have any errors, the same command,<br>
+entered on the command line, will work.<br> <br>
+--<br>
+James Kanze (GABI Software)             email:ja*********@gmail.com<br>
+Conseils en informatique orientée objet/<br>
+Beratung in objektorientierter Datenverarbeitung<br>
+9 place Sémard, 78210 St.-Cyr-l'École, France, +33 (0)1 30 23 00 34<br> </div>   <div style="line-height: 13px; font-size: 8pt; color: #999999; margin: 15px 0px 0px 0px;">
+							
+							
+							
+							
+								Jun 27 '08
+                                                                #<a href="https://bytes.com/topic/c/answers/804871-linux-c-system-call-problem#post3200903" id="postcount3200903" name="9" title="permalink">9</a> </div>  <div class="actionbuttons"> <div style="float:right;"> </div> </div> </div>  </td> </tr> </tbody></table> </div>  </td> </tr> </tbody></table> </div>  <div id="edit3200926" style="padding:0px 0px 0px 0px; margin: 0px;"> <hr style="color:#ccc; background-color:#ccc; height:1px; border:none; margin:0px 25px 0px 0px; padding:0px;"> <table id="post3200926" cellpadding="0px" cellspacing="0px" border="0" width="100%" align="center" style="clear:both;"> <tbody><tr> <td class="alt2" style="padding:0px">  <div style="margin: 15px 25px 15px 0px; padding-top: 0px;"> <table cellpadding="0" cellspacing="0" border="0" width="100%"> <tbody><tr> <td class="alt2" valign="top" width="55px"> <a href="https://bytes.com/" alt=""><div id="avtr_a" class="avtr_icons"></div></a> <div class="smallfont" style="text-align:right; margin-right:2px;">
+						P: n/a
+					</div> </td> <td class="alt1" valign="top" id="td_post_3200926">  <div style="margin: 0px 0px 0px 15px; width: 505px;"> <a name="post3200926"></a> <div style="font-weight: bold; margin: 0px 0px 0px 0px;"> <span> <a class="bigusername" href="https://bytes.com/register/" rel="nofollow">Alf P. Steinbach</a> </span> </div>  <div style="font-size: 105%; margin: 15px 0px 0px 0px; line-height: 20px; word-wrap: break-word;" id="post_message_3200926">
+
+					
+	
+				 * James Kanze:
+	<blockquote class="post_quotes">	
+				On 18 avr, 16:07, "Alf P. Steinbach" &lt;al...@start.nowrote:
+	<blockquote class="post_quotes">	
+				&gt;* C++ Newbie:
+	<blockquote class="post_quotes">	
+				&gt;&gt;Why doesn't the following C++ program echo the value of 97?<br>If you manually "head -3 temp.txt | tail -1" the temp.txt<br>file, you will get 97. Use it in a system call, and it<br>doesn't work.
+</blockquote> </blockquote> <blockquote class="post_quotes"> <blockquote class="post_quotes">	
+				&gt;&gt;#include &lt;fstream&gt;
+</blockquote> </blockquote> <blockquote class="post_quotes"> <blockquote class="post_quotes">	
+				&gt;&gt;using std::fstream;<br>using std::ios;
+</blockquote> </blockquote> <blockquote class="post_quotes"> <blockquote class="post_quotes">	
+				&gt;&gt;int main()<br>{<br>int i = 0;
+</blockquote> </blockquote> <blockquote class="post_quotes">	
+				&gt;This variable has no business being declared at this point.
+</blockquote> <blockquote class="post_quotes">	
+				&gt;Declare it in the head of the 'for' loop you should have been<br>using instead of 'while'.
+</blockquote> <blockquote class="post_quotes"> <blockquote class="post_quotes">	
+				&gt;&gt;fstream myfile;<br>myfile.open ("temp.txt", ios::out);
+</blockquote> </blockquote> <blockquote class="post_quotes">	
+				&gt;Just use an ofstream,
+</blockquote> <blockquote class="post_quotes">	
+				&gt;   ofstream myfile( "temp.txt" );
+</blockquote> <br>
+And check for errors afterwards.<br> <blockquote class="post_quotes"> <blockquote class="post_quotes">	
+				&gt;&gt;while (i &lt; 100)<br>   {myfile &lt;&lt; i &lt;&lt; "\n";<br>   i++;<br>   }
+</blockquote> </blockquote> <blockquote class="post_quotes">	
+				&gt;At this point it might be a good idea to close the file or at<br>least flush the file buffers.
+</blockquote> <br>
+Again, and check for errors afterwards.  Writes have been known<br>
+to fail.<br> <blockquote class="post_quotes"> <blockquote class="post_quotes">	
+				&gt;&gt;system ("echo Third last line of file is:");<br>system ("tail -3 temp.txt | head -1");
+</blockquote> </blockquote> <blockquote class="post_quotes">	
+				&gt;The effect of the system call is, as one might guess from the<br>function's name, system dependent.
+</blockquote> <blockquote class="post_quotes">	
+				&gt;But even if it worked as written, i.e. that that command is<br>passed to some command interpreter, that's not the command you<br>state you're giving manually.
+</blockquote> <br>
+Yes, but in this case, this is the correct command, and what he<br>
+stated he gave manually is wrong:-).<br><br>
+In fact, the problem is obvious: when he invokes his command<br>
+here, the file has not yet been flushed, and so the OS hasn't<br>
+yet received the data.  When he enters the command manually, the<br>
+program has terminated, the return from main has closed the<br>
+file, and if he doesn't have any errors, the same command,<br>
+entered on the command line, will work.
+</blockquote>
+
+Well yes, that's what I wrote, and Andrew Koenig then also wrote that.<br> <br>
+Seems to be full agreement. :-)<br>
+Cheers,<br> <br>
+- Alf<br> </div>   <div style="line-height: 13px; font-size: 8pt; color: #999999; margin: 15px 0px 0px 0px;">
+							
+							
+							
+							
+								Jun 27 '08
+                                                                #<a href="https://bytes.com/topic/c/answers/804871-linux-c-system-call-problem#post3200926" id="postcount3200926" name="10" title="permalink">10</a> </div>  <div class="actionbuttons"> <div style="float:right;"> </div> </div> </div>  </td> </tr> </tbody></table> </div>  </td> </tr> </tbody></table> </div>  <div id="lastpost"></div> </div>    <div style="clear:both;"></div> <div style="clear:both;"></div> <div style="clear:both;"></div> <div style="margin:25px 25px 25px 0px;"> <h3 style="border-bottom: 1px solid #ccc; margin: 0px; padding: 0px 0px 3px 0px;">This discussion thread is closed</h3> <div style="border:1px solid #fbeed5; background-color:#fcf8e3; color: #c09853; padding:15px; margin:10px 0px 10px 0px; font-size: 120%; font-weight: bold;"> <div style="float:right; padding:0px; margin:10px 0px 10px 0px; width: 200px; text-align: right;"> <a href="https://bytes.com/submit/g/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Ask&#39;, &#39;Closed - New Discussion&#39;, &#39;/topic/c/answers/804871-linux-c-system-call-problem&#39;, 0 );" class="btn_orange btn_awesome" rel="nofollow">Start new discussion</a> </div> <p>Replies have been disabled for this discussion.</p> </div> </div>  <div style="clear:both"></div> <div style="margin:0px 25px 10px 0px;">  <p style="padding:0px; margin:10px 0px 10px 0px; font-size: 110%;"> </p><div class="similar_threads"> <h3>Similar topics</h3> <ul> <li class="smallfont" style="margin-bottom:3px; padding: 0px;"><a href="https://bytes.com/topic/c/insights/827839-zen-art-debugging-c-c-linux-gdb">Zen and the Art of Debugging C/C++ in Linux with GDB</a> </li> <li class="smallfont" style="margin-bottom:3px; padding: 0px;"><a href="https://bytes.com/topic/db2/answers/638978-install-db2-linux-mc-serviceguard-cluster">Install DB2 on Linux MC/ServiceGuard Cluster</a> </li> <li class="smallfont" style="margin-bottom:3px; padding: 0px;"><a href="https://bytes.com/topic/python/answers/514844-sansung-yh-920-linux-yh-925-db-0-1-py-attributeerror-moduleobject-has-no-attribute-decode">Sansung YH-920 + Linux + yh-925-db-0.1.py = AttributeError: 'module'object has no attribute 'decode'</a> </li> <li class="smallfont" style="margin-bottom:3px; padding: 0px;"><a href="https://bytes.com/topic/db2/answers/183026-sqlj-install_jar-problem-both-solaris-linux">sqlj.install_jar problem on both Solaris and Linux</a> </li> <li class="smallfont" style="margin-bottom:3px; padding: 0px;"><a href="https://bytes.com/topic/net/answers/112074-when-will-gnu-linux-ready-joe-user">When Will GNU/Linux Be Ready for Joe User?</a> </li> <li class="smallfont" style="margin-bottom:3px; padding: 0px;"><a href="https://bytes.com/topic/net/answers/108798-new-linux-economy">The New Linux Economy</a> </li> <li class="smallfont" style="margin-bottom:3px; padding: 0px;"><a href="https://bytes.com/topic/python/answers/37048-reimplenting-linux-kernel-python">Reimplenting Linux Kernel in Python</a> </li> <li class="smallfont" style="margin-bottom:3px; padding: 0px;"><a href="https://bytes.com/topic/java/answers/18050-java-small-memory-virtualized-linux-environment">Java in small-memory virtualized Linux environment</a> </li> </ul> </div> <a href="https://bytes.com/topic/c/answers/" style="font-weight: bold;">Browse more C / C++ Questions on Bytes</a>  </div>    </td> <td width="15px" class="spacer"></td> <td width="300px" height="1000px" valign="top"> <img src="./Linux_C++ system call problem - C _ C++_files/sidecolumn.gif" width="300px" height="1px" border="0" style="margin: 0px; padding: 0px;"> <div class="navbox"> <h3>Question stats</h3> <ul> <li> <span>viewed: 2285</span> </li> <li> <span>replies: 9</span> </li> <li> <span>date asked: Jun 27 '08</span> </li> </ul> <div style="margin:10px 0px 10px 0px; padding: 10px 0px 10px 0px;"> <a href="https://bytes.com/subscription.php?do=addsubscription&t=804871" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Follow&#39;, &#39;Follow Discussion&#39;, &#39;/topic/c/answers/804871-linux-c-system-call-problem&#39;, 0 );" class="btn_blue btn_awesome" rel="nofollow">Follow this discussion</a> </div> <div style="clear:both"></div> </div>  <ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-8550604525820387" data-ad-slot="5734623908" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><ins id="aswift_2_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><iframe width="300" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins> <script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>   </td> </tr> </tbody></table> </td> </tr> </tbody></table> <table class="maintable footer"> <tbody><tr> <td> <div style="width: 650px; float:left;">
+BYTES.COM © 2015
+<br>
+Formerly "TheScripts.com" from 2005-2008
+<br> <a href="https://bytes.com/about_us.html">About Bytes</a> | <a href="https://bytes.com/mediakit.html">Advertise on Bytes</a> | <a href="https://bytes.com/contactus.html">Contact Us</a> <br> <a href="https://bytes.com/sitemap/">Sitemap</a> 
+
+ | <a href="https://bytes.com/sitemap/f-308.html">C / C++ Answers Sitemap</a> | <a href="https://bytes.com/sitemap/f-309.html">C / C++ Insights Sitemap</a> </div> <div style="width: 250px; float:right; text-align:right;"> <a href="https://plus.google.com/+Bytes_com" rel="nofollow"><img src="./Linux_C++ system call problem - C _ C++_files/gplus-32.png" height="32px" width="32px" border="0px" title="Follow us on Google Plus for the Latest Bytes Updates."></a> <a href="http://twitter.com/bytes" rel="nofollow"><img src="./Linux_C++ system call problem - C _ C++_files/twitter.png" height="32px" width="32px" border="0px" title="Follow us on Twitter for the latest Bytes updates."></a> <a href="http://www.facebook.com/bytes" rel="nofollow"><img src="./Linux_C++ system call problem - C _ C++_files/facebook.png" height="32px" width="32px" border="0px" title="Follow us on Facebook for the latest Bytes updates."></a> <br>
+Follow us to get the Latest Bytes Updates
+
+</div> </td> </tr> </tbody></table> <script type="text/javascript"> <!--
+	// Main vBulletin Javascript Initialization
+	vBulletin_init();
+//--> </script> <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-90111-7', 'bytes.com');
+  ga('send', 'pageview');
+
+</script> <script async="" src="./Linux_C++ system call problem - C _ C++_files/adsbygoogle.js"></script>  
+<script type="text/javascript">
+//<![CDATA[
+
+window.orig_onload = window.onload;
+window.onload = function() {
+var cpost=document.location.hash.substring(1);var cpost2='';if(cpost){ var ispost=cpost.substring(0,4)=='post';if(ispost)cpost2='post_'+cpost.substring(4);if((cobj = fetch_object(cpost))||(cobj = fetch_object(cpost2))){cobj.scrollIntoView(true);}else if(ispost){cpostno = cpost.substring(4,cpost.length);if(parseInt(cpostno)>0){location.replace('https://bytes.com/showthread.php?p='+cpostno);};} }
+
+if(typeof window.orig_onload == "function") window.orig_onload();
+}
+
+//]]>
+</script>
+ <table cellspacing="0" cellpadding="0" class="gstl_50 gssb_c" style="width: 567px; display: none; top: 88px; position: absolute; left: 368px;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table></body></html>

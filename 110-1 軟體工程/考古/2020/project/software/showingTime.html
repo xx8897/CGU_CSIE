@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>場次時間表</title>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+		<script type="text/javascript" src="js/jquery.form.js"></script>
+		
+		<style type="text/css">	
+			body {
+				padding: 0px;
+				margin: 0px;
+				background-attachment:fixed;
+			}
+			nav > ul {
+				background-color: #DEDEDE;
+				list-style: none;   /* 移除項目符號 */
+				margin: 0;
+				padding: 0;
+			}
+
+			nav a {
+				color: inherit; /* 移除超連結顏色 */
+				display: block; /* 讓 <a> 填滿 <li> */
+				font-size: 1.2rem;
+				padding: 20px;
+				text-decoration: none;  /* 移除超連結底線 */
+			}
+
+			/* 滑鼠移到 <a> 時變成深底淺色 */
+			nav li:hover {
+				background-color: rgb(115, 115, 115);
+				color: white;
+			}
+
+			.flex-nav {
+				position:fixed;
+				display: flex;
+				justify-content: space-evenly;
+				width:1265px;
+				z-index:3;
+				top:0px;
+			}
+			
+			.movietable{
+				position:absolute;
+				top:150px;
+				left:400px;
+				font-size:17px;
+				width:500px;
+				opacity:0.9;
+			}
+			
+			h1{position:relative;
+				left:550px;
+				width:500px;
+				top:65px;
+				color:white;
+			}
+			
+			.title {font-size:50px;}
+			
+			.back{z-index:-1;
+				position:fixed;
+				top:0px;
+				left:10px;
+				width:1230px;}
+				
+			.test{font-weight:bold;}
+
+		</style>
+	</head>
+	<body background="./background.png">
+		<nav>
+            <ul class="flex-nav">
+                <li><a href="home.html">首頁</a></li>
+                <li><a href="movie_list.html">電影介紹</a></li>
+                <li><a href="showingTime.html">場次查詢</a></li>
+                <li><a href="buy.html">會員專區</a></li>
+				<li><a href="login.html">登入/註冊</a></li>
+            </ul>
+        </nav>
+		<div style="border:10px; #FFAC55 solid;">
+			<script type="text/javascript">				
+				document.write('<table bgcolor="#FAFAFA" border="0" cellpadding="20" class="movietable" height="60px;" width="1200px">');
+				document.write('<h1>場次時間表</h1>')
+				
+				for(var i=1;i<=10;i++){
+					document.write('<tr style="height:50px">')
+					document.write('<td><span class="test"> <h3>電影名稱:</h3> <br>日期:</br> <br>時間(幾點幾分):</br></span> </td>')
+					document.write('</tr>')
+				}
+				document.write('</tabel>');
+				document.write('</tr>');
+			</script>
+		</div>
+	</body>
+</html>

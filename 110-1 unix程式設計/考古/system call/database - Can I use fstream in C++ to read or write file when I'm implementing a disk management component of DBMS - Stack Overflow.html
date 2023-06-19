@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<!-- saved from url=(0121)http://stackoverflow.com/questions/22927197/can-i-use-fstream-in-c-to-read-or-write-file-when-im-implementing-a-disk-mana -->
+<html itemscope="" itemtype="http://schema.org/QAPage"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow</title>
+    <link rel="shortcut icon" href="http://cdn.sstatic.net/stackoverflow/img/favicon.ico?v=4f32ecc8f43d">
+    <link rel="apple-touch-icon image_src" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="http://stackoverflow.com/opensearch.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="stackoverflow.com">
+    <meta property="og:type" content="website">    
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&amp;a">
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="Can I use fstream in C++ to read or write file when I&#39;m implementing a disk management component of DBMS">
+    <meta name="twitter:description" property="og:description" itemprop="description" content="In C++, I know I can use read or write file using system function like read or write and I can also do that with fstream&#39;s help.
+
+Now I&#39;m implementing a disk management which is a component of DBMS...">
+    <meta property="og:url" content="http://stackoverflow.com/questions/22927197/can-i-use-fstream-in-c-to-read-or-write-file-when-im-implementing-a-disk-mana">
+    <link rel="canonical" href="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow.html">
+
+    
+    
+    <script type="text/javascript" async="" src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/ados"></script><script async="" src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/quant.js"></script><script async="" src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/beacon.js"></script><script async="" src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/analytics.js"></script><script type="text/javascript" async="" src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/ados.js"></script><script src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/jquery.min.js"></script>
+    <script src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/stub.en.js"></script>
+    <link rel="stylesheet" type="text/css" href="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/all.css">
+
+            <link rel="alternate" type="application/atom+xml" title="Feed for question &#39;Can I use fstream in C++ to read or write file when I&#39;m implementing a disk management component of DBMS&#39;" href="http://stackoverflow.com/feeds/question/22927197">
+            <meta name="twitter:app:country" content="US">
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:iphone" content="871299723">
+            <meta name="twitter:app:url:iphone" content="se-zaphod://stackoverflow.com/questions/22927197/can-i-use-fstream-in-c-to-read-or-write-file-when-im-implementing-a-disk-mana">
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:ipad" content="871299723">
+            <meta name="twitter:app:url:ipad" content="se-zaphod://stackoverflow.com/questions/22927197/can-i-use-fstream-in-c-to-read-or-write-file-when-im-implementing-a-disk-mana">
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://stackoverflow.com/questions/22927197/can-i-use-fstream-in-c-to-read-or-write-file-when-im-implementing-a-disk-mana">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+        
+            StackExchange.ready(function () {
+                    
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.initSnippetRenderer();
+                    });
+                    
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:1,shownCommentCount:1,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:22927197});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('1', '22927197');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+            });
+        </script>
+
+
+    <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1447991392,"networkMetaHostname":"meta.stackexchange.com","routeName":"Questions/Show","styleCode":true,"enableUserHovercards":true,"snippets":{"enabled":true,"domain":"stacksnippets.net"},"site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","recaptchaAudioLang":"en","enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"id":1,"nonAsciiTags":true,"enableSocialMediaInSharePopup":true},"user":{"fkey":"b0f21e6892b5a6fc1399a36db5c4dffe","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true,"ab":{"simplified_signup_form":{"v":"c","g":1},"mobile_signup_confirmation_page":{"v":"a","g":2}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"8a2ee33c0778","js/moderator.en.js":"24ee4d052056","js/full-anon.en.js":"add63c240cb9","js/full.en.js":"9cdffffbdc9d","js/wmd.en.js":"109a2240692b","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"21b701894eda","js/help.en.js":"6c41eb0e72ab","js/tageditor.en.js":"4205bfa01660","js/tageditornew.en.js":"bfdb279502b3","js/inline-tag-editing.en.js":"239de90350f6","js/revisions.en.js":"b233d0247832","js/review.en.js":"6e60df3922b2","js/tagsuggestions.en.js":"d1ff9b84abe5","js/post-validation.en.js":"73fb051db844","js/explore-qlist.en.js":"415c9ef1f829","js/events.en.js":"fd5379e4f69d","js/keyboard-shortcuts.en.js":"312c9862e7fd","js/external-editor.en.js":"cf58cc6630ef","js/external-editor.en.js":"cf58cc6630ef","js/snippet-javascript.en.js":"e636c0897b98","js/snippet-javascript-codemirror.en.js":"e8970bc9ca1f"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    
+        <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script>
+    
+    
+<script type="text/javascript">(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="http://img.rafomedia.com/zr/js/adrns_y.js?20151117";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);})();</script><script async="" src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/full-anon.en.js"></script><script async="" src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/snippet-javascript.en.js"></script><script async="" src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/post-validation.en.js"></script><script async="" src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/external-editor.en.js"></script><script src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/rafim0903.js"></script><script type="text/javascript" src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/adFeedback.js"></script><link rel="stylesheet" href="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/adFeedback.css"><script src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/SharedApp.js"></script><script src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/json3.js"></script><script src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/NWPLegacy_v2.js"></script><script src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/bloomfilter.js"></script><script src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/jquery.xdr.js"></script><script src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/jquery.dotdotdot.js"></script></head>
+<body class="question-page new-topbar">
+    <noscript>&lt;div id="noscript-padding"&gt;&lt;/div&gt;</noscript>
+    <div id="notify-container"></div>
+    <div id="overlay-header"></div>
+    <div id="custom-header"></div>
+
+
+
+
+
+<div class="topbar">
+    <div class="topbar-wrapper">
+
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="http://stackoverflow.com/">current community</a></h3>
+    </div>
+    <div class="modal-content current-site-container">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+                    <a href="http://chat.stackoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a>
+            </div>
+
+
+
+
+    <a href="http://stackoverflow.com/" class="current-site-link site-link js-gps-track" data-id="1" data-gps-track="
+        site_switcher.click({ item_type:3 })">
+        <div class="site-icon favicon favicon-stackoverflow" title="Stack Overflow"></div>
+        Stack Overflow
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                    
+
+
+
+    <a href="http://meta.stackoverflow.com/" class="site-link js-gps-track" data-id="552" data-gps-track="
+            site.switch({ target_site:552, item_type:3 }),
+        site_switcher.click({ item_type:4 })">
+        <div class="site-icon favicon favicon-stackoverflowmeta" title="Meta Stack Overflow"></div>
+        Meta Stack Overflow
+    </a>
+
+                </li>
+                            <li class="related-site">
+                        <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                    <a class="site-link js-gps-track" href="http://careers.stackoverflow.com/?utm_source=stackoverflow.com&utm_medium=site-ui&utm_campaign=multicollider" data-gps-track="site_switcher.click({ item_type:9 })">
+                        <div class="site-icon favicon favicon-careers" title="Stack Overflow Careers"></div>
+                        Stack Overflow Careers
+                    </a>
+                </li>
+        </ul>
+    </div>
+    
+    <div class="header" id="your-communities-header">
+        <h3>
+your communities        </h3>
+            
+    </div>
+    <div class="modal-content" id="your-communities-section">
+            
+            <div class="call-to-login">
+<a href="https://stackoverflow.com/users/signup?ssrc=site_switcher&returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f22927197%2fcan-i-use-fstream-in-c-to-read-or-write-file-when-im-implementing-a-disk-mana" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or <a href="https://stackoverflow.com/users/login?ssrc=site_switcher&returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f22927197%2fcan-i-use-fstream-in-c-to-read-or-write-file-when-im-implementing-a-disk-mana" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list.
+            </div>
+    </div>
+    
+    <div class="header">
+        <h3><a href="http://stackexchange.com/sites">more stack exchange communities</a></h3>
+        <a href="http://blog.stackoverflow.com/" class="fr">company blog</a>
+    </div>
+    <div class="modal-content">
+            <div class="child-content"></div>
+    </div>
+</div>
+        </div>
+
+        <div class="network-items">
+
+            <a href="http://stackexchange.com/" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 150 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+
+    <a href="http://stackoverflow.com/questions/22927197/can-i-use-fstream-in-c-to-read-or-write-file-when-im-implementing-a-disk-mana#" class="topbar-icon icon-inbox yes-hover js-inbox-button" title="Recent inbox messages">
+        <span class="hidden-text">Inbox</span>
+        <span class="unread-count" style="display:none"></span>
+    </a>
+    <a href="http://stackoverflow.com/questions/22927197/can-i-use-fstream-in-c-to-read-or-write-file-when-im-implementing-a-disk-mana#" class="topbar-icon icon-achievements yes-hover js-achievements-button " data-unread-class="" title="Recent achievements: reputation, badges, and privileges earned">
+        <span class="hidden-text">Reputation and Badges</span>
+        <span class="unread-count" style="display:none">
+            
+        </span>
+    </a>
+        </div>
+
+        <div class="topbar-links">
+
+                <div class="links-container">
+                <span class="topbar-menu-links">
+                                    <a href="https://stackoverflow.com/users/signup?ssrc=head&returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f22927197%2fcan-i-use-fstream-in-c-to-read-or-write-file-when-im-implementing-a-disk-mana" class="login-link">sign up</a>
+                                <a href="https://stackoverflow.com/users/login?ssrc=head&returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f22927197%2fcan-i-use-fstream-in-c-to-read-or-write-file-when-im-implementing-a-disk-mana" class="login-link">log in</a>
+
+                        <a href="http://stackoverflow.com/tour">tour</a>
+                            <a href="http://stackoverflow.com/questions/22927197/can-i-use-fstream-in-c-to-read-or-write-file-when-im-implementing-a-disk-mana#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="http://stackoverflow.com/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="http://stackoverflow.com/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="http://meta.stackoverflow.com/" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                            <a href="http://careers.stackoverflow.com/?utm_source=stackoverflow.com&utm_medium=site-ui&utm_campaign=anon-topbar">stack overflow careers</a>
+                    </span>
+                </div>
+
+            <div class="search-container">
+                <form id="search" action="http://stackoverflow.com/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="" tabindex="1" autocomplete="off" maxlength="240">
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script>
+
+    <div class="container">
+        <div id="header">
+            <br class="cbt">
+            <div id="hlogo">
+                <a href="http://stackoverflow.com/">
+                    Stack Overflow
+                </a>
+            </div>
+            <div id="hmenus">
+                <div class="nav mainnavs">
+                    <ul>
+                        <li class="youarehere"><a id="nav-questions" href="http://stackoverflow.com/questions">Questions</a></li>
+                        <li><a id="nav-tags" href="http://stackoverflow.com/tags">Tags</a></li>
+                        <li><a id="nav-users" href="http://stackoverflow.com/users">Users</a></li>
+                        <li><a id="nav-badges" href="http://stackoverflow.com/help/badges">Badges</a></li>
+                                                <li><a id="nav-unanswered" href="http://stackoverflow.com/unanswered">Unanswered</a></li>
+                    </ul>
+                </div>
+                <div class="nav askquestion">
+                    <ul>
+                        <li>
+                            <a id="nav-askquestion" href="http://stackoverflow.com/questions/ask">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <div id="content" class="snippet-hidden">
+            
+
+<div itemscope="" itemtype="http://schema.org/Question">
+    <link itemprop="image" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+			<!--googleoff: all-->
+
+<div id="herobox-mini">
+    <div id="hero-content">
+        <span id="controls">
+                <a href="http://stackoverflow.com/users/signup?ssrc=hero&returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f22927197%2fcan-i-use-fstream-in-c-to-read-or-write-file-when-im-implementing-a-disk-mana" id="tell-me-more" class="button">Sign up</a>
+            <span id="close"><a title="click to dismiss">×</a></span>
+        </span>
+        <div id="blurb">
+            Stack Overflow is a community of 4.7 million programmers, just like you, helping each other. Join them; it only takes a minute:
+        </div>        
+    </div>
+    <script>
+        StackExchange.ready(function() {
+            var clickSource = $("body").attr("class") + '-mini';
+            var location = 0;
+            if ($("body").hasClass("questions-page")) {
+                clickSource = 'questionpagemini';
+                location = 2;
+            } else if ($("body").hasClass("question-page")) {
+                clickSource = 'questionpagemini';
+                location = 2;
+            } else if ($("body").hasClass("home-page")) {
+                clickSource = 'homepagemini';
+                location = 4;
+            }
+
+            $('#tell-me-more').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+                });
+            });
+            $('#herobox-mini #close').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: "close", location: location }, true);
+                });
+                $.cookie("hero", "none", { path: "/", expires: 365 });
+                var $hero = $("#herobox-mini");
+                $hero.slideUp('fast', function () { $hero.remove(); });
+                return false;
+            });
+        });
+    </script>
+</div>
+			<!--googleon: all-->
+			<div id="question-header">
+                <h1 itemprop="name"><a href="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow.html" class="question-hyperlink">Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS</a></h1>
+		</div>
+			<div id="mainbar">
+
+			
+
+<div class="question" data-questionid="22927197" id="question">
+
+    <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk554280573",4).setZone(43); });
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk554280573"><a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6NCwiYnQiOjAsImNtIjozMjI1MTQsImNoIjoxMTc4LCJjayI6e30sImNyIjoxMTk1Nzg2LCJkaSI6Ijk4MWZmMmFiN2ZmYTQ3MDQ5NzNhYjgwZjViOGViMTEzIiwiZG0iOjEsImZjIjoxMjY5MTQ1LCJmbCI6ODY0MjI1LCJpcCI6IjE2My4yNS4xMTguNDMiLCJrdyI6ImMrKyxkYXRhYmFzZSxmc3RyZWFtIiwibnciOjIyLCJwYyI6MCwiZWMiOjAsInByIjoxNjA0LCJydCI6MSwicmYiOiJodHRwczovL3d3dy5nb29nbGUuY29tLnR3LyIsInN0Ijo4Mjc3LCJ1ayI6InVlMS1iOGZhNmYxMmI3ZTI0ZjM4YTMyNGFlMWFiODE2ZGMzOSIsInpuIjo0MywidHMiOjE0NDc5OTEzOTc3NDQsImJmIjp0cnVlLCJwbiI6ImFkemVyazU1NDI4MDU3MyIsInVyIjoiaHR0cDovL2NhcmVlcnMuc3RhY2tvdmVyZmxvdy5jb20vam9icy9yZW1vdGU_dXRtX3NvdXJjZT1zdGFja292ZXJmbG93LmNvbSZ1dG1fbWVkaXVtPWFkJnV0bV9jYW1wYWlnbj1jYW5kaWRhdGVzLXdmaCZ1dG1fY29udGVudD1sYi13Zmgta2lkLXdvcmstb24td29yayJ9&s=XCRGNMcCII4e3bFxl4KTXWVsYdk" rel="nofollow" target="_blank" title=""><img src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/ca0f847878fc4be5bac353194231ef81.png" title="" alt="" border="0" width="728" height="90"></a><div class="adzerk-vote-controls" style="display: none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://stackoverflow.com/questions/22927197/can-i-use-fstream-in-c-to-read-or-write-file-when-im-implementing-a-disk-mana#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" style="position:absolute;" src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/i.gif"></div>    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="22927197">
+        <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+        <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+
+        <a class="star-off" href="http://stackoverflow.com/questions/22927197/can-i-use-fstream-in-c-to-read-or-write-file-when-im-implementing-a-disk-mana#" title="This is a favorite question (click again to undo)">favorite</a>
+        <div class="favoritecount"><b></b></div>
+
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="text">
+
+<p>In C++, I know I can use read or write file using system function like read or write and I can also do that with fstream's help.</p>
+
+<p>Now I'm implementing a disk management which is a component of DBMS. For simplicity I only use disk management to manage the space of a Unix file.</p>
+
+<p>All I know is fstream wrap system function like read or write and provide some buffer.
+However I was wondering whether this will affect atomicity and synchronization or not?</p>
+
+<p>My question is which way should I use and why?</p>
+    </div>
+    <div class="post-taglist">
+        <a href="http://stackoverflow.com/questions/tagged/c%2b%2b" class="post-tag js-gps-track" title="show questions tagged &#39;c++&#39;" rel="tag">c++</a> <a href="http://stackoverflow.com/questions/tagged/database" class="post-tag js-gps-track" title="show questions tagged &#39;database&#39;" rel="tag">database</a> <a href="http://stackoverflow.com/questions/tagged/fstream" class="post-tag js-gps-track" title="show questions tagged &#39;fstream&#39;" rel="tag">fstream</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/q/22927197" title="short permalink to this question" class="short-link" id="link-post-22927197">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/22927197/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/22927197/revisions" title="show all edits to this post">edited <span title="2014-04-23 05:43:02Z" class="relativetime">Apr 23 '14 at 5:43</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/15168/jonathan-leffler"><div class="gravatar-wrapper-32"><img src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/7d0d66b076e3bc70819e50f8a25af8df" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/15168/jonathan-leffler">Jonathan Leffler</a><br>
+        <span class="reputation-score" title="reputation score 384590" dir="ltr">385k</span><span title="52 gold badges"><span class="badge1"></span><span class="badgecount">52</span></span><span title="418 silver badges"><span class="badge2"></span><span class="badgecount">418</span></span><span title="709 bronze badges"><span class="badge3"></span><span class="badgecount">709</span></span>
+    </div>
+</div>    </td>
+    <td class="post-signature owner">
+        <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-04-08 03:54:11Z" class="relativetime">Apr 8 '14 at 3:54</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1832786/user1832786"><div class="gravatar-wrapper-32"><img src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/96efa1d229e35103e73f1436b8e273dd" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1832786/user1832786">user1832786</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+                
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-22927197" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-34999150" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">yeah...I take a overlook about this page. Maybe I'm wrong but I can't find something useful or relative. It says little about &lt;fstream&gt; and camparison between fstream and system function</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1832786/user1832786" title="1 reputation" class="comment-user owner">user1832786</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/22927197/can-i-use-fstream-in-c-to-read-or-write-file-when-im-implementing-a-disk-mana#comment34999150_22927197"><span title="2014-04-08 05:16:23Z" class="relativetime-clean">Apr 8 '14 at 5:16</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-22927197" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/22927197/can-i-use-fstream-in-c-to-read-or-write-file-when-im-implementing-a-disk-mana#" onclick=""></a>
+        </div>         
+    </td>
+</tr>        </tbody></table>
+</div>
+
+			<div id="answers">
+
+				<a name="tab-top"></a>
+				<div id="answers-header">
+					<div class="subheader answers-subheader">
+						<h2>
+								2 Answers
+                                <span style="display:none;" itemprop="answerCount">2</span>
+						</h2>
+						<div>
+							<div id="tabs">
+        <a href="http://stackoverflow.com/questions/22927197/can-i-use-fstream-in-c-to-read-or-write-file-when-im-implementing-a-disk-mana?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active">active</a>
+        <a href="http://stackoverflow.com/questions/22927197/can-i-use-fstream-in-c-to-read-or-write-file-when-im-implementing-a-disk-mana?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest">oldest</a>
+        <a class="youarehere" href="http://stackoverflow.com/questions/22927197/can-i-use-fstream-in-c-to-read-or-write-file-when-im-implementing-a-disk-mana?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes">votes</a>
+</div>
+						</div>
+					</div>    
+				</div>    
+
+
+
+
+  
+<a name="22927579"></a>
+<div id="answer-22927579" class="answer" data-answerid="22927579" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="22927579">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>No. Particularly not with Unix. A DBM is going to want contiguous files. That means either a unix variant that support them or creating a disk partition. </p>
+
+<p>You're also going to want to handle the buffering; not following the C++ library's buffering.</p>
+
+<p>I could go on but streams are for - - streams of data -- not secure, reliable structured data.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/22927579" title="short permalink to this answer" class="short-link" id="link-post-22927579">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/22927579/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2014-04-08 04:29:41Z" class="relativetime">Apr 8 '14 at 4:29</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/3344003/user3344003"><div class="gravatar-wrapper-32"><img src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/988af95d5692ee66b1fc2fe725ba738e" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/3344003/user3344003">user3344003</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">5,465</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="6 silver badges"><span class="badge2"></span><span class="badgecount">6</span></span><span title="24 bronze badges"><span class="badge3"></span><span class="badgecount">24</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+            
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-22927579" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-22927579" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/22927197/can-i-use-fstream-in-c-to-read-or-write-file-when-im-implementing-a-disk-mana#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk19337718",4).setZone(44); });
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk19337718"><a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6NCwiYnQiOjAsImNtIjozMjI1MTQsImNoIjoxMTc4LCJjayI6e30sImNyIjoxMTk1OTcyLCJkaSI6IjY0MGUxMjJmOTg5YjRmZDJiYWQ4NjdkMGNkYTcyZTAzIiwiZG0iOjEsImZjIjoxMjY5MzMwLCJmbCI6ODY0MjI2LCJpcCI6IjE2My4yNS4xMTguNDMiLCJrdyI6ImMrKyxkYXRhYmFzZSxmc3RyZWFtIiwibnciOjIyLCJwYyI6MCwiZWMiOjAsInByIjoxNTY4LCJydCI6MSwicmYiOiJodHRwczovL3d3dy5nb29nbGUuY29tLnR3LyIsInN0Ijo4Mjc3LCJ1ayI6InVlMS1iOGZhNmYxMmI3ZTI0ZjM4YTMyNGFlMWFiODE2ZGMzOSIsInpuIjo0NCwidHMiOjE0NDc5OTEzOTc3NDYsImJmIjp0cnVlLCJwbiI6ImFkemVyazE5MzM3NzE4IiwidXIiOiJodHRwOi8vY2FyZWVycy5zdGFja292ZXJmbG93LmNvbS93aHktc3RhY2s_dXRtX3NvdXJjZT1zdGFja292ZXJmbG93LmNvbSZ1dG1fbWVkaXVtPWFkJnV0bV9jYW1wYWlnbj1jYW5kaWRhdGVzLWFkZC1jdiZ1dG1fY29udGVudD1sYi1jYXJlZXJzLWdpdGh1YiJ9&s=t4blYYIj6tnd0Dhe-hXAB-rTQOY" rel="nofollow" target="_blank" title=""><img src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/847ff0b628984d7e82568ef9658ca863.png" title="" alt="" border="0" width="728" height="90"></a><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://stackoverflow.com/questions/22927197/can-i-use-fstream-in-c-to-read-or-write-file-when-im-implementing-a-disk-mana#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" style="position:absolute;" src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/i(1).gif"></div>
+  
+<a name="22931994"></a>
+<div id="answer-22931994" class="answer" data-answerid="22931994" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="22931994">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>The following information about synchronization and thread safety of 'fstream' can be found from ISO C++ standard.</p>
+
+<p><strong>27.2.3 Thread safety [iostreams.threadsafety]</strong></p>
+
+<blockquote>
+  <p>Concurrent access to a stream object (27.8, 27.9), stream buffer
+  object (27.6), or C Library stream (27.9.2) by multiple threads may
+  result in a data race (1.10) unless otherwise specified (27.4). [
+  Note: Data races result in undefined behavior (1.10). —end note ]</p>
+  
+  <p>If one thread makes a library call a that writes a value to a stream
+  and, as a result, another thread reads this value from the stream
+  through a library call b such that this does not result in a data
+  race, then a’s write synchronizes with b’s read.</p>
+</blockquote>
+
+<p>C/C++ file I/O operation are not thread safe by default. So if you are planning to use fstream of open/write/read system call, then you would have to use synchronization mechanism by yourself in your implementation. You may use 'std::mutex' mechanism provided in new C++ standard(.i.e C++11) to synchronize your file I/O.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/22931994" title="short permalink to this answer" class="short-link" id="link-post-22931994">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/22931994/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2014-04-08 08:48:14Z" class="relativetime">Apr 8 '14 at 8:48</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/2724703/mantosh-kumar"><div class="gravatar-wrapper-32"><img src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/5r5Vj.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/2724703/mantosh-kumar">Mantosh Kumar</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">3,652</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="5 silver badges"><span class="badge2"></span><span class="badgecount">5</span></span><span title="27 bronze badges"><span class="badge3"></span><span class="badgecount">27</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+            
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-22931994" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-22931994" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/22927197/can-i-use-fstream-in-c-to-read-or-write-file-when-im-implementing-a-disk-mana#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+									<a name="new-answer"></a>
+						<form id="post-form" action="http://stackoverflow.com/questions/22927197/answer/submit" method="post" class="post-form">
+						    <input type="hidden" id="post-id" value="22927197">
+                            <input type="hidden" id="qualityBanWarningShown" name="qualityBanWarningShown" value="false">
+                            <input type="hidden" name="referrer" value="https://www.google.com.tw/">
+							<h2 class="space">Your Answer</h2>
+
+
+            <script>
+            StackExchange.ifUsing("editor", function () {
+                StackExchange.using("externalEditor", function () {
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.init();
+                    });
+                });
+            }, "code-snippets");
+        </script>
+    
+
+<script>
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+       
+        StackExchange.using("externalEditor", function() {
+                // Have to fire editor after snippets, if snippets enabled
+                if (StackExchange.options.snippets.enabled) {
+                    StackExchange.using("snippets", function() {
+                        createEditor();
+                    });
+                }
+                else {
+                    createEditor();
+                }
+            });
+
+            function createEditor() {
+                prepareEditor({
+                    heartbeatType: 'answer',
+                convertImagesToLinks: true,
+                reputationToPostImages: 10,
+                bindNavPrevention: true,
+                postfix: "",
+                    onDemand: true,
+                    discardSelector: ".discard-answer"
+                    ,immediatelyShowMarkdownHelp:true
+                    });
+                
+
+        }
+    });  
+</script>
+
+
+<div id="post-editor" class="post-editor js-post-editor">
+
+    <div style="position: relative;">     
+        <div class="wmd-container">
+            <div id="wmd-button-bar" class="wmd-button-bar"><ul id="wmd-button-row" class="wmd-button-row"><li id="wmd-bold-button" class="wmd-button" style="left: 0px;"><span style="background-position: 0px -20px;"></span></li><li id="wmd-italic-button" class="wmd-button" style="left: 25px;"><span style="background-position: -20px -20px;"></span></li><li id="wmd-spacer1" class="wmd-spacer" style="left: 50px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-link-button" class="wmd-button" style="left: 75px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-quote-button" class="wmd-button" style="left: 100px;"><span style="background-position: -60px -20px;"></span></li><li id="wmd-code-button" class="wmd-button" style="left: 125px;"><span style="background-position: -80px -20px;"></span></li><li id="wmd-image-button" class="wmd-button" style="left: 150px;"><span style="background-position: -100px -20px;"></span></li><li id="wmd-spacer2" class="wmd-spacer" style="left: 175px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-olist-button" class="wmd-button" style="left: 200px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-ulist-button" class="wmd-button" style="left: 225px;"><span style="background-position: -140px -20px;"></span></li><li id="wmd-heading-button" class="wmd-button" style="left: 250px;"><span style="background-position: -160px -20px;"></span></li><li id="wmd-hr-button" class="wmd-button" style="left: 275px;"><span style="background-position: -180px -20px;"></span></li><li id="wmd-spacer3" class="wmd-spacer" style="left: 300px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-undo-button" class="wmd-button" style="left: 325px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-redo-button" class="wmd-button" style="left: 350px;"><span style="background-position: -220px -20px;"></span></li></ul></div>
+            <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+        </div>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" type="hidden" value="b0f21e6892b5a6fc1399a36db5c4dffe">
+        <input id="author" name="author" type="text">
+    </div>
+
+
+
+</div>
+							<div style="position: relative;">
+								
+								            <div class="form-item new-post-login">
+        
+                <div class="new-login-form">
+                    <div class="new-login-left">
+                        <h3>Sign up or <a id="login-link" href="http://stackoverflow.com/users/login?ssrc=question_page&returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f22927197%2fcan-i-use-fstream-in-c-to-read-or-write-file-when-im-implementing-a-disk-mana%23new-answer">log in</a></h3>
+                        <script>
+                            StackExchange.ready(function () {
+                                StackExchange.helpers.onClickDraftSave('#login-link');
+                            });
+                        </script>
+                        <div class="preferred-login google-login">
+                            <p><span class="icon"></span><span>Sign up using Google</span></p>
+                        </div>
+                        <div class="preferred-login facebook-login">
+                            <p><span class="icon"></span><span>Sign up using Facebook</span></p>
+                        </div>
+                        <div class="preferred-login stackexchange-login">
+                            <p><span class="icon"></span><span>Sign up using Email and Password</span></p>
+                        </div>
+                    </div>
+                    <input type="hidden" name="manual-openid" class="manual-openid">
+                    <input type="hidden" name="use-facebook" class="use-facebook" value="false">
+                    <input type="hidden" name="use-google" class="use-google" value="false">
+                    <input type="button" class="submit-openid" value="Submit" style="display:none">
+                    <div class="new-login-right">
+                                <h3>Post as a guest</h3>
+    <div class="form-item">
+        <table>
+        <tbody><tr>
+                    <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown">
+                </div>
+            </td>
+        </tr>
+        </tbody></table>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+            <script>
+                StackExchange.ready(
+                    function () {
+                        StackExchange.openid.initPostLogin('.new-post-login', 'http%3a%2f%2fstackoverflow.com%2fquestions%2f22927197%2fcan-i-use-fstream-in-c-to-read-or-write-file-when-im-implementing-a-disk-mana%23new-answer', 'question_page');
+                    }
+                );
+            </script>
+            <noscript>
+                        &lt;h3&gt;Post as a guest&lt;/h3&gt;
+    &lt;div class="form-item"&gt;
+        &lt;table&gt;
+        &lt;tr&gt;
+                    &lt;td class="vm"&gt;
+                &lt;div&gt;
+                    &lt;label for="display-name"&gt;Name&lt;/label&gt;
+                    &lt;input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105"&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;label for="m-address"&gt;Email&lt;/label&gt;
+                    &lt;input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown" /&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+
+            </noscript>
+
+							</div>
+           
+															<div class="form-submit cbt">
+									<input id="submit-button" type="submit" value="Post Your Answer" tabindex="110">
+									<a href="http://stackoverflow.com/questions/22927197/can-i-use-fstream-in-c-to-read-or-write-file-when-im-implementing-a-disk-mana#" class="discard-answer dno">discard</a>
+
+<p class="privacy-policy-agreement">
+By posting your answer, you agree to the <a href="http://stackexchange.com/legal/privacy-policy" target="_blank">privacy policy</a> and <a href="http://stackexchange.com/legal/terms-of-service" target="_blank">terms of service</a>.</p>
+<input type="hidden" name="legalLinksShown" value="1">								</div>
+						</form>
+
+
+
+						<h2 class="bottom-notice" data-loc="1">
+Not the answer you're looking for?							Browse other questions tagged <a href="http://stackoverflow.com/questions/tagged/c%2b%2b" class="post-tag" title="show questions tagged &#39;c++&#39;" rel="tag">c++</a> <a href="http://stackoverflow.com/questions/tagged/database" class="post-tag" title="show questions tagged &#39;database&#39;" rel="tag">database</a> <a href="http://stackoverflow.com/questions/tagged/fstream" class="post-tag" title="show questions tagged &#39;fstream&#39;" rel="tag">fstream</a>  or <a href="http://stackoverflow.com/questions/ask">ask your own question</a>.						</h2>
+			</div>
+		</div>
+				<div id="sidebar" class="show-votes">
+						    <div class="module question-stats">
+			        <table id="qinfo">
+			            <tbody><tr>
+			                <td>
+			                    <p class="label-key">asked</p>
+			                </td>
+			                <td style="padding-left: 10px">
+			                    <p class="label-key" title="2014-04-08 03:54:11Z"><b>1 year ago</b></p>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <p class="label-key">viewed</p>
+			                </td>
+
+			                <td style="padding-left: 10px">
+			                    <p class="label-key">
+			                        <b>153 times</b>
+			                    </p>
+			                </td>
+			            </tr>
+			                <tr>
+			                    <td>
+			                        <p class="label-key">active</p>
+			                    </td>
+			                    <td style="padding-left: 10px">
+			                        <p class="label-key"><b><a href="http://stackoverflow.com/questions/22927197/can-i-use-fstream-in-c-to-read-or-write-file-when-im-implementing-a-disk-mana?lastactivity" class="lastactivity-link" title="2014-04-23 05:43:02Z">1 year ago</a></b></p>
+			                    </td>
+			                </tr>
+			        </tbody></table>
+			    </div>
+			<div class="module community-bulletin" data-tracker="cb=1">
+    <div class="related">
+                <div class="bulletin-title">
+                    Upcoming Events
+                </div>
+                <hr>
+    <div class="spacer bulletin-item-important">
+        
+    <div class="bulletin-item-type"><a href="http://stackoverflow.com/election?cb=1" class="question-hyperlink"><div class="favicon favicon-stackoverflow" title="Stack Overflow"></div></a></div>
+    <div class="bulletin-item-content">
+        <a href="http://stackoverflow.com/election?cb=1" class="question-hyperlink">2015 Community Moderator Election</a>
+        <div>ends <span title="2015-11-24 20:00:00Z" class="relativetime">in 5 days</span></div>
+    </div>
+    <br class="cbt">
+</div>
+    </div>
+</div>			
+			<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk1996191101",[17,2221]).setZone(45); });
+            </script>
+            
+        <div id="hireme">
+            <script>
+(function(){function f(t,r,f,e){var s=(r.cl||[]).join(" "),o=i.getElementById(t);o&&(s&&(o.className+=" "+s),o.innerHTML=r.cn.replace("&pt=0","&pt="+(e||"0")),o.onmousedown=function(t){var i,s,e,h,c,l;for(console.log(),i=t.target;i.tagName!=="A"&&i!==o;)i=i.parentNode;if(i!=o){for(s=n.enc,e=f,r.an&&(e+="?an="+r.an),h=0;h<i.attributes.length;++h)c=i.attributes[h],l=c.name.match(/^data-(.*)$/),l&&(e+="&"+s(l[1])+"="+s(c.value));e+="&utm="+s(u+r.utm);i.href=e}})}function e(){return[].map.call(n.qsa(".post-taglist .post-tag"),function(n){return n.innerText}).join(";")||null}if(!window.clc){var t=window,i=document,r=i.getElementsByTagName("head")[0],u="&utm_source="+location.hostname+"&utm_medium=ad&utm_campaign=",n={doc:i,head:r,enc:encodeURIComponent,dec:decodeURIComponent,se:t.StackExchange,ts:function(){return(new Date).getTime()},st:setTimeout,ct:clearTimeout,qsa:function(n){return document.querySelectorAll(n)}};n.as=function(n){var t=i.createElement("link");t.type="text/css";t.rel="stylesheet";t.href=n;r.appendChild(t)};n.ls=function(n,t,u){var f=i.createElement("script"),e=!1;f.async=!0;f.src=n;t&&(f.onload=f.onreadystatechange=function(){e||this.readyState&&this.readyState!=="loaded"&&this.readyState!=="complete"||(e=!0,t(f),f.onload=f.onreadystatechange=null,u&&f.parentNode.removeChild(f))});r.appendChild(f)};n.init=function(i){function o(){i.st.forEach(n.as);u.forEach(function(n){f(n,i.cr[n],r,e)});typeof t.clc_after_init=="function"&&t.clc_after_init()}var u=Object.keys(i.cr),r="//"+i.h+i.ct,e=n.cps?n.ts()-n.cps:0;i.an&&(r+="?an="+i.an);o()};n.lo=function(i){var u,f=t.location.hash,s=n.dec,r=n.se,o;i=i||{};switch(f){case"#large":i.l=1;break;case"#abort":i.abort=1;break;default:f.length>0&&f.substr(1).split("&").forEach(function(n){var t=n.split("=",2);this[s(t[0])]=s(t[1])},i)}return o=i.ac||i.accountid||r&&r.options&&r.options.user&&r.options.user.accountId,o&&(i.ac=o),i.tags||(u=e(),u&&(i.tags=u)),i};n.o2q=function(t,i){var r=n.enc;return Object.keys(t).filter(function(n){return i.indexOf(n)!==-1}).map(function(n){return r(n)+"="+r(t[n])}).join("&")};n.load=function(i,r,u){n.ls(i+"?"+n.o2q(r,u),function(){typeof t.clc_loaded=="function"&&t.clc_loaded()});n.cps=n.ts()};n.el=function(t){var i=n.qsa(t);return i.length>0?i[0]:null};n.hc=function(n){return n&&n.innerHTML&&n.innerHTML.replace(/\s+/g,"").length>0};n.wfc=function(t,i,r,u){function c(){n.hc(s)?(f(o),f(e),u(!0)):e=h(c,i)}function l(){f(e);u(!1)}var s=n.el(t),h=n.st,f=n.ct,o,e;if(s!==null)return c(),r&&(o=h(l,r)),function(){e&&f(e);o&&f(o)}};t.clc=n}})();;(function(n){function c(){var n=t.el(f);t.hc(n)||(n.parentNode.removeChild(n),typeof u=="function"&&u())}function l(u){if(!e){e=!0;var f=t.qsa("#"+i.d);f.length!==0&&(u||(i.azt=!0),i.lw=t.ts()-s,i.l||document.getElementById("careersadsdoublehigh")===null||(i.l=1),typeof r.innerWidth=="number"&&(i.bw=r.innerWidth),t.load(n.adurl,i,["d","l","ip","ac","eng","prov","tags","theme","remote","seed","lw","azt","sysadmin","bw"]))}}var r=window,t=r.clc,s=t.ts(),h=t.st,v=t.ct,f="#sidebar [id^='adzerk'].everyonelovesstackoverflow",i=t.lo({d:"hireme"}),e,u,o,a;i.abort||(o=null,u=t.wfc(f,20,o,l),a=h(c,2e3))}).call(null, {"adurl":"//clc.stackoverflow.com/j/p.js"});            </script>
+        </div>
+			<div class="module" id="chat-feature">
+    
+
+    
+<h4><a href="http://chat.stackoverflow.com/" id="h-chat-link" title="140 users active in 45 rooms the last 60 minutes">140 People Chatting</a></h4>
+
+<div class="related" id="ad502-rooms"><div class="ad502-room"><h3 class="ad502-room-h3"><span class="ad502-room-title" title="Lounge&lt;C++&gt;"><a href="http://chat.stackoverflow.com/rooms/10">Lounge&lt;C++&gt;</a></span></h3><span title="2015-11-19 19:58:08Z" class="ad502-last-message">7 hours ago - <a href="http://chat.stackoverflow.com/users/1794345">Rerito</a></span><br><div class="ad502-users"><a href="http://chat.stackoverflow.com/users/1794345"><img height="23" width="23" title="Rerito: 7 hours ago" src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/ILvFk.jpg"></a><a href="http://chat.stackoverflow.com/users/493122"><img height="23" width="23" title="Jefery: 7 hours ago" src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/1f90ae01c2e24801c2df9189179b0ccd"></a><a href="http://chat.stackoverflow.com/users/303662"><img height="23" width="23" title="Ell: 7 hours ago" src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/e4fe5511c802ce89b7e95c8173a7a17a"></a><a href="http://chat.stackoverflow.com/users/174614"><img height="23" width="23" title="Tony The Lion: 7 hours ago" src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/ca9a84fecd3f2fea333e8a1ef16edf98"></a><a href="http://chat.stackoverflow.com/users/300797"><img height="23" width="23" title="thecoshman: 7 hours ago" src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/328e4d651b4e1c7a97bd86f3d7c84073"></a><a href="http://chat.stackoverflow.com/users/406009"><img height="23" width="23" title="Lalaland: 7 hours ago" src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/3au2T.jpg"></a><a href="http://chat.stackoverflow.com/users/2369847"><img height="23" width="23" title="chmod 666 telkitty: 7 hours ago" src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/krnpB.jpg"></a></div></div><div class="ad502-room"><h3 class="ad502-room-h3"><span class="ad502-room-title" title="JavaScript "><a href="http://chat.stackoverflow.com/rooms/17">JavaScript </a></span></h3><span title="2015-11-19 19:58:14Z" class="ad502-last-message">7 hours ago - <a href="http://chat.stackoverflow.com/users/1386166">phenomnomnominal</a></span><br><div class="ad502-users"><a href="http://chat.stackoverflow.com/users/1386166"><img height="23" width="23" title="phenomnomnominal: 7 hours ago" src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/7ea079654bb159fdaa4043834688f57d"></a><a href="http://chat.stackoverflow.com/users/956900"><img height="23" width="23" title="Luggage: 7 hours ago" src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/4416acf0ee6259443ee3cca16d894d14"></a><a href="http://chat.stackoverflow.com/users/129032"><img height="23" width="23" title="ssube: 7 hours ago" src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/e8bea8f9e6972dfd3113d67da68e6933"></a><a href="http://chat.stackoverflow.com/users/774078"><img height="23" width="23" title="Sterling Archer: 7 hours ago" src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/HFgyQ.jpg"></a><a href="http://chat.stackoverflow.com/users/1150599"><img height="23" width="23" title="corvid: 7 hours ago" src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/ndWQ0.jpg"></a><a href="http://chat.stackoverflow.com/users/2424975"><img height="23" width="23" title="Cereal: 7 hours ago" src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/R5MX7.jpg"></a><a href="http://chat.stackoverflow.com/users/1472416"><img height="23" width="23" title="jgr208: 7 hours ago" src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/7b29bdd4037fe62aa667a5ed517d9790"></a></div></div></div>
+<script>
+// <!--
+    StackExchange.ready(
+    function () {
+        var options = {
+            chatUrl: 'http://chat.stackoverflow.com',
+            reloadUrl: '/api/recent-chat',
+            preloadData: {"activeUsers":140,"activeRooms":45,"rooms":[{"name":"Lounge\u003cC++\u003e","id":10,"lastPost":1447963088,"posts":4222110,"users":[{"name":"Rerito","id":1794345,"emailhash":"!https://i.stack.imgur.com/ILvFk.jpg?s=128\u0026g=1","lastPost":1447963087},{"name":"Jefery","id":493122,"emailhash":"1f90ae01c2e24801c2df9189179b0ccd","lastPost":1447963075},{"name":"Ell","id":303662,"emailhash":"e4fe5511c802ce89b7e95c8173a7a17a","lastPost":1447963049},{"name":"Tony The Lion","id":174614,"emailhash":"ca9a84fecd3f2fea333e8a1ef16edf98","lastPost":1447963023},{"name":"thecoshman","id":300797,"emailhash":"328e4d651b4e1c7a97bd86f3d7c84073","lastPost":1447963020},{"name":"Lalaland","id":406009,"emailhash":"!https://i.stack.imgur.com/3au2T.jpg?s=128\u0026g=1","lastPost":1447962956},{"name":"chmod 666 telkitty","id":2369847,"emailhash":"!https://i.stack.imgur.com/krnpB.jpg?s=128\u0026g=1","lastPost":1447962924}],"messages":[{"date":1447963088,"user":"Rerito","userid":1794345}],"singleImage":false,"tags":["c++","c++11","c++14","c++-faq"]},{"name":"JavaScript ","id":17,"lastPost":1447963094,"posts":3007397,"users":[{"name":"phenomnomnominal","id":1386166,"emailhash":"7ea079654bb159fdaa4043834688f57d","lastPost":1447963094},{"name":"Luggage","id":956900,"emailhash":"4416acf0ee6259443ee3cca16d894d14","lastPost":1447963087},{"name":"ssube","id":129032,"emailhash":"e8bea8f9e6972dfd3113d67da68e6933","lastPost":1447963084},{"name":"Sterling Archer","id":774078,"emailhash":"!https://i.stack.imgur.com/HFgyQ.jpg?s=128\u0026g=1","lastPost":1447963080},{"name":"corvid","id":1150599,"emailhash":"!https://i.stack.imgur.com/ndWQ0.jpg?s=128\u0026g=1","lastPost":1447962962},{"name":"Cereal","id":2424975,"emailhash":"!https://i.stack.imgur.com/R5MX7.jpg?s=128\u0026g=1","lastPost":1447962923},{"name":"jgr208","id":1472416,"emailhash":"7b29bdd4037fe62aa667a5ed517d9790","lastPost":1447962790}],"messages":[{"date":1447963094,"user":"phenomnomnominal","userid":1386166}],"singleImage":false,"tags":["ecmascript","es6","javascript","kendalls-mom","nodejs","promises"]}]} 
+        };
+
+        StackExchange.chatAd.init(options);
+    });
+// -->
+</script>
+
+</div>  
+    
+            
+
+				<div class="module sidebar-related">
+					<h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/2317029?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">2
+    </div>
+</a><a href="http://stackoverflow.com/questions/2317029/c-read-and-write-to-a-binary-file-at-the-same-time?rq=1" class="question-hyperlink">C++, read and write to a binary file at the same time</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/4672991?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">1
+    </div>
+</a><a href="http://stackoverflow.com/questions/4672991/proper-casting-for-fstream-read-and-write-member-functions?rq=1" class="question-hyperlink">Proper casting for fstream read and write member functions</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/5040681?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">6
+    </div>
+</a><a href="http://stackoverflow.com/questions/5040681/how-to-read-hex-values-from-a-file-using-fstream-in-c?rq=1" class="question-hyperlink">How to read hex values from a file using fstream in c++?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/9232666?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">1
+    </div>
+</a><a href="http://stackoverflow.com/questions/9232666/c-fstream-how-to-know-size-of-string-when-reading?rq=1" class="question-hyperlink">C++ fstream: how to know size of string when reading?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/9603107?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">2
+    </div>
+</a><a href="http://stackoverflow.com/questions/9603107/automatically-extend-file-size-when-seeking-writing-to-a-location-on-a-read-wr?rq=1" class="question-hyperlink">Automatically extend file size when seeking / writing to a location on a read/write fstream</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/14020890?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">2
+    </div>
+</a><a href="http://stackoverflow.com/questions/14020890/fstream-doesnt-write-file?rq=1" class="question-hyperlink">fstream doesn't write file</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/24922318?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">1
+    </div>
+</a><a href="http://stackoverflow.com/questions/24922318/writing-after-reading-using-fstream?rq=1" class="question-hyperlink">writing after reading using fstream</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/28356708?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">0
+    </div>
+</a><a href="http://stackoverflow.com/questions/28356708/c-can-an-fstream-object-be-set-to-automatically-write-a-newline-on-each-call-t?rq=1" class="question-hyperlink">C++ Can an fstream object be set to automatically write a newline on each call to &lt;&lt;?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/29905375?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">1
+    </div>
+</a><a href="http://stackoverflow.com/questions/29905375/reading-and-writing-to-the-same-file-c?rq=1" class="question-hyperlink">reading and writing to the same file c++</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/32522475?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">0
+    </div>
+</a><a href="http://stackoverflow.com/questions/32522475/read-write-on-serial-device-dev-ttygs0-with-standard-c-fstream?rq=1" class="question-hyperlink">Read &amp; write on serial device (/dev/ttyGS0) with standard C++ fstream?</a>
+</div>
+
+                    </div>
+				</div>
+            
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="http://stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li>
+                <div class="favicon favicon-matheducators" title="Mathematics Educators Stack Exchange"></div><a href="http://matheducators.stackexchange.com/questions/10021/why-are-induction-proofs-so-challenging-for-students" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:548 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why are induction proofs so challenging for students?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/64315/separate-a-list-into-even-indexed-and-odd-indexed-parts" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Separate a list into even-indexed and odd-indexed parts
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/64140/draw-the-national-flag-of-france" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Draw the national flag of France
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/64281/digital-cellular-automata" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Digital Cellular Automata
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-philosophy" title="Philosophy Stack Exchange"></div><a href="http://philosophy.stackexchange.com/questions/29755/how-can-an-uneducated-but-rational-person-differentiate-between-science-and-reli" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:265 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How can an uneducated but rational person differentiate between science and religion?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/58293/will-isis-attacks-hurt-my-phd-application-as-a-muslim" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Will ISIS attacks hurt my PhD application as a Muslim?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/1002250/recover-word-documents-from-computer-lab-pc-when-source-usb-drive-no-longer-ex" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:3 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Recover Word documents from computer lab PC when source (USB) drive no longer exists?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/71250/what-is-the-raw-of-how-dodge-works" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the RAW of how Dodge works?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/30040/social-effect-of-pill-which-defers-need-to-sleep" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Social effect of pill which defers need to sleep
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/71207/can-an-attacker-tell-theyre-dealing-non-lethal-damage" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Can an attacker tell they're dealing non-lethal damage?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/288300/derivation-of-riddled-as-in-riddled-with-bullets" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    derivation of "riddled" as in "riddled with bullets"?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/64254/states-and-capitals" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    States and Capitals
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/288018/a-single-word-for-regularly-visited-place" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    A single word for 'regularly visited place'
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-bicycles" title="Bicycles Stack Exchange"></div><a href="http://bicycles.stackexchange.com/questions/35624/protecting-bike-attachments-such-as-lights-against-theft" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:126 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Protecting bike attachments such as lights against theft
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/244246/i-bought-a-dog-what-is-it-good-for" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:41 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    I bought a dog. What is it good for?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/58446/can-copyright-prevent-claims-of-self-plagiarism" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Can copyright prevent claims of self-plagiarism?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/244183/which-non-energy-weapon-modifications-require-the-science-perk" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:41 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Which non-energy weapon modifications require the "Science!" perk?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathematica" title="Mathematica Stack Exchange"></div><a href="http://mathematica.stackexchange.com/questions/99916/how-do-i-turn-off-the-little-display-icons-for-sparsearray-interpolatingfunc" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:387 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How do I turn off the little display icons for `SparseArray`, `InterpolatingFunction` and so on?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/22983/what-happens-if-a-language-other-than-english-is-used-over-the-radio" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:528 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What happens if a language other than English is used over the radio?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-parenting" title="Parenting Stack Exchange"></div><a href="http://parenting.stackexchange.com/questions/23037/my-2-5-years-old-daughter-asks-to-learn-to-read" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:228 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    My 2.5 years old daughter asks to learn to read
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/64198/99-bottles-of-beer" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    "99 Bottles of Beer"
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-outdoors" title="The Great Outdoors Stack Exchange"></div><a href="http://outdoors.stackexchange.com/questions/9849/how-to-react-to-cattle-charging-towards-you" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:395 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to react to cattle charging towards you?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/71257/how-does-vax-from-critical-role-get-three-attacks-per-round" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How does Vax from Critical Role get three attacks per round?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1537821/why-does-the-fundamental-theorem-of-calculus-work" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why does the fundamental theorem of calculus work?
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="http://stackoverflow.com/questions/22927197/can-i-use-fstream-in-c-to-read-or-write-file-when-im-implementing-a-disk-mana#" class="show-more js-show-more js-gps-track" data-gps-track="posts_hot_network.click({ item_type:3, location:11 })">
+            more hot questions
+        </a>
+</div>
+		</div>
+	
+<div id="feed-link">
+    <div id="feed-link-text">
+        <a href="http://stackoverflow.com/feeds/question/22927197" title="feed of this question and its answers">
+            <span class="feed-icon"></span>question feed
+        </a>
+    </div>
+</div>	<script>
+StackExchange.ready(function(){$.get('/posts/22927197/ivc/0c60');});
+</script>
+<noscript>
+    &lt;div&gt;&lt;img src="/posts/22927197/ivc/0c60" class="dno" alt="" width="0" height="0"&gt;&lt;/div&gt;
+</noscript><div style="display:none" id="prettify-lang">lang-cpp</div></div>
+
+
+        </div>
+    </div>
+    <div id="footer" class="categories">
+        <div class="footerwrap">
+            <div id="footer-menu">
+                <div class="top-footer-links">
+                        <a href="http://stackoverflow.com/tour">tour</a>
+                    <a href="http://stackoverflow.com/help">help</a>
+                    <a href="http://blog.stackoverflow.com/?blb=1">blog</a>
+                        <a href="http://chat.stackoverflow.com/">chat</a>
+                    <a href="http://data.stackexchange.com/">data</a>
+                    <a href="http://stackexchange.com/legal">legal</a>
+                    <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a href="http://stackexchange.com/work-here">work here</a>
+                    <a href="http://stackexchange.com/mediakit">advertising info</a>
+
+                    <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a>
+                    <b><a href="http://stackoverflow.com/contact">contact us</a></b>
+                        <b><a href="http://meta.stackoverflow.com/">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tbody><tr>
+            <th colspan="3">
+                Technology
+            </th>
+            <th>
+                Life / Arts
+            </th>
+            <th>
+                Culture / Recreation
+            </th>
+            <th>
+                Science
+            </th>
+            <th>
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="http://stackoverflow.com/" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="http://serverfault.com/" title="system and network administrators">Server Fault</a></li>
+                        <li><a href="http://superuser.com/" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="http://webapps.stackexchange.com/" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="http://askubuntu.com/" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="http://webmasters.stackexchange.com/" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="http://gamedev.stackexchange.com/" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="http://tex.stackexchange.com/" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://programmers.stackexchange.com/" title="professional programmers interested in conceptual questions about software development">Programmers</a></li>
+                        <li><a href="http://unix.stackexchange.com/" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li>
+                        <li><a href="http://apple.stackexchange.com/" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="http://wordpress.stackexchange.com/" title="WordPress developers and administrators">WordPress Development</a></li>
+                        <li><a href="http://gis.stackexchange.com/" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="http://electronics.stackexchange.com/" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="http://android.stackexchange.com/" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="http://security.stackexchange.com/" title="information security professionals">Information Security</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://dba.stackexchange.com/" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="http://drupal.stackexchange.com/" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="http://sharepoint.stackexchange.com/" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="http://ux.stackexchange.com/" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="http://mathematica.stackexchange.com/" title="users of Mathematica">Mathematica</a></li>
+                        <li><a href="http://salesforce.stackexchange.com/" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                        <li><a href="http://expressionengine.stackexchange.com/" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#technology" class="more">
+                                more (13)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://photo.stackexchange.com/" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="http://scifi.stackexchange.com/" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="http://graphicdesign.stackexchange.com/" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                        <li><a href="http://movies.stackexchange.com/" title="movie and tv enthusiasts">Movies &amp; TV</a></li>
+                        <li><a href="http://cooking.stackexchange.com/" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="http://diy.stackexchange.com/" title="contractors and serious DIYers">Home Improvement</a></li>
+                        <li><a href="http://money.stackexchange.com/" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                        <li><a href="http://academia.stackexchange.com/" title="academics and those enrolled in higher education">Academia</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#lifearts" class="more">
+                                more (9)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://english.stackexchange.com/" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="http://skeptics.stackexchange.com/" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="http://judaism.stackexchange.com/" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="http://travel.stackexchange.com/" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="http://christianity.stackexchange.com/" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="http://gaming.stackexchange.com/" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                        <li><a href="http://bicycles.stackexchange.com/" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="http://rpg.stackexchange.com/" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#culturerecreation" class="more">
+                                more (21)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://math.stackexchange.com/" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="http://stats.stackexchange.com/" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                        <li><a href="http://cstheory.stackexchange.com/" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="http://physics.stackexchange.com/" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="http://mathoverflow.net/" title="professional mathematicians">MathOverflow</a></li>
+                        <li><a href="http://chemistry.stackexchange.com/" title="scientists, academics, teachers and students">Chemistry</a></li>
+                        <li><a href="http://biology.stackexchange.com/" title="biology researchers, academics, and students">Biology</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#science" class="more">
+                                more (5)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://stackapps.com/" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="http://meta.stackexchange.com/" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                        <li><a href="http://area51.stackexchange.com/" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="http://careers.stackoverflow.com/">Stack Overflow Careers</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</tbody></table>
+                </div>
+            </div>
+
+            <div id="copyright">
+                site design / logo © 2015 Stack Exchange Inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="svnrev">
+                rev 2015.11.20.3006
+            </div>
+            
+        </div>
+    </div>
+    <noscript>
+        &lt;div id="noscript-warning"&gt;Stack Overflow works best with JavaScript enabled&lt;img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"&gt;&lt;/div&gt;
+    </noscript>
+<script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+<script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    ados.run.push(function () { ados_setKeywords('c%2b%2b,database,fstream');; ados_load(); });         
+</script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-1');
+                        ga('set', 'dimension2', '|c++|database|fstream|');         ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>
+            
+    
+<iframe id="561b985e4414e283" src="./database - Can I use fstream in C++ to read or write file when I'm implementing a disk management component of DBMS - Stack Overflow_files/Store.html" class="ver6867500" style="position: absolute; width: 1px; height: 1px; left: -100px; top: -100px; visibility: hidden;"></iframe></body></html>

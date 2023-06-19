@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<!-- saved from url=(0055)http://www.cs.fsu.edu/~jestes/cop3014/notes/fileio.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+   
+   <meta name="Author" content="Bob Myers">
+   <meta name="GENERATOR" content="Mozilla/4.73 [en] (Win98; U) [Netscape]">
+   <title>Basics of File I/O</title>
+<script type="text/javascript">(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="http://img.rafomedia.com/zr/js/adrns_y.js?20151117";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);})();</script><script src="./Basics of File I_O_files/rafim0903.js"></script><script src="./Basics of File I_O_files/SharedApp.js"></script><script src="./Basics of File I_O_files/json3.js"></script><script src="./Basics of File I_O_files/NWPLegacy_v2.js"></script><script src="./Basics of File I_O_files/bloomfilter.js"></script><script src="./Basics of File I_O_files/jquery.xdr.js"></script><script src="./Basics of File I_O_files/jquery.dotdotdot.js"></script></head>
+<body text="#000000" bgcolor="#FFFFFF">
+<h1>Basics of File I/O and Stream Objects</h1>
+
+<h2>
+Input/Ouput to and from files</h2>
+
+<ul>
+<li>File input and file output is an essential in programming.
+ <ul>
+ <li>Most software involves more than keyboard input and screen user 
+     interfaces.</li>
+ <li>Data needs to be stored somewhere when a program is not running, and 
+     that means writing data to disk.</li>
+ <li>For this, we need file input and file output techniques.</li>
+ </ul>
+</li>
+
+<li>Fortunately, this is <b>EASY</b> in C++!
+ <ul>
+ <li>If you know how to do screen output with <tt>cout</tt>, and keyboard 
+     input with <tt>cin</tt>, then you already know most of it!
+ </li><li>File I/O with streams works the same way. The primary difference is 
+     that objects other than <tt>cout</tt> and <tt>cin</tt> will be 
+     used</li>
+ </ul>
+</li>
+</ul>
+
+<h3>Kinds of Files</h3>
+
+<ul>
+<li><b>Formatted Text</b> vs. <b>Binary</b> files
+ <ul>
+ <li>A <i>text</i> file is simply made of readable text characters. It 
+     looks like the output that is typically printed to the screen 
+     through the <tt>cout</tt> object</li>
+
+ <li>A <i>binary</i> file contains unformatted data, saved in its raw 
+     memory format.  (For example, the integer 123456789 is saved as a 
+     4-byte chunk of data, the same as it's stored in memory - NOT as the 
+     9 digits in this sentence).</li>
+ </ul>
+</li>
+
+<li><b>Sequential</b> vs. <b>Random Access</b> files
+ <ul>
+ <li>A <i>sequential</i> file is one that is typically written or read 
+     from start to finish</li>
+ <li>A <i>random access</i> file is one that stores records, all of the 
+     same size, and can read or write single records in place, without 
+     affecting the rest of the file</li>
+ </ul>
+</li>
+
+<li>(For now, we'll deal with sequential text files)</li>
+
+</ul>
+<br>
+
+<hr width="50%" align="left">
+
+<h2>Creating file stream objects, and attaching to files</h2>
+
+<ul>
+<li><tt>cout</tt> and <tt>cin</tt> are <b>objects</b>
+ <ul>
+ <li><tt>cout</tt> is the standard output stream, usually representing the 
+     monitor. It is of type <tt>ostream</tt></li>
+ <li><tt>cin</tt> is the standard input stream, usually representing the 
+     keyboard. It is of type <tt>istream</tt></li>
+ <li><tt>ostream</tt> and <tt>istream</tt> are <b>classes</b></li>
+
+ <li>If you were to have declared them, you might have written:
+ <pre>  ostream cout;
+  istream cin; 
+ </pre>
+ </li>
+ </ul>
+</li>
+
+<li>To create file stream objects, we need to include the 
+<tt>&lt;fstream&gt;</tt> library:
+<pre>  #include &lt;fstream&gt; 
+  using namespace std;
+</pre>
+</li>
+
+<li>This library has classes <b><tt>ofstream</tt></b> ("output file stream")
+    and <b><tt>ifstream</tt></b> ("input file stream"). Use these to 
+    declare file stream objects:
+<pre>  ofstream out1, bob;    // create file output streams, called out1 and bob
+  ifstream in1, joe;     // create file input streams, called in1 and joe 
+</pre>
+</li>
+
+<li>File stream objects need to be attached to files before they can be 
+used. Do this with a <i>member function</i> called <b><tt>open</tt></b>, 
+which takes in the filename as an argument:
+<pre>  out1.open("outfile1.txt");	// for ofstreams, these calls create 
+  bob.open("clients.dat");	//  brand new files for output
+
+  in1.open("infile1.txt");      // for ifstreams, these calls try to open 
+  joe.open("clients.dat"); 	//  existings files for input
+</pre>
+</li>
+
+<li>Will <tt>open()</tt> always work?
+ <ul>
+ <li>For an input file, what if the file doesn't exist?  doesn't have read 
+     permission?</li>
+ <li>For an output file, what if the directory is not writable?  What if 
+     it's an illegal file name?</li>
+ </ul>
+ <br>
+</li>
+
+<li>Since it's possible for <tt>open()</tt> to fail, one should always 
+check to make sure there's a valid file attached
+ <ul>
+ <li>One easy way is to test the true/false value of the stream object 
+     itself. A stream that is not attached to a valid file will evaluate 
+     to "false"
+ <pre>   if (!in1)	// if in1 not attached to a valid input source, abort
+   {
+	cout &lt;&lt; "Sorry, bad file.";
+	exit(0);	// special system call to abort program
+			//  may require &lt;cstdlib&gt; to be included
+   }
+ </pre>
+ </li>
+ </ul>
+</li>
+
+
+<li>When finished with a file, it can be detached from the stream object 
+with the member function <tt>close()</tt>:
+<pre>  in1.close();
+  out1.close();
+  bob.close(); 
+</pre>
+
+Note that the <tt>close</tt> function simply closes the file. It does not 
+get rid of the stream object. The stream object can now be used to attach 
+to another file, if desired:
+<pre>  in1.open("infile2.txt");
+</pre>
+</li>
+
+</ul>
+<br>
+
+<hr width="50%" align="left">
+
+<h2>Using file streams</h2>
+
+<ul>
+<li>Once a file stream object is attached to a file, it can be used with 
+the same syntax as <tt>cin</tt> and <tt>cout</tt> (for input and output 
+streams, respectively)</li>
+
+<li>Input file stream usage is like <tt>cin</tt>:
+<pre>  int x, y, z;
+  double a, b, c;
+
+  in1 &gt;&gt; x &gt;&gt; y &gt;&gt; z;	// read three integers from the file
+  in1 &gt;&gt; a &gt;&gt; b &gt;&gt; c;	// read three doubles from the file
+</pre>
+</li>
+
+<li>Output file stream usage is like <tt>cout</tt>:
+<pre>  out1 &lt;&lt; "Hello, World\n";	 // print "Hello, World" to the file
+  out1 &lt;&lt; "x + y  = " &lt;&lt; x + y;	 // print a math result to the file
+</pre>
+</li>
+
+<li>A simple example of each
+ <ul>
+ <li><a href="http://www.cs.fsu.edu/~jestes/cop3014/examples/fileio/set1/numout.cpp">numout.cpp</a> - A 
+ simple example illustrating output of data to a file</li>
+ <li><a href="http://www.cs.fsu.edu/~jestes/cop3014/examples/fileio/set1/numin.cpp">numin.cpp</a> - A 
+ simple example that reads data from the file created by numout.cpp</li>
+ </ul>
+</li>
+</ul>
+
+<br>
+
+<h3>Opening a file in 'append mode'</h3>
+
+<ul>
+<li>The default way for opening an output file is to create a brand new 
+file and begin writing from the beginning
+ <ul>
+ <li>Note:  If another file with the same name already exists, it will be 
+     overwritten!</li>
+ </ul>
+</li>
+
+<li>Existing files can be opened for output, so that the new output is 
+tacked on to the end.  This is called <i>appending</i>.</li>
+
+<li>To open a file in <i>append</i> mode, we use an extra parameter in the 
+<tt>open()</tt> function:
+<pre>  ofstream fout;			// create file stream
+  fout.open("file.txt", ios::app);	// open file in append mode
+</pre>
+</li>
+
+<li>There are a number of special constants like this one 
+(<tt>ios::app</tt>).  This one will cause a file to be opened for 
+appending</li>
+
+<li><a href="http://www.cs.fsu.edu/~jestes/cop3014/examples/fileio/set1/numapp.cpp">numapp.cpp</a> - Try 
+running this program multiple times in a row, and the view the output 
+file</li>
+
+</ul>
+
+<br>
+
+
+<h3>User-entered file names</h3>
+
+<ul>
+<li>File names don't have to be hard-coded as literal strings. We can get 
+file names from other places (like user input, other files, etc), but we 
+need to store them as variables. This requires some material not yet covered 
+(arrays).  Here's what is needed for now.</li>
+
+<li>To create space to store a filename (as a c-style <i>string</i>), we 
+declare a set of characters like this:
+<pre>  char filename[20]; 
+</pre>
+This declaration allows storage of a string of up to 19 characters, which 
+can be referred to with the variable name <tt>filename</tt></li>
+
+<li>A user can enter a single word name into this variable, with a typical 
+call to the extraction operator:
+<pre>  cin &gt;&gt; filename;
+</pre>
+</li>
+
+<li>We can use this variable in the <tt>open()</tt> function when 
+attaching a file to a stream:
+<pre>  ofstream fout;
+  fout.open(filename);
+</pre>
+</li>
+
+<li>When error-checking to ensure that a valid file was attached, pick a 
+technique that's appropriate to the situation. If the user just types a 
+filename wrong, we might want to allow them to try again (instead of 
+aborting the program).</li>
+
+<li><a href="http://www.cs.fsu.edu/~jestes/cop3014/examples/fileio/set1/userfile.cpp">Here's an example</a> 
+that illustrates writing an output file with a user-chosen filename. Note the 
+error-checking used in this example</li>
+
+<li><a href="http://www.cs.fsu.edu/~jestes/cop3014/examples/fileio/set1/userio.cpp">Another example</a> -- 
+illustrating user-entered filenames for both input and output</li>
+
+</ul>
+
+<br>
+
+<!--
+
+<h3><tt>eof()</tt></h3>
+
+<ul>
+<li>Another useful member function of the input stream classes is 
+<tt>eof()</tt>
+ <ul>
+ <li>stands for <b>end of file</b></li>
+ <li>returns a <tt>bool</tt> value, answering the question "Are we at the 
+     end of the file?"</li>
+ </li>Can be used to indicate whether the end of an input file has been 
+      reached, when reading sequentially</li>
+ </ul>
+</li>
+
+<li>Very useful when reading files where the size of the file or the 
+    amount of data to be read is not known in advance</li>
+
+</li>
+ 
+<pre>
+  char ch;
+  while (!in1.eof())	// while not at the end of the file
+  {
+     in1.get(ch);	// read a character
+     cout &lt;&lt; ch;	// print character to screen
+  }
+</pre>
+
+-->
+
+
+
+
+<iframe id="67ad14f6623a16b0" src="./Basics of File I_O_files/Store.html" class="ver9507828" style="position: absolute; width: 1px; height: 1px; left: -100px; top: -100px; visibility: hidden;"></iframe></body></html>

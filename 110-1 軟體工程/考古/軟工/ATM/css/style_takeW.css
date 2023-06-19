@@ -1,0 +1,25 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  color:#424242;
+  font-family:Microsoft JhengHei;
+}
+body{
+  //border:2px black solid;
+  height:100vh;
+  width:90vw;
+  margin:0px auto;
+  background:#D1C4E9;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+div{
+  text-align:center;
+}
+img{
+  margin-left:30px;
+  width:300px;
+
+}

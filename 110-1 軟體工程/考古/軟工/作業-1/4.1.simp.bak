@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sim-project version="11.80" multi-file="no" uid="simp16ffa61ce60e427daa058d01a39a654c">
+  <meta>
+    <name>kkkkkk</name>
+    <authors> </authors>
+    <description />
+  </meta>
+  <counters models="1">
+    <entity-names>
+      <counter>
+        <item-type type-id="actor" type="UmlActor" />
+        <value>3</value>
+      </counter>
+      <counter>
+        <item-type type-id="" type="DrawingItem" />
+        <value>1</value>
+      </counter>
+      <counter>
+        <item-type type-id="use-case" type="UmlUseCase" />
+        <value>5</value>
+      </counter>
+    </entity-names>
+    <entity-ids>
+      <counter>
+        <item-type type-id="" type="AbstractElementGroup" />
+        <value>62</value>
+      </counter>
+      <counter>
+        <item-type type-id="actor" type="UmlActor" />
+        <value>4</value>
+      </counter>
+      <counter>
+        <item-type type-id="dependency" type="UmlDependency" />
+        <value>2</value>
+      </counter>
+      <counter>
+        <item-type type-id="generalization" type="UmlGeneralization" />
+        <value>9</value>
+      </counter>
+      <counter>
+        <item-type type-id="universal-connector" type="UniversalConnector" />
+        <value>2</value>
+      </counter>
+      <counter>
+        <item-type type-id="shape" type="AbstractShapeItem" />
+        <value>2</value>
+      </counter>
+      <counter>
+        <item-type type-id="use-case" type="UmlUseCase" />
+        <value>6</value>
+      </counter>
+    </entity-ids>
+    <diagrams>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.Diagrams.UmlDiagrams.UmlUseCaseDiagram</type>
+        <value>1</value>
+      </counter>
+    </diagrams>
+    <fields />
+  </counters>
+  <alias-groups />
+  <management uid="md-b15e6c0d94514a18bc8523b0444e0bb7" name="" task-id-sequence="0">
+    <persons>
+      <person id="P8f7dc47db74a44e69dca1c492469117d">
+        <first-name />
+        <last-name />
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
+      </person>
+    </persons>
+    <teams />
+    <sprints />
+    <projects />
+    <modules />
+    <tasks />
+    <to-dos />
+  </management>
+  <glossary id="glsr-a261bbe0454c48e3bb6d203e8087833b" />
+  <types default="UML">
+    <type-sets>
+      <type-set file="UmlTypes.xml" />
+    </type-sets>
+    <custom-types />
+  </types>
+  <items />
+  <models>
+    <model id="p3f2fa43b127341499c3254d839e97181_185525464" name="Model1" namespace="" order-index="1">
+      <meta>
+        <authors>
+          <author> </author>
+        </authors>
+        <description />
+        <creation-date>10/21/2018 20:39:28</creation-date>
+        <change-date>01/01/0001 00:00:00</change-date>
+        <revision-count>0</revision-count>
+        <version />
+      </meta>
+      <abstract-items />
+      <sub-models />
+      <diagram type="uml-usecase" id="p3d123e74df13412490ba174c8752d3f6_119641043" name="UseCaseDiagram1" order-index="1" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-special-indicators="false" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="solid" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>10/21/2018 20:39:28</creation-date>
+          <change-date>10/21/2018 21:11:06</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <abstract-items>
+          <item id="f3db3636d8634e21924e14a0abcd62ba" cid="AC001" type="actor" name="銀行客戶" style-class="" visibility="package" change-tracking-state="added" creator="P8f7dc47db74a44e69dca1c492469117d" creation-date="10/21/2018 20:39:36">
+            <style class="default" />
+          </item>
+          <item id="57c74e982905436a97ecbada22e5948e" cid="UC002" type="use-case" name="餘額查詢" style-class="" visibility="package" change-tracking-state="added" creator="P8f7dc47db74a44e69dca1c492469117d" creation-date="10/21/2018 21:03:14">
+            <style class="default" />
+            <use-case>
+              <stakeholders />
+            </use-case>
+          </item>
+          <item id="631902961fee476d92146b9ef65afe40" cid="UC001" type="use-case" name="提款" style-class="" visibility="package" change-tracking-state="added" creator="P8f7dc47db74a44e69dca1c492469117d" creation-date="10/21/2018 21:03:06">
+            <style class="default" />
+            <use-case>
+              <stakeholders />
+            </use-case>
+          </item>
+          <item id="a2f75f011cd648768a08334cd3c6322f" cid="GNR002" type="generalization" name="" style-class="" visibility="package" change-tracking-state="added" creator="P8f7dc47db74a44e69dca1c492469117d" creation-date="10/21/2018 20:45:02" to="631902961fee476d92146b9ef65afe40">
+            <style class="default" />
+          </item>
+          <item id="795430ac6bbe404790f3ecd941001d9f" cid="UC003" type="use-case" name="轉帳" style-class="" visibility="package" change-tracking-state="added" creator="P8f7dc47db74a44e69dca1c492469117d" creation-date="10/21/2018 21:03:16">
+            <style class="default" />
+            <use-case>
+              <stakeholders />
+            </use-case>
+          </item>
+          <item id="c7989ea6da754b4cad7ba481089806f1" cid="UC004" type="use-case" name="跨行轉帳" style-class="" visibility="package" change-tracking-state="added" creator="P8f7dc47db74a44e69dca1c492469117d" creation-date="10/21/2018 21:03:19">
+            <style class="default" />
+            <use-case>
+              <stakeholders />
+            </use-case>
+          </item>
+          <item id="2c6a32c4d1524975858d6c5ca3ce30fe" cid="GNR003" type="generalization" name="" style-class="" visibility="package" change-tracking-state="added" creator="P8f7dc47db74a44e69dca1c492469117d" creation-date="10/21/2018 21:03:36" to="57c74e982905436a97ecbada22e5948e">
+            <style class="default" />
+          </item>
+          <item id="bbb2c71722dc480f9129a301c8fefa8b" cid="GNR005" type="generalization" name="" style-class="" visibility="package" change-tracking-state="added" creator="P8f7dc47db74a44e69dca1c492469117d" creation-date="10/21/2018 21:03:41" to="795430ac6bbe404790f3ecd941001d9f">
+            <style class="default" />
+          </item>
+          <item id="0081c31fdbe548b685fdfeb8971383d4" cid="GNR007" type="generalization" name="" style-class="" visibility="package" change-tracking-state="added" creator="P8f7dc47db74a44e69dca1c492469117d" creation-date="10/21/2018 21:03:49" to="c7989ea6da754b4cad7ba481089806f1">
+            <style class="default" />
+          </item>
+        </abstract-items>
+        <layer id="2bf96736117b4fb6a55517b6115516a2" name="Default" visible="true" enabled="true" locked="false">
+          <item id="f3db3636d8634e21924e14a0abcd62ba" iid="e625137ddb4a4f399c69d1281593ff7c" creation-date="10/21/2018 20:39:36" order-index="0" type="entity">
+            <layout ax="517" ay="274" awidth="50" aheight="100" x="517" y="274" width="50" height="100" name-position="0,10" name-anchor="bottom" auto-anchor="true" label-attached="false" />
+          </item>
+          <item id="a2f75f011cd648768a08334cd3c6322f" iid="81ec9bf0fa1d41b89dcc7d0db4894f07" creation-date="10/21/2018 20:45:02" order-index="4" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="576" y1="324" x2="746" y2="135" start-border-pos="0.375" end-border-pos="0.876666665077209" name-position="0,0" name-width="50">
+              <points>
+                <point x="576" y="324" />
+                <point x="746" y="135" />
+              </points>
+            </layout>
+            <relation to="631902961fee476d92146b9ef65afe40" to-iid="762a5dbdfdbf4959bc244e2d6d26739f" />
+          </item>
+          <item id="631902961fee476d92146b9ef65afe40" iid="762a5dbdfdbf4959bc244e2d6d26739f" creation-date="10/21/2018 21:03:06" order-index="5" type="entity">
+            <layout ax="746" ay="98" awidth="120" aheight="75" x="746" y="98" width="120" height="75" />
+            <use-case />
+          </item>
+          <item id="57c74e982905436a97ecbada22e5948e" iid="df4324571fc44527a3a49f4ae09b190f" creation-date="10/21/2018 21:03:14" order-index="6" type="entity">
+            <layout ax="746" ay="210" awidth="120" aheight="75" x="746" y="210" width="120" height="75" />
+            <use-case />
+          </item>
+          <item id="795430ac6bbe404790f3ecd941001d9f" iid="7bbd233b3e044db9ab56a0700052f531" creation-date="10/21/2018 21:03:16" order-index="7" type="entity">
+            <layout ax="746" ay="322" awidth="120" aheight="75" x="746" y="322" width="120" height="75" />
+            <use-case />
+          </item>
+          <item id="c7989ea6da754b4cad7ba481089806f1" iid="b2be9772332b42f9b5e8d33227c2a238" creation-date="10/21/2018 21:03:19" order-index="8" type="entity">
+            <layout ax="746" ay="447" awidth="120" aheight="75" x="746" y="447" width="120" height="75" />
+            <use-case />
+          </item>
+          <item id="2c6a32c4d1524975858d6c5ca3ce30fe" iid="c31b6614b6914d74ac12723b6a942c7f" creation-date="10/21/2018 21:03:36" order-index="10" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="576" y1="324" x2="746" y2="247" start-border-pos="0.375" end-border-pos="0.876666666666667" name-position="0,0">
+              <points>
+                <point x="576" y="324" />
+                <point x="746" y="247" />
+              </points>
+            </layout>
+            <relation to="57c74e982905436a97ecbada22e5948e" to-iid="df4324571fc44527a3a49f4ae09b190f" />
+          </item>
+          <item id="bbb2c71722dc480f9129a301c8fefa8b" iid="1a95d9481f1d48799838dcaffa64b077" creation-date="10/21/2018 21:03:41" order-index="11" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="576" y1="324" x2="746" y2="360" start-border-pos="0.375" end-border-pos="0.873333333333333" name-position="0,0">
+              <points>
+                <point x="576" y="324" />
+                <point x="746" y="360" />
+              </points>
+            </layout>
+            <relation to="795430ac6bbe404790f3ecd941001d9f" to-iid="7bbd233b3e044db9ab56a0700052f531" />
+          </item>
+          <item id="0081c31fdbe548b685fdfeb8971383d4" iid="7c45fa36eb5b437bbd2e4f1c60402061" creation-date="10/21/2018 21:03:49" order-index="12" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="576" y1="324" x2="746" y2="484" start-border-pos="0.375" end-border-pos="0.876666666666667" name-position="0,0">
+              <points>
+                <point x="576" y="324" />
+                <point x="746" y="484" />
+              </points>
+            </layout>
+            <relation to="c7989ea6da754b4cad7ba481089806f1" to-iid="b2be9772332b42f9b5e8d33227c2a238" />
+          </item>
+        </layer>
+      </diagram>
+    </model>
+  </models>
+</sim-project>

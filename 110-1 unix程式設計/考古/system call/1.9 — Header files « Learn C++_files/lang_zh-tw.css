@@ -1,0 +1,97 @@
+div#nav-group {
+    display:block;
+    height:158px;
+    *height:40px;
+    margin:0;
+    width:962px;
+}
+
+div#breadcrumb {
+    clear:left;
+    color:#7B7E7D;
+    display:none;
+    font-size:9px;
+    left:0;
+    margin:0 auto;
+    padding:13px 10px 5px;
+    position:absolute;
+    top:13.2em;
+}
+
+.tab_selected a,
+.tab_selected a:link,
+.tab_selected a:visited,
+.tab_selected a:hover,
+.tab_selected a:active {
+    color:#aa0828 !important; font-size:11px; _font-size:9px; *font-size:9px; font-weight:bold; cursor:pointer;
+}
+
+.tab_unselected a:link,
+.tab_unselected a:visited,
+.tab_unselected a:hover,
+.tab_unselected a:active {
+    color:#7b7e7d; font-size:11px; _font-size:9px; *font-size:9px; font-weight:bold; cursor:pointer;
+}
+
+.promo_text2 {
+    color:#333333;
+    display:block;
+    padding: 120px 10px 0px 12px;
+}
+
+div.capandpun {
+    width: 100% !important;
+    top: 49px !important;
+}
+.capital-pass{
+    display:none !important;
+}
+
+.left{
+    display: none;
+}
+.passphase{
+    width: 100%;
+    float: none !important;
+    text-align: center !important;
+}
+
+.addspace{
+    width: 100%;
+}
+
+div.number {
+    left: 0 !important;
+}
+
+div.passcontenttext {
+    margin-top: 31px;
+    padding-right: 0 !important;
+    text-align: center !important;
+}
+
+.strongpass .hrlinediv{
+        display: none;
+}
+
+.strongpass {
+    right: 0 !important;
+    width: 100%;
+}
+
+.badpass .hrlinediv{
+        display: none;
+}
+
+.badpass {
+    right: 0 !important;
+    width: 100%;
+}
+
+.wrong {
+    display: none;
+}
+div#worstpass{
+        text-align: center !important;
+        width: 100%;
+}

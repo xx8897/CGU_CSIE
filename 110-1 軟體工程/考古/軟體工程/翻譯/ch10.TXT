@@ -1,0 +1,133 @@
+ch10  Component-Level Design
+
+★What is a Component?
+1.系統的模組化、可配置的、可替換的部分，封裝實踐並揭開介面
+2.OO觀點－元件包含一組合作class
+3.傳統觀點－包含邏輯處理、處理所需的內部資料結構和介面
+
+*Basic Design Principles
+1.開封原則(OCP)－模組元件應對擴展開放，但對修改關閉
+2.Liskov替換原則(LSP)－子class應可替代基本class
+3.依賴逆原則(DIP)－依靠抽象
+4.界面分離原(ISP)－特定的界面比通用界面要好
+5.釋放再利用等價原則(REP)－重複使用&釋放
+6.共同封閉原則(CCP)－以起改變的class屬於彼此
+7.共同再利用原則(CRP)－不能一起用的class不該分在一起
+
+*Design Guidelines3
+1.元件－架構模型一部分的元件命名
+2.介面－提供溝通和合作的重要訊息
+3.依賴和繼承－建從左到右依賴和從底到頂繼承的模型
+
+*Cohesion內聚
+1.傳統觀念－模組的"專一"
+2.OO觀念－內聚意味元件或class僅封裝關係密切的屬性和操作
+3.功能、層級、溝通、順序、程序、時間、效用
+*Levels of cohesion(凝聚力層級)
+功能
+層
+通訊
+順序
+過程
+時間
+效用
+
+*Coupling耦合
+1.傳統觀念－元件與連接其他元件和外部世界的程度
+2.OO觀念－測量class彼此連接程度
+3.內容、共圖、控制、郵票、資料、慣例call、type使用、導入、外部
+
+Component Level Design
+1.確定問題領域對應的設計class
+2.確定基礎架構領域對應的設計class
+3.詳述沒被取得可重用元件的設計class
+3a.確定訊息細節
+3b.確定元件的適當接口
+3c.確定屬性、資料類型、資料結構
+3d.詳述操作處理流程
+4.描述持久性資料來源
+5.開法class或元件的行為表示
+6.描述配置圖以供其他實現細節
+7.考慮每個元件設計
+
+Component Design for WebApps
+Content Design for WebApps
+Functional Design for WebApps
+Designing Conventional Components
+
+*Algorithm Design
+1.檢查元建設計描述
+2.使用逐步細化來開發
+3.使用架構programming來實現程序邏輯
+4.使用"形式方法"來證明邏輯
+
+*Algorithm Design Model
+檢查品質
+1.圖形
+2.虛擬碼
+3.程式語言
+4.決策表
+
+Structured Programming
+1.使用有限的邏輯結構
+2.更可讀、可測試的code
+3."正確性證明"結合使永用
+4.實現高品質
+
+Program Design Language (PDL)
+1.易結合來源code
+2.機器易讀
+3.圖可由PDL生成
+4.易維護
+
+*Why Design Language?
+1.HOL選擇的衍生物
+2.機器可讀、處理
+3.鑲嵌來源碼，易維護
+4.如設計者和編碼者不同，可詳盡的表示
+5.簡單查看
+
+Component-Based Development
+Impediments to Reuse
+
+*Domain Engineering
+1.定義要調查的領域
+2.分類從領域得到項目
+3.收集領域中應用程序代表的樣本
+4.分析每個樣本應用程序
+5.開發分析模型for object
+
+Identifying Reusable Components
+Component-Based SE
+
+*CBSE Activities
+1.元件資格
+2.元件適應
+3.元件組成
+4.元件更新
+
+Qualification
+Adaptation
+Composition
+OMG/ CORBA
+Microsoft COM
+Sun JavaBeans
+
+Classification
+1.列舉分類－
+2.面分類－
+3.屬性分類－
+
+The Reuse Environment
+
+*Composition (成分): 基礎結構必須建立結合組件一起
+架構成分組件包括：
+數據交換模型
+自動化
+結構化儲存
+基礎對象模型
+ 
+*Classification(分類)
+列舉分類：class的成分和不同的軟件組件的子類的水平分層結構描述
+面分類：區域分析，一組基本的描述性特徵
+屬性值分類：在結構域定義的所有組件屬性

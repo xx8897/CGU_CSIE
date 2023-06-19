@@ -1,0 +1,712 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sim-project version="12.79" multi-file="no" uid="simp394f6eb2787847739fdd59cb4044625c">
+  <meta>
+    <name>1.5</name>
+    <authors> 黃至祥</authors>
+    <description />
+  </meta>
+  <counters models="1">
+    <entity-names>
+      <counter>
+        <item-type type-id="package" type="Package" />
+        <value>1</value>
+      </counter>
+      <counter>
+        <item-type type-id="class" type="Class" />
+        <value>6</value>
+      </counter>
+      <counter>
+        <item-type type-id="element-detail" type="Element Detail" />
+        <value>1</value>
+      </counter>
+    </entity-names>
+    <entity-ids>
+      <counter>
+        <item-type type-id="group" type="Group" />
+        <value>251</value>
+      </counter>
+      <counter>
+        <item-type type-id="package" type="Package" />
+        <value>2</value>
+      </counter>
+      <counter>
+        <item-type type-id="class" type="Class" />
+        <value>10</value>
+      </counter>
+      <counter>
+        <item-type type-id="property" type="Property" />
+        <value>14</value>
+      </counter>
+      <counter>
+        <item-type type-id="universal-connector" type="Universal Connector" />
+        <value>3</value>
+      </counter>
+      <counter>
+        <item-type type-id="generalization" type="Generalization" />
+        <value>4</value>
+      </counter>
+      <counter>
+        <item-type type-id="element-detail" type="Element Detail" />
+        <value>2</value>
+      </counter>
+      <counter>
+        <item-type type-id="comment-connector" type="Comment Connector" />
+        <value>2</value>
+      </counter>
+      <counter>
+        <item-type type-id="relationship" type="Association" />
+        <value>9</value>
+      </counter>
+    </entity-ids>
+    <diagrams>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.Diagrams.UmlDiagrams.UmlClassDiagram</type>
+        <value>1</value>
+      </counter>
+    </diagrams>
+    <fields>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.DiagramItems.Fields.OperationField</type>
+        <value>15</value>
+      </counter>
+    </fields>
+  </counters>
+  <alias-groups />
+  <management uid="md-9c58a264a6934c09b28052f8e8a39c54" name="" task-id-sequence="0">
+    <persons>
+      <person id="">
+        <first-name />
+        <last-name>黃至祥</last-name>
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
+      </person>
+    </persons>
+    <teams />
+    <sprints />
+    <projects />
+    <modules />
+    <tasks />
+    <to-dos />
+  </management>
+  <glossary id="glsr-358b214b1c4744d19740cc36c43204d3" />
+  <types default="UML">
+    <type-sets>
+      <type-set file="UmlTypes.xml" />
+    </type-sets>
+    <custom-types>
+      <type id="double" tid="" name="double" description="" />
+      <type id="List" tid="" name="List" description="" />
+    </custom-types>
+  </types>
+  <items>
+    <item id="dc899c52cbec40ab9fdf5b38f379f800" cid="PROP001" type="property" name="銀行代碼" style-class="" owner="e355232ee35e4d1cb5a88095fcec1bcb" creator="" creation-date="10/08/2021 02:48:41" visibility="private">
+      <style style-name="Default" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFFFF" accuracy="0.9">
+        <text-style type="name" use-defaults="false" color="#FF555555" font="Segoe UI;11.25;B" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <text-style type="part-header" use-defaults="false" color="#FF1E1E1E" font="Verdana;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <text-style type="text" use-defaults="false" color="#FF555555" font="Segoe UI;9.75;" horizontal-alignment="left" vertical-alignment="center" shadow="false" />
+        <text-style type="tagged-value" use-defaults="false" color="#FF555555" font="Segoe UI;9.75;" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <text-style type="stereotype" use-defaults="false" color="#FF555555" font="Segoe UI;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <background type="solid" colors="#FFF2F2F2,#FFF2F2F2" />
+        <border color="#FF555555" width="2" dash-style="Solid" />
+        <label-connector color="#80000000" width="1" dash-style="Dash" />
+        <alternate-styles>
+          <alternate-style style-name="Alternate" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#322A2A2A" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFFFF" accuracy="0.9">
+            <text-style type="name" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;11.25;B" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <text-style type="part-header" use-defaults="false" color="#FF1E1E1E" font="Verdana;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <text-style type="text" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;9.75;" horizontal-alignment="left" vertical-alignment="center" shadow="false" />
+            <text-style type="tagged-value" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;9.75;" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <text-style type="stereotype" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <background type="solid" colors="#FF203D85,#FF203D85" />
+            <border color="#FF203D85" width="2" dash-style="Solid" />
+            <label-connector color="#80000000" width="1" dash-style="Dash" />
+          </alternate-style>
+        </alternate-styles>
+      </style>
+      <feature />
+      <structural-feature type="String" type-id="Uml.String" />
+      <property />
+    </item>
+    <item id="05253a56e5314023a0c47157677b5944" cid="PROP002" type="property" name="銀行名稱" style-class="" owner="e355232ee35e4d1cb5a88095fcec1bcb" creator="" creation-date="10/08/2021 02:49:14" visibility="private">
+      <style style-name="Default" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFFFF" accuracy="0.9">
+        <text-style type="name" use-defaults="false" color="#FF555555" font="Segoe UI;11.25;B" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <text-style type="part-header" use-defaults="false" color="#FF1E1E1E" font="Verdana;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <text-style type="text" use-defaults="false" color="#FF555555" font="Segoe UI;9.75;" horizontal-alignment="left" vertical-alignment="center" shadow="false" />
+        <text-style type="tagged-value" use-defaults="false" color="#FF555555" font="Segoe UI;9.75;" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <text-style type="stereotype" use-defaults="false" color="#FF555555" font="Segoe UI;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <background type="solid" colors="#FFF2F2F2,#FFF2F2F2" />
+        <border color="#FF555555" width="2" dash-style="Solid" />
+        <label-connector color="#80000000" width="1" dash-style="Dash" />
+        <alternate-styles>
+          <alternate-style style-name="Alternate" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#322A2A2A" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFFFF" accuracy="0.9">
+            <text-style type="name" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;11.25;B" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <text-style type="part-header" use-defaults="false" color="#FF1E1E1E" font="Verdana;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <text-style type="text" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;9.75;" horizontal-alignment="left" vertical-alignment="center" shadow="false" />
+            <text-style type="tagged-value" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;9.75;" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <text-style type="stereotype" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <background type="solid" colors="#FF203D85,#FF203D85" />
+            <border color="#FF203D85" width="2" dash-style="Solid" />
+            <label-connector color="#80000000" width="1" dash-style="Dash" />
+          </alternate-style>
+        </alternate-styles>
+      </style>
+      <feature />
+      <structural-feature type="String" type-id="Uml.String" />
+      <property />
+    </item>
+    <item id="51656cef5d1a4b5088fe052a17cfa159" cid="PROP003" type="property" name="編號" style-class="" owner="e228518404484e2cb8a49e822adb9ed3" creator="" creation-date="10/08/2021 03:01:14" visibility="private">
+      <style style-name="Default" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFFFF" accuracy="0.9">
+        <text-style type="name" use-defaults="false" color="#FF555555" font="Segoe UI;11.25;B" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <text-style type="part-header" use-defaults="false" color="#FF1E1E1E" font="Verdana;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <text-style type="text" use-defaults="false" color="#FF555555" font="Segoe UI;9.75;" horizontal-alignment="left" vertical-alignment="center" shadow="false" />
+        <text-style type="tagged-value" use-defaults="false" color="#FF555555" font="Segoe UI;9.75;" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <text-style type="stereotype" use-defaults="false" color="#FF555555" font="Segoe UI;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <background type="solid" colors="#FFF2F2F2,#FFF2F2F2" />
+        <border color="#FF555555" width="2" dash-style="Solid" />
+        <label-connector color="#80000000" width="1" dash-style="Dash" />
+        <alternate-styles>
+          <alternate-style style-name="Alternate" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#322A2A2A" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFFFF" accuracy="0.9">
+            <text-style type="name" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;11.25;B" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <text-style type="part-header" use-defaults="false" color="#FF1E1E1E" font="Verdana;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <text-style type="text" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;9.75;" horizontal-alignment="left" vertical-alignment="center" shadow="false" />
+            <text-style type="tagged-value" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;9.75;" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <text-style type="stereotype" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <background type="solid" colors="#FF203D85,#FF203D85" />
+            <border color="#FF203D85" width="2" dash-style="Solid" />
+            <label-connector color="#80000000" width="1" dash-style="Dash" />
+          </alternate-style>
+        </alternate-styles>
+      </style>
+      <feature />
+      <structural-feature type="String" type-id="Uml.String" />
+      <property />
+    </item>
+    <item id="di1a1e1bdb606e455989a43d3d258bb5b36902" cid="PROP004" type="property" name="帳號" style-class="" owner="di5f9495268ac34f32bffd4dda90b002d56902" creator="" creation-date="10/08/2021 02:48:41" visibility="private">
+      <style style-name="Default" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFFFF" accuracy="0.9">
+        <text-style type="name" use-defaults="false" color="#FF555555" font="Segoe UI;11.25;B" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <text-style type="part-header" use-defaults="false" color="#FF1E1E1E" font="Verdana;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <text-style type="text" use-defaults="false" color="#FF555555" font="Segoe UI;9.75;" horizontal-alignment="left" vertical-alignment="center" shadow="false" />
+        <text-style type="tagged-value" use-defaults="false" color="#FF555555" font="Segoe UI;9.75;" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <text-style type="stereotype" use-defaults="false" color="#FF555555" font="Segoe UI;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <background type="solid" colors="#FFF2F2F2,#FFF2F2F2" />
+        <border color="#FF555555" width="2" dash-style="Solid" />
+        <label-connector color="#80000000" width="1" dash-style="Dash" />
+        <alternate-styles>
+          <alternate-style style-name="Alternate" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#322A2A2A" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFFFF" accuracy="0.9">
+            <text-style type="name" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;11.25;B" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <text-style type="part-header" use-defaults="false" color="#FF1E1E1E" font="Verdana;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <text-style type="text" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;9.75;" horizontal-alignment="left" vertical-alignment="center" shadow="false" />
+            <text-style type="tagged-value" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;9.75;" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <text-style type="stereotype" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <background type="solid" colors="#FF203D85,#FF203D85" />
+            <border color="#FF203D85" width="2" dash-style="Solid" />
+            <label-connector color="#80000000" width="1" dash-style="Dash" />
+          </alternate-style>
+        </alternate-styles>
+      </style>
+      <feature />
+      <structural-feature type="String" type-id="Uml.String" />
+      <property />
+    </item>
+    <item id="di00a851037ff34f20a98acfd7677475ad6902" cid="PROP005" type="property" name="帳戶餘額" style-class="" owner="di5f9495268ac34f32bffd4dda90b002d56902" creator="" creation-date="10/08/2021 02:49:14" visibility="private">
+      <style style-name="Default" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFFFF" accuracy="0.9">
+        <text-style type="name" use-defaults="false" color="#FF555555" font="Segoe UI;11.25;B" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <text-style type="part-header" use-defaults="false" color="#FF1E1E1E" font="Verdana;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <text-style type="text" use-defaults="false" color="#FF555555" font="Segoe UI;9.75;" horizontal-alignment="left" vertical-alignment="center" shadow="false" />
+        <text-style type="tagged-value" use-defaults="false" color="#FF555555" font="Segoe UI;9.75;" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <text-style type="stereotype" use-defaults="false" color="#FF555555" font="Segoe UI;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <background type="solid" colors="#FFF2F2F2,#FFF2F2F2" />
+        <border color="#FF555555" width="2" dash-style="Solid" />
+        <label-connector color="#80000000" width="1" dash-style="Dash" />
+        <alternate-styles>
+          <alternate-style style-name="Alternate" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#322A2A2A" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFFFF" accuracy="0.9">
+            <text-style type="name" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;11.25;B" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <text-style type="part-header" use-defaults="false" color="#FF1E1E1E" font="Verdana;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <text-style type="text" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;9.75;" horizontal-alignment="left" vertical-alignment="center" shadow="false" />
+            <text-style type="tagged-value" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;9.75;" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <text-style type="stereotype" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <background type="solid" colors="#FF203D85,#FF203D85" />
+            <border color="#FF203D85" width="2" dash-style="Solid" />
+            <label-connector color="#80000000" width="1" dash-style="Dash" />
+          </alternate-style>
+        </alternate-styles>
+      </style>
+      <feature />
+      <structural-feature type="double" type-id="double" />
+      <property />
+    </item>
+    <item id="75fbbbb3f0d149e285677f2f4853489f" cid="PROP006" type="property" name="金融卡卡號" style-class="" owner="di5f9495268ac34f32bffd4dda90b002d56902" creator="" creation-date="10/08/2021 03:10:07" visibility="private">
+      <style style-name="Default" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFFFF" accuracy="0.9">
+        <text-style type="name" use-defaults="false" color="#FF555555" font="Segoe UI;11.25;B" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <text-style type="part-header" use-defaults="false" color="#FF1E1E1E" font="Verdana;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <text-style type="text" use-defaults="false" color="#FF555555" font="Segoe UI;9.75;" horizontal-alignment="left" vertical-alignment="center" shadow="false" />
+        <text-style type="tagged-value" use-defaults="false" color="#FF555555" font="Segoe UI;9.75;" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <text-style type="stereotype" use-defaults="false" color="#FF555555" font="Segoe UI;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <background type="solid" colors="#FFF2F2F2,#FFF2F2F2" />
+        <border color="#FF555555" width="2" dash-style="Solid" />
+        <label-connector color="#80000000" width="1" dash-style="Dash" />
+        <alternate-styles>
+          <alternate-style style-name="Alternate" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#322A2A2A" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFFFF" accuracy="0.9">
+            <text-style type="name" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;11.25;B" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <text-style type="part-header" use-defaults="false" color="#FF1E1E1E" font="Verdana;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <text-style type="text" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;9.75;" horizontal-alignment="left" vertical-alignment="center" shadow="false" />
+            <text-style type="tagged-value" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;9.75;" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <text-style type="stereotype" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <background type="solid" colors="#FF203D85,#FF203D85" />
+            <border color="#FF203D85" width="2" dash-style="Solid" />
+            <label-connector color="#80000000" width="1" dash-style="Dash" />
+          </alternate-style>
+        </alternate-styles>
+      </style>
+      <feature />
+      <structural-feature type="String" type-id="Uml.String" />
+      <property />
+    </item>
+    <item id="f8aca0da6dc5462e9c5c84bd66377323" cid="PROP010" type="property" name="編號" style-class="" owner="di969d5d5ba70d42b8a472b81f28b453b79668" creator="" creation-date="10/08/2021 03:13:48" visibility="private">
+      <style style-name="Default" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFFFF" accuracy="0.9">
+        <text-style type="name" use-defaults="false" color="#FF555555" font="Segoe UI;11.25;B" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <text-style type="part-header" use-defaults="false" color="#FF1E1E1E" font="Verdana;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <text-style type="text" use-defaults="false" color="#FF555555" font="Segoe UI;9.75;" horizontal-alignment="left" vertical-alignment="center" shadow="false" />
+        <text-style type="tagged-value" use-defaults="false" color="#FF555555" font="Segoe UI;9.75;" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <text-style type="stereotype" use-defaults="false" color="#FF555555" font="Segoe UI;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <background type="solid" colors="#FFF2F2F2,#FFF2F2F2" />
+        <border color="#FF555555" width="2" dash-style="Solid" />
+        <label-connector color="#80000000" width="1" dash-style="Dash" />
+        <alternate-styles>
+          <alternate-style style-name="Alternate" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#322A2A2A" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFFFF" accuracy="0.9">
+            <text-style type="name" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;11.25;B" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <text-style type="part-header" use-defaults="false" color="#FF1E1E1E" font="Verdana;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <text-style type="text" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;9.75;" horizontal-alignment="left" vertical-alignment="center" shadow="false" />
+            <text-style type="tagged-value" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;9.75;" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <text-style type="stereotype" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <background type="solid" colors="#FF203D85,#FF203D85" />
+            <border color="#FF203D85" width="2" dash-style="Solid" />
+            <label-connector color="#80000000" width="1" dash-style="Dash" />
+          </alternate-style>
+        </alternate-styles>
+      </style>
+      <feature />
+      <structural-feature type="String" type-id="Uml.String" />
+      <property />
+    </item>
+    <item id="b6877ac624e24133be154c81be9eee26" cid="PROP011" type="property" name="可用現金" style-class="" owner="6d4b9f86a5e94ba6a50f83a7a77405af" creator="" creation-date="10/08/2021 03:16:30" visibility="private">
+      <style style-name="Default" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#3A555555" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFFFF" accuracy="0.9">
+        <text-style type="name" use-defaults="false" color="#FF555555" font="Segoe UI;11.25;B" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <text-style type="part-header" use-defaults="false" color="#FF1E1E1E" font="Verdana;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <text-style type="text" use-defaults="false" color="#FF555555" font="Segoe UI;9.75;" horizontal-alignment="left" vertical-alignment="center" shadow="false" />
+        <text-style type="tagged-value" use-defaults="false" color="#FF555555" font="Segoe UI;9.75;" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <text-style type="stereotype" use-defaults="false" color="#FF555555" font="Segoe UI;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+        <background type="solid" colors="#FFF2F2F2,#FFF2F2F2" />
+        <border color="#FF555555" width="2" dash-style="Solid" />
+        <label-connector color="#80000000" width="1" dash-style="Dash" />
+        <alternate-styles>
+          <alternate-style style-name="Alternate" shadow-type="smooth" shadow-offset="2,2" shadow-visible="true" shadow-color="#322A2A2A" shadow-radius="8" wrap-name-text="true" wrap-other-text="true" padding="2" margin="1" glow-color="#FFFFFFFF" accuracy="0.9">
+            <text-style type="name" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;11.25;B" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <text-style type="part-header" use-defaults="false" color="#FF1E1E1E" font="Verdana;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <text-style type="text" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;9.75;" horizontal-alignment="left" vertical-alignment="center" shadow="false" />
+            <text-style type="tagged-value" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;9.75;" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <text-style type="stereotype" use-defaults="false" color="#FFE9E9E9" font="Segoe UI;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+            <background type="solid" colors="#FF203D85,#FF203D85" />
+            <border color="#FF203D85" width="2" dash-style="Solid" />
+            <label-connector color="#80000000" width="1" dash-style="Dash" />
+          </alternate-style>
+        </alternate-styles>
+      </style>
+      <feature />
+      <structural-feature type="Integer" type-id="Uml.Integer" />
+      <property />
+    </item>
+  </items>
+  <models>
+    <model id="p87209efd96334193aa15127252c7e474_545303709" name="Model1" namespace="" order-index="1">
+      <meta>
+        <authors>
+          <author> </author>
+        </authors>
+        <description />
+        <creation-date>10/08/2021 02:40:28</creation-date>
+        <change-date>01/01/0001 00:00:00</change-date>
+        <revision-count>0</revision-count>
+        <version />
+      </meta>
+      <abstract-items />
+      <sub-models />
+      <diagram type="uml-class" id="pd8806f7841fc4327af010457f366998f_649084309" name="ClassDiagram1" order-index="1" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-field-tags="true" show-empty-compartments="true" show-special-indicators="false" show-rules="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-visibility-sign="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-data="true" show-description="false" show-field-description="false" auto-routed-paths="false" default-line-style="default" view-location="-2,66">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="solid" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>10/08/2021 02:40:28</creation-date>
+          <change-date>10/08/2021 03:29:13</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <abstract-items>
+          <item id="e355232ee35e4d1cb5a88095fcec1bcb" cid="C001" type="class" name="銀行" style-class="" change-tracking-state="added" creator="" creation-date="10/08/2021 02:43:56" visibility="undefined">
+            <owned-items>
+              <owned-item ref="dc899c52cbec40ab9fdf5b38f379f800" />
+              <owned-item ref="05253a56e5314023a0c47157677b5944" />
+            </owned-items>
+            <attributes>
+              <attribute id="ac01859f0b0ab49bbafd9be190cbb2e74592" cid="PROP001" name="銀行代碼" creation-date="10/08/2021 02:48:41" property-ref="dc899c52cbec40ab9fdf5b38f379f800" />
+              <attribute id="a863a455fd48a4e04aec1bd05c0258afe426" cid="PROP002" name="銀行名稱" creation-date="10/08/2021 02:49:14" property-ref="05253a56e5314023a0c47157677b5944" />
+            </attributes>
+            <operations>
+              <operation id="obd17c849b96f486daa8daf23d0640c35127" cid="OP001" name="提款" creation-date="10/08/2021 02:52:28" type="" type-id="" visibility="public">
+                <parameters>
+                  <parameter id="p011a73af9fd84f64a6f1cbc74ab9f085" name="帳戶編號" type="" type-id="" />
+                  <parameter id="p8d4f56e04176432ea8e72ec75f9f1e88" name="金額" type="" type-id="" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                </source-codes>
+              </operation>
+              <operation id="ob57a88d2361742a08e8c0376f8e6eee0129" cid="OP002" name="查詢帳戶餘額" creation-date="10/08/2021 02:52:28" type="double" type-id="double" visibility="public">
+                <parameters>
+                  <parameter id="p4ee73c19ea0f40ca9a186341469856d1" name="帳戶編號" type="" type-id="" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                </source-codes>
+              </operation>
+              <operation id="o2506d9e41d104d869d4960924872f7fa129" cid="OP003" name="取得帳戶資料" creation-date="10/08/2021 02:52:28" type="List" type-id="List" visibility="public">
+                <parameters>
+                  <parameter id="p6ec28da86cd9487782a55b16a771f690" name="客戶編號" type="" type-id="" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                </source-codes>
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="di969d5d5ba70d42b8a472b81f28b453b79668" cid="C003" type="class" name="讀卡機" style-class="" change-tracking-state="added" creator="" creation-date="10/08/2021 02:59:54" visibility="undefined">
+            <owned-items>
+              <owned-item ref="f8aca0da6dc5462e9c5c84bd66377323" />
+            </owned-items>
+            <attributes>
+              <attribute id="a8fd42bd31d4d4361a3fcca1a893feab342" cid="PROP010" name="編號" creation-date="10/08/2021 03:13:48" property-ref="f8aca0da6dc5462e9c5c84bd66377323" />
+            </attributes>
+            <operations>
+              <operation id="ofb1a0fb73e1b4f13ae24e1beff97cf4f816" cid="OP008" name="取得卡號" creation-date="10/08/2021 03:14:55" type="String" type-id="Uml.String" visibility="public" />
+              <operation id="o08888b000ad344a08211b1e57b8ea314816" cid="OP009" name="取得密碼" creation-date="10/08/2021 03:14:55" type="String" type-id="Uml.String" visibility="public" />
+              <operation id="o908db1e6d0d14ddd9a74f416cde84752416" cid="OP010" name="取得客戶密碼" creation-date="10/08/2021 03:15:20" type="String" type-id="Uml.String" visibility="public" />
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="e228518404484e2cb8a49e822adb9ed3" cid="C002" type="class" name="ATM" style-class="" change-tracking-state="added" creator="" creation-date="10/08/2021 02:59:54" visibility="undefined">
+            <owned-items>
+              <owned-item ref="51656cef5d1a4b5088fe052a17cfa159" />
+            </owned-items>
+            <attributes>
+              <attribute id="a4d9f49bfb6ac40528821ff602fd349dc26" cid="PROP003" name="編號" creation-date="10/08/2021 03:01:14" property-ref="51656cef5d1a4b5088fe052a17cfa159" />
+            </attributes>
+            <operations>
+              <operation id="o9ca6dd9a35354d07a3e0efb6a7c3b241259" cid="OP004" name="提款" creation-date="10/08/2021 03:08:29" type="" type-id="" visibility="public" />
+              <operation id="o3ae3ee886e58405db09e2a023f8bb0af259" cid="OP005" name="查詢帳戶餘額" creation-date="10/08/2021 03:08:29" type="" type-id="" visibility="public" />
+              <operation id="o4a06edc11d504d16b49e4513816e6341259" cid="OP006" name="驗證密碼" creation-date="10/08/2021 03:08:29" type="" type-id="" visibility="public" />
+              <operation id="of024786307dd40549288f8e03eb51129259" cid="OP007" name="插入新卡片" creation-date="10/08/2021 03:08:29" type="" type-id="" visibility="public" />
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="di5f9495268ac34f32bffd4dda90b002d56902" cid="C004" type="class" name="帳戶" style-class="" change-tracking-state="added" creator="" creation-date="10/08/2021 02:43:56" visibility="undefined">
+            <owned-items>
+              <owned-item ref="75fbbbb3f0d149e285677f2f4853489f" />
+            </owned-items>
+            <attributes>
+              <attribute id="ac01859f0b0ab49bbafd9be190cbb2e74592" cid="PROP004" name="帳號" creation-date="10/08/2021 02:48:41" property-ref="di1a1e1bdb606e455989a43d3d258bb5b36902" />
+              <attribute id="a863a455fd48a4e04aec1bd05c0258afe426" cid="PROP005" name="帳戶餘額" creation-date="10/08/2021 02:49:14" property-ref="di00a851037ff34f20a98acfd7677475ad6902" />
+              <attribute id="a363a7934b77f4d35b1c22deda192cf35971" cid="PROP006" name="金融卡卡號" creation-date="10/08/2021 03:10:07" property-ref="75fbbbb3f0d149e285677f2f4853489f" />
+            </attributes>
+            <operations>
+              <operation id="ob57a88d2361742a08e8c0376f8e6eee0129" cid="OP002" name="取得帳戶餘額" creation-date="10/08/2021 02:52:28" type="double" type-id="double" visibility="public">
+                <source-codes>
+                  <source-code language="ActionScript" />
+                </source-codes>
+              </operation>
+              <operation id="o2506d9e41d104d869d4960924872f7fa129" cid="OP003" name="取得卡號" creation-date="10/08/2021 02:52:28" type="String" type-id="Uml.String" visibility="public">
+                <source-codes>
+                  <source-code language="ActionScript" />
+                </source-codes>
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="8a587468253d400091c8939fd1c2a168" cid="PROP007" type="property" name="交易時間" style-class="" owner="59d09b8924ed4359bd94df572be5687b" creator="" creation-date="10/08/2021 03:12:21" visibility="private">
+            <feature />
+            <structural-feature type="帳戶" type-id="Class:di5f9495268ac34f32bffd4dda90b002d56902" />
+            <property>
+              <source-codes>
+                <source-code language="ActionScript" uid="scs-1b0ac00f-5a9f-49b5-9fc8-2c404ff8d6d2" />
+              </source-codes>
+            </property>
+          </item>
+          <item id="59d09b8924ed4359bd94df572be5687b" cid="C005" type="class" name="交易" style-class="" change-tracking-state="added" creator="" creation-date="10/08/2021 03:12:01" visibility="undefined">
+            <owned-items>
+              <owned-item ref="8a587468253d400091c8939fd1c2a168" />
+            </owned-items>
+            <attributes>
+              <attribute id="a583a78373df44ad6817937b2b0364fc7682" cid="PROP007" name="交易時間" creation-date="10/08/2021 03:12:21" property-ref="8a587468253d400091c8939fd1c2a168" />
+            </attributes>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="69a18d07ae0642488b2769e2e3bf675a" cid="C006" type="class" name="存款" style-class="" change-tracking-state="added" creator="" creation-date="10/08/2021 03:12:54" visibility="undefined">
+            <owned-items>
+              <owned-item ref="502af138c8ac49c7939a12af88d5944b" />
+            </owned-items>
+            <attributes>
+              <attribute id="a2f1c904c68854dc7844defe03064c1c1419" cid="PROP008" name="金額" creation-date="10/08/2021 03:13:08" property-ref="502af138c8ac49c7939a12af88d5944b" />
+            </attributes>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="502af138c8ac49c7939a12af88d5944b" cid="PROP008" type="property" name="金額" style-class="" owner="69a18d07ae0642488b2769e2e3bf675a" creator="" creation-date="10/08/2021 03:13:08" visibility="private">
+            <feature />
+            <structural-feature type="double" type-id="double" />
+            <property>
+              <source-codes>
+                <source-code language="ActionScript" uid="scs-ae478169-3549-421f-956f-ab8d1d3abe93" />
+              </source-codes>
+            </property>
+          </item>
+          <item id="di4c7bcde2394642ab92349873363f5a799672" cid="C007" type="class" name="提款" style-class="" change-tracking-state="added" creator="" creation-date="10/08/2021 03:12:54" visibility="undefined">
+            <attributes>
+              <attribute id="a2f1c904c68854dc7844defe03064c1c1419" cid="PROP009" name="金額" creation-date="10/08/2021 03:13:08" property-ref="di048cc4e2892d4f8ab6c16fd8d56cca1b9672" />
+            </attributes>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="di048cc4e2892d4f8ab6c16fd8d56cca1b9672" cid="PROP009" type="property" name="金額" style-class="" owner="di4c7bcde2394642ab92349873363f5a799672" creator="" creation-date="10/08/2021 03:13:08" visibility="private">
+            <feature />
+            <structural-feature type="double" type-id="double" />
+            <property>
+              <source-codes>
+                <source-code language="ActionScript" uid="scs-ae478169-3549-421f-956f-ab8d1d3abe93" />
+              </source-codes>
+            </property>
+          </item>
+          <item id="6d4b9f86a5e94ba6a50f83a7a77405af" cid="C008" type="class" name="現鈔分送器" style-class="" change-tracking-state="added" creator="" creation-date="10/08/2021 03:16:08" visibility="undefined">
+            <owned-items>
+              <owned-item ref="b6877ac624e24133be154c81be9eee26" />
+            </owned-items>
+            <attributes>
+              <attribute id="a9a26d79b256e4da69c05369f4029bc81654" cid="PROP011" name="可用現金" creation-date="10/08/2021 03:16:30" property-ref="b6877ac624e24133be154c81be9eee26" />
+            </attributes>
+            <operations>
+              <operation id="oc17adeaac97b406b9d5fad8edc9d38c6326" cid="OP011" name="分派現鈔" creation-date="10/08/2021 03:17:33" type="Integer" type-id="Uml.Integer" visibility="public" />
+              <operation id="od6f97bbe5c7b4852b178ebbd4ad5e8d9326" cid="OP012" name="取得可用現金" creation-date="10/08/2021 03:17:33" type="" type-id="" visibility="public" />
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="0c1b9a67fbed451b9cb32dd5a1f01234" cid="C009" type="class" name="銀行客戶" style-class="" change-tracking-state="added" creator="" creation-date="10/08/2021 03:17:46" visibility="undefined">
+            <owned-items>
+              <owned-item ref="449d3b0c12fa4ccaa53dd3ef0ea6c9f0" />
+              <owned-item ref="d9526e1224f54592bd5c9ed46231846b" />
+            </owned-items>
+            <attributes>
+              <attribute id="ab3dba0bec46843a89fe8837ee8395a80542" cid="PROP012" name="客戶編號" creation-date="10/08/2021 03:18:10" property-ref="449d3b0c12fa4ccaa53dd3ef0ea6c9f0" />
+              <attribute id="acec9196f2ee44765b8e46f1c25c6a7da557" cid="PROP013" name="姓名" creation-date="10/08/2021 03:18:12" property-ref="d9526e1224f54592bd5c9ed46231846b" />
+            </attributes>
+            <operations>
+              <operation id="oee7a5efb78c64bce88f625bdbe221961684" cid="OP013" name="取得客戶編號" creation-date="10/08/2021 03:19:26" type="String" type-id="Uml.String" visibility="public" />
+              <operation id="oc21f6e4a0d2545ab82fd67e776a11669684" cid="OP014" name="取得客戶姓名" creation-date="10/08/2021 03:19:26" type="String" type-id="Uml.String" visibility="public" />
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="449d3b0c12fa4ccaa53dd3ef0ea6c9f0" cid="PROP012" type="property" name="客戶編號" style-class="" owner="0c1b9a67fbed451b9cb32dd5a1f01234" creator="" creation-date="10/08/2021 03:18:10" visibility="private">
+            <feature />
+            <structural-feature type="String" type-id="Uml.String" />
+            <property>
+              <source-codes>
+                <source-code language="ActionScript" uid="scs-c457630b-8d2f-416b-b82b-555ab476a6b2" />
+              </source-codes>
+            </property>
+          </item>
+          <item id="d9526e1224f54592bd5c9ed46231846b" cid="PROP013" type="property" name="姓名" style-class="" owner="0c1b9a67fbed451b9cb32dd5a1f01234" creator="" creation-date="10/08/2021 03:18:12" visibility="private">
+            <feature />
+            <structural-feature type="String" type-id="Uml.String" />
+            <property>
+              <source-codes>
+                <source-code language="ActionScript" uid="scs-7ba190b4-5f8a-4501-86ec-f414f5676db5" />
+              </source-codes>
+            </property>
+          </item>
+          <item id="69b69691651b43bc8ecec7686eaa4bea" cid="GNR001" type="generalization" name="" style-class="" change-tracking-state="added" creator="" creation-date="10/08/2021 03:19:53" from="69a18d07ae0642488b2769e2e3bf675a" to="59d09b8924ed4359bd94df572be5687b" visibility="package" />
+          <item id="e542f4df3c3747b3a400aeca11b67667" cid="GNR002" type="generalization" name="" style-class="" change-tracking-state="added" creator="" creation-date="10/08/2021 03:20:18" from="di4c7bcde2394642ab92349873363f5a799672" to="59d09b8924ed4359bd94df572be5687b" visibility="package" />
+          <item id="d1e8a6836ca4409fae079f0a67fe1506" cid="GNR003" type="generalization" name="" style-class="" change-tracking-state="added" creator="" creation-date="10/08/2021 03:20:36" from="e228518404484e2cb8a49e822adb9ed3" to="6d4b9f86a5e94ba6a50f83a7a77405af" visibility="package" />
+          <item id="c6916fe1ccb34a5ea79660baeb99c57d" cid="REL002" type="relationship" name="" style-class="" change-tracking-state="added" creator="" creation-date="10/08/2021 03:24:36" from="di5f9495268ac34f32bffd4dda90b002d56902" to="e355232ee35e4d1cb5a88095fcec1bcb" visibility="package">
+            <relation from="di5f9495268ac34f32bffd4dda90b002d56902" to="e355232ee35e4d1cb5a88095fcec1bcb" derived="false">
+              <start-role id="umlar-a0dbbf8c-649b-4438-991e-2876671ab54c" name="" multiplicity="1..*" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-705a696f-50d1-4bf6-ac50-595f325a7adc" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="f7446158941d427ea0abef4aed496d51" cid="REL003" type="relationship" name="" style-class="" change-tracking-state="added" creator="" creation-date="10/08/2021 03:27:16" from="e228518404484e2cb8a49e822adb9ed3" to="6d4b9f86a5e94ba6a50f83a7a77405af" visibility="package">
+            <relation from="e228518404484e2cb8a49e822adb9ed3" to="6d4b9f86a5e94ba6a50f83a7a77405af" derived="false">
+              <start-role id="umlar-59ce6854-b0e9-4b3e-8d43-c14f2fc98fe9" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-3ba88539-5a3d-47c7-882d-b9d06e39e157" name="" multiplicity="1" navigability="yes" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="921f914a485945eda7e9f5dc8cdc3cbc" cid="REL004" type="relationship" name="" style-class="" change-tracking-state="added" creator="" creation-date="10/08/2021 03:27:49" from="e228518404484e2cb8a49e822adb9ed3" to="di969d5d5ba70d42b8a472b81f28b453b79668" visibility="package">
+            <relation from="e228518404484e2cb8a49e822adb9ed3" to="di969d5d5ba70d42b8a472b81f28b453b79668" derived="false">
+              <start-role id="umlar-ed71fb2d-963c-4f86-ab6c-5a60fd97b3cb" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-a9f19433-682d-4d62-8dff-82b73cccda7e" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="d9e61680854048569d9fcea78afe855e" cid="REL005" type="relationship" name="" style-class="" change-tracking-state="added" creator="" creation-date="10/08/2021 03:28:16" from="di5f9495268ac34f32bffd4dda90b002d56902" to="0c1b9a67fbed451b9cb32dd5a1f01234" visibility="package">
+            <relation from="di5f9495268ac34f32bffd4dda90b002d56902" to="0c1b9a67fbed451b9cb32dd5a1f01234" derived="false">
+              <start-role id="umlar-4abc28f7-0537-488c-bf08-71748586afe1" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-f671c16e-79c4-499e-a608-8eea64f2b34a" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="f829317cb17b424f94c0ec0abb97b33b" cid="REL006" type="relationship" name="" style-class="" change-tracking-state="added" creator="" creation-date="10/08/2021 03:28:43" from="di5f9495268ac34f32bffd4dda90b002d56902" to="59d09b8924ed4359bd94df572be5687b" visibility="package">
+            <relation from="di5f9495268ac34f32bffd4dda90b002d56902" to="59d09b8924ed4359bd94df572be5687b" derived="false">
+              <start-role id="umlar-25df6a3f-2f1f-4f26-a1dc-164178c9ab50" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-f5756204-e596-447f-95f0-6a485a85d698" name="" multiplicity="*" navigability="" association-type="association" visibility="private" attribute-ref="a583a78373df44ad6817937b2b0364fc7682" />
+            </relation>
+          </item>
+          <item id="b5968252f41f470fa425d628d6d68f05" cid="REL008" type="relationship" name="" style-class="" change-tracking-state="added" creator="" creation-date="10/08/2021 03:29:13" from="e355232ee35e4d1cb5a88095fcec1bcb" to="59d09b8924ed4359bd94df572be5687b" visibility="package">
+            <relation from="e355232ee35e4d1cb5a88095fcec1bcb" to="59d09b8924ed4359bd94df572be5687b" derived="false">
+              <start-role id="umlar-0dd68366-9952-4a22-9873-32af49b21e04" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-35506a83-433d-40a6-9aec-6f758833d60d" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+            </relation>
+          </item>
+        </abstract-items>
+        <layer id="ef123ae6b92743a4a12d96a177793e9a" name="Default" visible="true" enabled="true" locked="false">
+          <item id="e355232ee35e4d1cb5a88095fcec1bcb" iid="9e5133e6e19f4bacb4f21b82b3d2c3b7" creation-date="10/08/2021 02:43:56" order-index="0" type="entity">
+            <layout ax="104" ay="60" awidth="267" aheight="133" x="104" y="60" width="267" height="133" />
+            <class />
+          </item>
+          <item id="e228518404484e2cb8a49e822adb9ed3" iid="8c6c0cd29c0742ddb95acc25b771cbfb" creation-date="10/08/2021 02:59:54" order-index="1" type="entity">
+            <layout ax="461" ay="60" awidth="242" aheight="133" x="414" y="60" width="242" height="133" rotation-center="-29,-7" />
+            <class />
+          </item>
+          <item id="di969d5d5ba70d42b8a472b81f28b453b79668" iid="5dbc3b4091e84ff8b87042b19333504f" creation-date="10/08/2021 02:59:54" order-index="1" type="entity">
+            <layout ax="807" ay="60" awidth="242" aheight="133" x="760" y="60" width="242" height="133" rotation-center="-29,-7" />
+            <class />
+          </item>
+          <item id="di5f9495268ac34f32bffd4dda90b002d56902" iid="84d6339aa8724b1fb1e908f85606382a" creation-date="10/08/2021 02:43:56" order-index="0" type="entity">
+            <layout ax="104" ay="261" awidth="267" aheight="141" x="104" y="261" width="267" height="133" />
+            <class />
+          </item>
+          <item id="59d09b8924ed4359bd94df572be5687b" iid="ada0d2b43af44360b848b3f46543b1b4" creation-date="10/08/2021 03:12:01" order-index="2" type="entity">
+            <layout ax="476" ay="263" awidth="227" aheight="90" x="476" y="263" width="227" height="90" rotation-center="0,29.5" />
+            <class />
+          </item>
+          <item id="69a18d07ae0642488b2769e2e3bf675a" iid="babeefbcd2884218b445f0b0b2963592" creation-date="10/08/2021 03:12:54" order-index="3" type="entity">
+            <layout ax="442" ay="418" awidth="112" aheight="77" x="442" y="418" width="112" height="77" />
+            <class />
+          </item>
+          <item id="di4c7bcde2394642ab92349873363f5a799672" iid="632643a43bff4fc09d7fc5214b341a87" creation-date="10/08/2021 03:12:54" order-index="3" type="entity">
+            <layout ax="609" ay="418" awidth="112" aheight="77" x="609" y="418" width="112" height="77" />
+            <class />
+          </item>
+          <item id="6d4b9f86a5e94ba6a50f83a7a77405af" iid="4cdbfce1376d41ee94ba2b4b56591025" creation-date="10/08/2021 03:16:08" order-index="4" type="entity">
+            <layout ax="811.25" ay="263" awidth="233.5" aheight="121" x="811.25" y="263" width="233.5" height="121" rotation-center="3.25,4" />
+            <class />
+          </item>
+          <item id="0c1b9a67fbed451b9cb32dd5a1f01234" iid="85798d6b3dc84d8f8e3feb332f79b2ac" creation-date="10/08/2021 03:17:46" order-index="5" type="entity">
+            <layout ax="116.5" ay="472" awidth="242" aheight="133" x="116.5" y="472" width="242" height="133" rotation-center="23.5,6.5" />
+            <class />
+          </item>
+          <item id="69b69691651b43bc8ecec7686eaa4bea" iid="a46666b9b025401e8cb991b397bfb7c0" creation-date="10/08/2021 03:19:53" order-index="6" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="498" y1="418" x2="590" y2="353" start-border-pos="0.125" end-border-pos="0.624449339207048" start-local-pos="56" end-local-pos="114" name-position="0,20">
+              <points>
+                <point x="498" y="418" />
+                <point x="590" y="353" />
+              </points>
+            </layout>
+            <relation from="69a18d07ae0642488b2769e2e3bf675a" from-iid="babeefbcd2884218b445f0b0b2963592" to="59d09b8924ed4359bd94df572be5687b" to-iid="ada0d2b43af44360b848b3f46543b1b4" />
+          </item>
+          <item id="e542f4df3c3747b3a400aeca11b67667" iid="c9be7a8317b8476ea56a05894acba883" creation-date="10/08/2021 03:20:18" order-index="7" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="665" y1="418" x2="590" y2="353" start-border-pos="0.125" end-border-pos="0.624449339207048" start-local-pos="56" end-local-pos="114" name-position="0,20">
+              <points>
+                <point x="665" y="418" />
+                <point x="590" y="353" />
+              </points>
+            </layout>
+            <relation from="di4c7bcde2394642ab92349873363f5a799672" from-iid="632643a43bff4fc09d7fc5214b341a87" to="59d09b8924ed4359bd94df572be5687b" to-iid="ada0d2b43af44360b848b3f46543b1b4" />
+          </item>
+          <item id="c6916fe1ccb34a5ea79660baeb99c57d" iid="6bdf6c8f72504d1a8ff50f1886b9ea21" creation-date="10/08/2021 03:24:36" order-index="9" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="12,-26" end-multiplicity-position="15,-25" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="238" y1="261" x2="238" y2="193" start-border-pos="0.125468164794007" end-border-pos="0.624531835205993" start-local-pos="134" end-local-pos="134" name-position="0,20">
+              <points>
+                <point x="238" y="261" />
+                <point x="238" y="193" />
+              </points>
+            </layout>
+            <relation from="di5f9495268ac34f32bffd4dda90b002d56902" from-iid="84d6339aa8724b1fb1e908f85606382a" to="e355232ee35e4d1cb5a88095fcec1bcb" to-iid="9e5133e6e19f4bacb4f21b82b3d2c3b7" />
+          </item>
+          <item id="f7446158941d427ea0abef4aed496d51" iid="011397aee7144d4684767943f746f1d9" creation-date="10/08/2021 03:27:16" order-index="10" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="47.82087,17.11243" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="582" y1="193" x2="928" y2="263" start-border-pos="0.625" end-border-pos="0.125" start-local-pos="121" end-local-pos="116.75" name-position="0,20">
+              <points>
+                <point x="582" y="193" />
+                <point x="928" y="263" />
+              </points>
+            </layout>
+            <relation from="e228518404484e2cb8a49e822adb9ed3" from-iid="8c6c0cd29c0742ddb95acc25b771cbfb" to="6d4b9f86a5e94ba6a50f83a7a77405af" to-iid="4cdbfce1376d41ee94ba2b4b56591025" />
+          </item>
+          <item id="921f914a485945eda7e9f5dc8cdc3cbc" iid="2d5278d0deda4d5a9f539952bd9d61eb" creation-date="10/08/2021 03:27:49" order-index="11" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="true" auto-path="" x1="703" y1="124" x2="807" y2="126" start-border-pos="0.371240601503759" end-border-pos="0.87593984962406" start-local-pos="64" end-local-pos="66" name-position="0,20">
+              <points>
+                <point x="703" y="124" />
+                <point x="807" y="126" />
+              </points>
+            </layout>
+            <relation from="e228518404484e2cb8a49e822adb9ed3" from-iid="8c6c0cd29c0742ddb95acc25b771cbfb" from-field="o9ca6dd9a35354d07a3e0efb6a7c3b241259" to="di969d5d5ba70d42b8a472b81f28b453b79668" to-iid="5dbc3b4091e84ff8b87042b19333504f" />
+          </item>
+          <item id="d9e61680854048569d9fcea78afe855e" iid="4379eb90101c4eeebf811ae49550a7e1" creation-date="10/08/2021 03:28:16" order-index="12" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="238" y1="402" x2="238" y2="472" start-border-pos="0.624531835205993" end-border-pos="0.12551652892562" start-local-pos="134" end-local-pos="121.5" name-position="0,20">
+              <points>
+                <point x="238" y="402" />
+                <point x="238" y="472" />
+              </points>
+            </layout>
+            <relation from="di5f9495268ac34f32bffd4dda90b002d56902" from-iid="84d6339aa8724b1fb1e908f85606382a" to="0c1b9a67fbed451b9cb32dd5a1f01234" to-iid="85798d6b3dc84d8f8e3feb332f79b2ac" />
+          </item>
+          <item id="f829317cb17b424f94c0ec0abb97b33b" iid="7c389e6113e6453488ca1079fb14ec6f" creation-date="10/08/2021 03:28:43" order-index="13" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="true" auto-path="" x1="371" y1="308" x2="476" y2="302" start-border-pos="0.33333333581686" end-border-pos="0.890277777777778" start-local-pos="47" end-local-pos="39" name-position="0,20">
+              <points>
+                <point x="371" y="308" />
+                <point x="476" y="302" />
+              </points>
+            </layout>
+            <relation from="di5f9495268ac34f32bffd4dda90b002d56902" from-iid="84d6339aa8724b1fb1e908f85606382a" to="59d09b8924ed4359bd94df572be5687b" to-iid="ada0d2b43af44360b848b3f46543b1b4" to-field="a583a78373df44ad6817937b2b0364fc7682" />
+          </item>
+          <item id="b5968252f41f470fa425d628d6d68f05" iid="0dea44593d364c3aac4a0cac6847c7fe" creation-date="10/08/2021 03:29:13" order-index="14" type="relation">
+            <layout start-role-position="25,15" end-role-position="47.36673,25.27069" start-multiplicity-position="25,-15" end-multiplicity-position="48.28579,19.77205" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="371" y1="126" x2="476" y2="295" start-border-pos="0.37406015037594" end-border-pos="0.911111116409302" start-local-pos="45" end-local-pos="32" name-position="0,20">
+              <points>
+                <point x="371" y="126" />
+                <point x="413" y="201" />
+                <point x="476" y="295" />
+              </points>
+            </layout>
+            <relation from="e355232ee35e4d1cb5a88095fcec1bcb" from-iid="9e5133e6e19f4bacb4f21b82b3d2c3b7" to="59d09b8924ed4359bd94df572be5687b" to-iid="ada0d2b43af44360b848b3f46543b1b4" />
+          </item>
+        </layer>
+      </diagram>
+    </model>
+  </models>
+</sim-project>

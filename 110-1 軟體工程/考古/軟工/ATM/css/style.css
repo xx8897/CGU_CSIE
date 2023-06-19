@@ -1,0 +1,40 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  color:#424242;
+  background:#D1C4E9;
+  font-family:Microsoft JhengHei;
+  animation-name:oxxo;
+  animation-duration:3s;
+}
+body{
+  //border:2px black solid;
+  height:100vh;
+  width:90vw;
+  margin:0px auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+div{
+  height:100%;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  
+}
+img{
+  margin-left:80px;
+  width:300px;
+  animation-delay:1s;
+}
+@keyframes oxxo{
+  0%{
+	  color:#D1C4E9;
+  }
+}
+
+

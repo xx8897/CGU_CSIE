@@ -1,0 +1,3 @@
+﻿  server.cpp
+C:\Users\xx8897\Desktop\server\server\server.cpp(67,24): warning C4129: '	': 無法辨識的字元逸出序列
+  server.vcxproj -> C:\Users\xx8897\Desktop\server\Debug\server.exe

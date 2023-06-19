@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登入</title>
+		<style type="text/css">
+			header {font-weight:bold;
+					color:white;					
+					text-align:left;
+					height:21mm;
+					width:335mm;
+					background-color:darkslategray;
+					line-height:80px;}
+					
+			div p.in	{position:relative;
+						top:120px;
+						left:510px;}
+							
+			.login_button{position:absolute;
+						top:325px;
+						left:710px;}		
+			body {
+				padding: 0px;
+				margin: 0px;
+				background-attachment:fixed;
+			}
+			nav > ul {
+				background-color: #DEDEDE;
+				list-style: none;   /* 移除項目符號 */
+				margin: 0;
+				padding: 0;
+			}
+
+			nav a {
+				color: inherit; /* 移除超連結顏色 */
+				display: block; /* 讓 <a> 填滿 <li> */
+				font-size: 1.2rem;
+				padding: 20px;
+				text-decoration: none;  /* 移除超連結底線 */
+			}
+
+			/* 滑鼠移到 <a> 時變成深底淺色 */
+			nav li:hover {
+				background-color: rgb(115, 115, 115);
+				color: white;
+			}
+
+			.flex-nav {
+				display: flex;
+				justify-content: space-evenly;
+			}
+			
+			div p{font-size:20px;
+				font-weight:bold;
+				color:white;}
+			
+			div p.title {position:absolute;
+					font-weight:bold;
+					color:white;					
+					left:600px;
+					top:90px;   
+					font-size:1cm;}
+			
+			.area	{width:500px;}
+			.href	{position:absolute;
+						left:720px;
+						top:310px;
+					}
+
+		</style>
+		<script>
+			function wd(){
+				alert('登入成功');
+				location.href='home.html';
+			}
+		</script>
+	</head>
+	<body background="./background.png">
+		<nav>
+            <ul class="flex-nav">
+                <li><a href="home.html">首頁</a></li>
+                <li><a href="movie_list.html">電影介紹</a></li>
+                <li><a href="showingTime.html">場次查詢</a></li>
+                <li><a href="buy.html">會員專區</a></li>
+				<li><a href="login.html">登入/註冊</a></li>
+            </ul>
+        </nav>
+		
+		<div class="area">
+			<p class="title">登入</p>
+			<p class="in"><input type="text" id="username" class="text_field" size="30" 
+				style="font-size:15px; padding:10px;"  required="required" placeholder="請輸入帳號"/></p>
+			<p class="in"><input type="text" id="gender" class="text_field" size="30" 
+				style="font-size:15px; padding:10px;" placeholder="請輸入密碼" required="required"/></p>
+			<span class="href"><a href="register.html">加入會員</a></span>
+			<p class="login_button"><input type="button" id="btn_login" value="登入" style="width:80px;height:30px;" 
+				onmousedown="wd()"/></p>
+		</div>
+	</body>
+</html>

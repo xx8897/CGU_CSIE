@@ -1,0 +1,4 @@
+先安裝主程式（iviewxxx_setup.exe），再安裝中文語系（irfanview_lang_chinese.exe），完畢後按「IrfanView 中文切換教學 - 阿榮技術學院」連結線上觀看圖文教學。
+
+阿榮 2013.05.09
+https://www.azofreeware.com/

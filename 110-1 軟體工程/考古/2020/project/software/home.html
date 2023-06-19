@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>首頁</title>
+		
+		<style type="text/css">	
+			body {
+				padding: 0px;
+				margin: 0px;
+				background-attachment:fixed;
+			}
+			nav > ul {
+				background-color: #DEDEDE;
+				list-style: none;   /* 移除項目符號 */
+				margin: 0;
+				padding: 0;
+			}
+
+			nav a {
+				color: inherit; /* 移除超連結顏色 */
+				display: block; /* 讓 <a> 填滿 <li> */
+				font-size: 1.2rem;
+				padding: 20px;
+				text-decoration: none;  /* 移除超連結底線 */
+			}
+
+			/* 滑鼠移到 <a> 時變成深底淺色 */
+			nav li:hover {
+				background-color: rgb(115, 115, 115);
+				color: white;
+			}
+
+			.flex-nav {
+				position:fixed;
+				display: flex;
+				justify-content: space-evenly;
+				z-index:3;
+				top:0px;
+				width:1290px;
+			}
+			
+			.back	{z-index: 1;
+				position:fixed;
+				top:100px;
+				left:33%;
+				width:450px; 
+				height:450px;}
+				
+			.t {position:relative;
+				left:530px;
+				width:500px;
+				top:130px;
+				color:white;
+				font-size:60px;
+			}
+			
+			.text{position:relative;
+				left:450px;
+				width:500px;
+				top:130px;
+				color:white;
+				font-size:25px;
+			}
+		</style>
+	</head>
+	<body background="./background.png">
+		<nav>
+            <ul class="flex-nav">
+                <li><a href="home.html">首頁</a></li>
+                <li><a href="movie_list.html">電影介紹</a></li>
+                <li><a href="showingTime.html">場次查詢</a></li>
+                <li><a href="buy.html">會員專區</a></li>
+				<li><a href="login.html">登入/註冊</a></li>
+            </ul>
+        </nav>
+		<img class="back" src="gray2.png" title="gray_background" >
+		<span class="t">About us</span>
+		
+		<div class="text">
+			<br>XX電影院</br>
+			<br>地址 : 桃園市龜山區文化一路259號</br>
+			<br>電話 : (03)1234567</br>
+			<br>營業時間 : 24hr</br>
+			<br>信箱 : movie@gmail.com</br>
+		</div>
+	</body>
+</html>

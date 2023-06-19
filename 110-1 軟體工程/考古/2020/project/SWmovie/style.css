@@ -1,0 +1,74 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	background-attachment:fixed;
+}
+nav > ul {
+	background-color: #DEDEDE;
+	list-style: none;   /* 移除項目符號 */
+	margin: 0;
+	padding: 0;
+}
+
+nav a {
+	color: inherit; /* 移除超連結顏色 */
+	display: block; /* 讓 <a> 填滿 <li> */
+	font-size: 1.2rem;
+	padding: 20px;
+	text-decoration: none;  /* 移除超連結底線 */
+}
+
+/* 滑鼠移到 <a> 時變成深底淺色 */
+nav li:hover {
+	background-color: rgb(115, 115, 115);
+	color: white;
+}
+/*
+nav .username:hover {
+	background-color: #DEDEDE;
+	color: black;
+	padding: 0;
+}*/
+
+
+.flex-nav {
+	position:fixed;
+	display: flex;
+	justify-content: space-evenly;
+	z-index:3;
+	top:0px;
+	width:1290px;
+}
+
+.back{
+	position:fixed;
+	top:100px;
+	left:32.5%;
+	width:450px; 
+	height:450px;
+}
+	
+.t {
+	position:relative;
+	left:540px;
+	top:130px;
+	color:#2D2C2C;
+	font-size:45px;
+	font-weight: bolder;
+}
+
+.text{
+	z-index:1;
+	position:relative;
+	left:450px;
+	width:500px;
+	top:130px;
+	color:#2D2C2C;
+	font-weight: bolder;
+	font-size:25px;
+}
+
+
+.text br .about{
+	text-decoration: underline;
+}

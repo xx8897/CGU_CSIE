@@ -1,0 +1,165 @@
+Appendix 2 Concept of objects and object-oriented software
+★物件導向範例優於結構化範例
+★class / object 導入背景
+★class / object 的特性
+★object-oriented software 的特性
+
+＊What is Module?
+一整塊的code -> 難以維護
+硬體系統經驗
+ -硬體module易於理解，定義故障，重置，延伸
+ -模組設計準則：模組內最大相關，模組間最小相關
+Module
+ -一組可以讓系統其他部分調用的名稱，有一組自己獨特的變數名稱
+ -包含各種程序功能，無論內部or分別編譯
+ -由boundary elements所限制，並有一總識別碼
+如何量化
+ -內聚力(強度)：module內程式碼間結合度
+ -耦合(結合)：module間的關聯度
+module作用是做什麼(行為)
+module內文是module的特定用法
+module名稱取決於作用
+
+＊Degree of Cohesion
+Coincidental cohesion 偶發內聚力
+ -一個模組要做好幾個不相關的工作
+ -缺點：難以維持和了解，缺乏可重用性
+Logical cohesion 邏輯內聚力
+ -模組內具有多個邏輯上相關聯的功能
+ -缺點：介面難以了解和維持
+Temporal cohesion 暫時內聚力
+ -當一連串有時序相關的功能需同時執行時
+Procedural cohesion 程序內聚力
+ -一連串的功能需按照順序來執行
+ -缺點：彼此間關聯性小
+Communication cohesion 溝通內聚力
+ -一連串的功能需按照順序來執行，且共用相同的資源
+ -缺點：過於複雜
+Informational Cohesion 資訊內聚力
+ -每個功能都有自己獨特的輸入端，表現在同一個資料結構
+Functional cohesion功能內聚力 
+ -每一個模組只有一個功能只做一件事情
+
+＊Degree of Coupling
+Content coupling 內容耦合力
+ -兩個module間若改變其中一個module另一個會直接被影響
+ -缺點：任何改變皆會影響對方
+Common coupling 共同耦合力
+ -兩個module使用相同資料，皆可讀寫
+ -缺點：共用資料的錯誤、維護、名稱、變動之問題
+Control coupling 控制耦合力
+ -可利用控制的元素去控制另一個module
+ -缺點：module不獨立
+Stamp coupling 資料結構耦合力
+ -module間以資料結構作為參數傳遞，但並非每個模組均用到該資料結構的所有欄位
+ -缺點：部份 argument 資料沒用到
+Data coupling 資料耦合力
+ -module間以一些簡單型態資料作為moduls間的傳遞參數
+
+＊Concept of Data encapsulation
+藉著執行操作將資料建構在一起
+計算機的抽象級別
+ -level 0：Digital logic level
+ -level 1：Microprogramming level
+ -level 2：Machine code level
+ -level 3：Operating system level
+ -level 4：Assembly language level
+ -level 5：Problem-oriented language level
+先定義資料結構名稱及相關操作簽署，再談設計
+Abstract data types
+ -定義資料結構名稱及其使用方式，看不到內部結構
+
+＊Information Hiding
+Abstract data types的好處：使用者只看到模組外部介面，code和data分開
+Information hiding
+ -可能會改變的物件要隱藏起來
+ -未來的改變是局部性的
+ -改變不能影響到其他模組
+Data abstraction
+Procedural abstraction
+透過private屬性隱藏信息
+
+＊Objects / Classes
+延伸ADT以設計軟體
+ -Objects有各自的data area但共用procedures code
+定義class及延伸code sharing
+ -class：ADT supports 繼承
+ -Objects 是class的實例
+實例的行為及架構被class定義
+class有時被稱為object's type
+class描述objects的共同抽象特徵
+每一個實例有一個唯一的標誌
+Object：
+ -正在運行中的元素
+ -系統中的實體，能保存狀態，並提供一些操作來測試或改變狀態
+ -某些操作可能不影響內部訊息，但一次僅能一個行為
+
+＊Inheritance of Classes 繼承關係
+物件導向語言的一個基本特徵
+ -擴大code sharing 的使用，定義subclass
+ -建立subclass可繼承某class的所有屬性和行為
+ -可修改部分attributes及operations->overriding(覆蓋)的觀念
+ -一般化/特殊化關係
+
+＊Aggregation-Classes 組成關係
+一個class由多個classes組合而成
+ -consist-of relation(結合體)：parant object去除時，child objects不能存在
+ -join-together relation(組合體)：parant object去除時，child objects可存在
+一個class的attributes為其他objects，且有自己的methods，這些methods可呼叫其他內部objects的methods
+
+＊Dependency relation of classes 依附關係
+part- class內method作修改，影響呼叫此method之whole- class method之執行行為
+一class A 修改時將影響另一class Ｂ之執行行為，則class Ｂ depends on class A.
+
+＊Association -- Classes 間的關係
+系統由一組元素組成，這些元素被交互使用以執行特定任務以滿足用戶的目標。
+從程式結構觀點，class是物件導向軟體系統的基本element，執行時element (object/class)間應有交互行為(interaction)
+ -Association: class間有inheritance、 dependency、與aggregation 以外的關係
+
+＊Class 與object的關係
+Object-oriented program執行時,在某一時刻看到物件間關係
+Object-oriented program內，class 與object的對應關係
+ -Object皆有對應的class,且多個Object可對應同一個class
+在 object diagram 中
+ -Inheritance relation沒有意義
+ -Dependency relation代表object A 的行為受object B影嚮
+ -Aggregation relation代表物件間包含關係
+
+＊Dynamic relations of objects 
+物件間若無交互行為,則仍為獨立個體而無法構成完整程式之功能
+兩個物件可透過訊息傳遞做溝通
+物件的變動是由透過傳送stimuli的動態關係所創造出來的
+Stimulus表示他促使一些行為採取行動，並不一定包括任何訊息
+當接收到一個stimulus要執行一個操作，操作結束後回傳到原本caller
+object可以創建或銷毀另一個object
+一個物件可以發出請求創造另一個thread(引線)同時執行另一個活動
+Active object:一個object可藉由另一個thread來執行
+ -此 object 有一method為run( )
+ -當此 object 的start ( ) 被呼叫時,則啟動另一 thread 執行此 object的run( ) method,原thread 繼續執行
+Active object所屬的class,稱為 Active class
+兩個並行執行的objects會有交互作用
+Shared object:有兩個或更多threads的objects所調用的objects
+Shared object所屬的class,稱為 Shared class
+
+＊Interface and Abstract class 
+透過呼叫 interface 可使同一 operation 在不同時刻執行不同 object 的 method
+Abstract class :此class的 methods只定義其 signature ,詳細 algorithm 並未定義,當另一class繼承此class時,再定義這些methods的詳細內容,後者為 real class
+
+＊Polymorphism and Dynamic Binding
+
+★＊structed program(組織運作)與 object-oriented program (物件導向程序)
+Object-oriented program內，class 與object的對應關係
+ -Object皆有對應的class,且多個Object可對應同一個class
+兩個物件可透過訊息傳遞做溝通
+multi-thread
+OO program執行某一功能
+polymorphism
+subsystem的觀念
+
+★列出Object-oriented program和structured program的差別
+Object-oriented program主要使用多型和繼承等觀念
+將資料抽象化：data、oerators
+封裝的特性-物件、類別的概念
+而structured program主要是
+將重複的程式片段抽出成為函式
+在main裡面透過呼叫函式來執行

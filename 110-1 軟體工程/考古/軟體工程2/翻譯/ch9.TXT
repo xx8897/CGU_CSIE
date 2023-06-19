@@ -1,0 +1,102 @@
+ch9 Architectural Design
+
+★＊Why Architecture?(為什麼有架構)
+1.分析設計的有效性
+2.考慮架構的替代品
+3.減少風險
+
+★＊Why is Architecture Important?(架構重要性)
+1.是一個溝通彼此的推動者
+2.凸顯早期設計
+3.構成相對較小、易理解的模型
+
+**soft Architecture 定義
+   建立一個相對較小、理智可掌握的模式
+
+★Architectural Styles(款式)
+一系統包含:
+   1.一組組件
+   2.一組連接器
+   3.約束
+   4.語意模型
+>>資料中心架構
+>>資料流架構
+>>call和return架構
+>>物件導向架構
+>>分層架構
+
+Architectural Descriptions
+一個產品的集合用來記錄架構
+
+Architectural Genres
+整個軟體領域中特別的種類
+類別裡又有子類別
+
+
+
+*Architectural Patterns
+1.並發性－應用程序以模擬平行的方式處理多個task
+    - OS程序管理模式
+    -task排程模式
+2.持久性－若process執行後仍存在，則資料存在
+   -資料庫管理系統模式
+   -應用層級持久模式 
+3.分佈－系統或元件在分佈式環境中彼此溝通的方式
+   -broker中間人
+
+Architectural Design
+
+Analyzing Architectural Design
+1.收集方案
+2.引出需求、限制、環境描述
+3.選擇架構風格/模式，以滿足場景&需求
+  模組view、程序view、資料流view
+4.單獨考慮屬性來評估品質屬性
+5.確認品質屬性的敏感性
+6.用步驟5進行的分析評估候選架構
+
+*Architectural Complexity
+1.共享依賴性－消費者&生產者之依賴關係
+2.流動依賴性－資源的消費者&生產者之依賴關係
+3.限制依賴性－ 一活動的控制相對流量限制
+
+ADL
+1.描述軟體架構的語義&語法
+2.分解架構元件
+3.組合各部位成更大的架構
+4.代表元件間的介面
+
+*An Architectural Design Method
+1.衍生程式結構
+2.分割架構－(1)水平分割(2)垂直分割:Factoring
+
+*Why Partitioned Architecture?
+1.更容易測試
+2.更容易維護
+3.減少副作用
+4.更容易擴展
+
+*Structured Design
+1.目標－推導出分區的程式架構
+2.方法－DFD映射到程式架構、PSPEC&STD用於標示每個模組內容
+3.符號－結構圖
+
+General Mapping Approach
+1.指定傳入傳出流邊界來隔離轉換中心
+2.執行"一級因式分解"
+2.執行"二級因式分解"
+
+**pseudocode比algorithm design representations 受歡迎
+-容易結合原始碼
+-機器可讀的，不須圖形輸入
+-從PDL圖形可以被產生
+-資料可以被宣告    像是程序
+-容易維持
+
+
+
+
+
+
+
+

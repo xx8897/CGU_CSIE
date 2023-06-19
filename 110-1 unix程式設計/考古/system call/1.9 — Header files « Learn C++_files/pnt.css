@@ -1,0 +1,8 @@
+.pnt-notice {
+	display:inline-block;
+	color:#000000;
+	background:#CCCCCC;
+	position:relative;
+	border-radius:10px;
+	padding:5px 15px 5px 15px;
+}

@@ -1,0 +1,96 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  color:#424242;
+  font-family:Microsoft JhengHei;
+}
+body{
+  //border:2px black solid;
+  height:110vh;
+  width:90vw;
+  margin:0px auto;
+  background:#D1C4E9;
+}
+header{
+  //border:2px blue solid;
+  height:28vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.note{
+  //border: 2px green solid;
+  line-height:35px;
+  text-align:center;
+}
+main{
+  /*border:2px brown solid;
+  height:75vh;*/
+  margin-top:5vh;
+}
+.line-one{
+  //border:2px black solid;
+  margin-top:3vh;
+  height:35vh;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+a{
+  text-decoration:none;
+}
+.items{
+  
+  border:3px #757575 solid;
+  height:35vh;
+  width:20vw;
+  border-radius: 5px;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+}
+.two{
+  margin-left:3vw;
+}
+.icon-wrapper, .project-name {
+  //border: 2px yellow solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.next{
+  height: 100px;
+  transform: translateY(15px);
+  transition: all 0.6s;
+}
+.icon-wrapper .imgo{
+  height: 140px;
+  transform: translateY(0px);
+  transition: all 0.6s;
+}
+.project-name{
+  margin-top:20px;
+}
+.project-name p {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #424242;
+  transform: translateY(0px);
+  transition: all 0.5s;
+}
+
+.items:hover {
+  border: 3px solid #E5E6F1;
+}
+.items:hover .project-name p {
+  transform: translateY(-10px);
+}
+.items:hover .icon-wrapper .imgo {
+  transform: translateY(5px);
+}
+.items:hover .icon-wrapper .next {
+  transform: translateY(20px);
+}
+

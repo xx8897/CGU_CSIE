@@ -1,0 +1,99 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登入</title>
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<style type="text/css">
+			header {font-weight:bold;
+					color:white;					
+					text-align:left;
+					height:21mm;
+					width:335mm;
+					background-color:darkslategray;
+					line-height:80px;}
+					
+			div .in	{position:relative;
+						top:170px;
+						left:500px;}
+							
+			.login_button{position:absolute;
+						top:330px;
+						left:600px;
+						font-size:15px; 
+			}	
+			.login_button:hover{
+				position:absolute;
+				top:330px;
+				left:600px;
+				color:white;
+				background-color:#403737;
+				cursor: pointer;
+				font-size:15px; 
+			}	
+			
+
+			.flex-nav {
+				display: flex;
+				justify-content: space-evenly;
+			}
+			
+			div p{font-size:20px;
+				font-weight:bold;
+				color:white;}
+			
+			div p.title {position:absolute;
+					font-weight:bold;
+					color:white;					
+					left:600px;
+					top:90px;   
+					font-size:1cm;}
+			
+			.area	{width:10%}
+			.href	{
+				position:absolute;
+						left:710px;
+						top:300px;
+			}
+			.href:hover	{
+				position:absolute;
+				left:710px;
+				top:300px;
+				color:red;
+			}
+
+		</style>
+		<script>
+			function wd(){
+				alert('登入成功');
+				location.href='home.php';
+			}
+		</script>
+	</head>
+	<body background="./background.png">
+		<nav>
+            <ul class="flex-nav">
+                <li><a href="home.php">首頁</a></li>
+                <li><a href="movie_list.php">電影介紹</a></li>
+                <li><a href="showingTime.php">場次查詢</a></li>
+                <li><a href="buy.php">會員專區</a></li>
+				<li><a href="login.html">登入/註冊</a></li>
+            </ul>
+        </nav>
+		
+		<div class="area" >
+			<p class="title">登入</p>
+			<form name="Login" action="Login.php" method="POST">
+				<p ><input type="text" name="account" class="in" size="30" 
+					style="font-size:15px; padding:10px;"  required="required" placeholder="請輸入帳號"/></p>
+				<p class="in"><input type="text" name="password" class="text_field" size="30" 
+					style="font-size:15px; padding:10px;" placeholder="請輸入密碼" required="required"/></p>
+				<span ><a href="register.html" class="href">加入會員</a></span>
+				<p ><input class="login_button"type="submit" id="btn_login" value="登入" style="width:80px;height:30px;"></p>
+			</form>
+		</div>
+
+	</body>
+</html>

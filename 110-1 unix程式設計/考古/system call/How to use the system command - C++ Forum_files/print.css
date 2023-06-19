@@ -1,0 +1,319 @@
+/*print style sheet */
+@import url("exceptions/form.css");
+body * { 
+font-family: Arial, Helvetica, sans-serif; 
+font-style:normal;
+line-height:125%;
+}
+#navigation {display: none !important}
+img#logo {
+            margin: 13px 0 22px 0;
+            border: none;
+}
+a img {
+border:none;
+}
+ul[id|="nav"] {
+            display: none;
+}
+.access-aid, #nav-utility, #nav-segment, #nav-primary, #nav-page, #nav-personal, #nav-footer {
+            display: none;
+}
+#content {
+            margin-left: 0;
+            font-size: 80%;
+}
+body#homepage {
+            margin-left: 0;
+            font-size: 80%;
+}
+
+
+div#sidebar {
+            display: none;
+}
+body#homepage div#sidebar{
+            display:inline;
+}
+body#homepage div.masthead_hidden, body#homepage div#helpwizard-banner, body#homepage div#segment-tabs, body#homepage div#segments-default, body#homepage div#tab-content{
+            display:none;
+}
+div#footer {
+            margin-top: 5em;
+            border-top: 1px solid #ccc;
+            font-size: 80%;
+            color: #ccc;
+}
+.access-aid {
+            display: none;
+}
+ul#nav-tabs {
+            display: none !important;
+}
+div#content h3 {
+            color: #b00c33;
+            font-size: 125%;
+            font-weight: bold;
+}
+/*---- Summary ----*/
+dl.tc-summary {
+            border: 1px solid #ccc;
+            padding: 10px;
+}
+dl.tc-summary dt {
+            float: left;
+            font-weight: bold;
+            padding: 3px 0;
+            clear: both;
+}
+dl.tc-summary a:link, dl.tc-summary a:visited, dl.tc-summary a:hover, dl.tc-summary a:active {
+            text-decoration: none; 
+            color: #000;
+}
+
+.tc-summary dd {
+            margin-left: 200px;
+            padding: 4px 0;
+}
+
+/*--- Tab Content ----*/
+div#tab-content div {
+            visiblilty: visible;
+            display: block !important;
+}
+div#tab-content {
+            font-size: 90%;
+            padding-left: 15px;
+}
+div#tab-content h3 {
+            margin-left: -15px;
+            display: block;
+            visibility: visible !important;
+            font-size: 125%;
+            border-bottom: 1px solid #ccc;
+}
+
+div#tab-content h3 {
+            font-size: 110%;
+}
+div#tab-content h4 {
+           font-size: 100%;
+            color: #999 !important;
+            margin-bottom: 5px;
+}
+
+div#tab-content h5 {
+            margin-left: 20px;
+            margin-bottom: 5px;
+}
+
+div#tab-content p {
+            margin: 5px 0 15px 0;
+}
+
+.tc-infolist, .risk-assessment {
+            margin: 0 0 20px 20px;
+
+}
+.tc-infolist dt, .risk-assessment dt {
+            font-weight: bold;
+            float: left;
+            width: 170px;
+}
+
+.tc-infolist dd, .risk-assessment dd {
+            margin-left: 180px;
+            padding: 3px 0;
+}
+table {
+            border: 2px solid #ccc;
+            border-collapse: collapse;
+
+}
+
+table a:link, table a:visited { 
+            text-decoration: none; 
+            color: #000;
+}
+
+th {
+           font-weight: bold;
+           border-bottom: 1px solid #ccc;
+
+}
+
+th, td {
+           padding: 3px 10px;
+            border-right: 1px solid #ccc;
+
+}
+
+/* .noPrint
+
+{
+
+            display: none;
+
+            visibility: hidden;
+
+}
+
+.sideBackground
+
+{
+
+            display: none;
+
+            visibility: hidden;
+
+}
+
+.redBackground
+
+{
+
+            display: none;
+
+            visibility: hidden;
+
+}
+
+.NAITag
+
+{
+
+            text-align: left;
+
+}
+
+h1 span {
+
+            visibility: visible;
+
+}
+
+body, #frame, #main, #content, #contentMain {
+
+            border: none !important;
+
+            margin: 0px !important;
+
+            padding: 0px !important;
+
+            width: auto !important;
+
+}
+
+#purchaseFlow {
+
+            display: none !important;
+
+}
+
+*/
+
+div#navigation, div#nav-utility, .access-aid, ol#toc, div#footer {
+            display: none;
+
+}
+div#header img#logo {
+          border: none;
+
+}
+ul.cmsl li a{
+color:#000033;
+}
+p a.styled, div#awards p a{
+padding-left:15px;
+color:#000033;
+}
+div#awards h3 a{
+            color: #000;
+            font-weight: bold;
+			}
+
+div#teaser, div#pos{
+background-repeat:no-repeat;
+}
+div#breadcrumb, div#breadcrumb a{
+display:none;
+}
+/*threat center
+h3.capital a{
+            color: #000;
+            font-weight: bold;
+			
+}
+div#extra p a{
+color:#000033;
+}*/
+div#threat_center_callout{
+display:none;
+}
+
+/*bugs*/
+h3#pname{
+font-size:150%;
+font-weight:bold;
+color:#000 !important;
+padding-bottom:0 !important;
+margin-bottom:0 !important;
+}
+h4#product-type{
+font-size:105%;
+font-variant:small-caps;
+color:#000 !important;
+padding-top:0 !important;
+margin-top:0 !important;
+}
+div#content h4 {
+font-size: 100%;
+color:#000 !important;
+}
+
+
+ul#pdocslist li{
+display:none;
+}
+
+
+div#promo-smb div.promo45 div.boxshot {
+		display:none;
+}
+div.promo90 div.boxshot img{
+		display:none;
+}
+div#promo-ent div.promo span.access-aid{
+display: block;
+font-weight: bold;
+font-size: 120%;
+*font-size: 125%;
+color:#000;
+text-decoration:none;
+}
+div#promo-ent div.promo a.promo-banner{
+background-image:none !important;
+}
+
+
+div.dropshadow#content-main tbody td a{
+	text-align:right;
+	padding-right:6px;
+	text-decoration:underline;
+	color:#000099;
+	font-size:95%;
+	}
+	
+body#threat_center-threatcenter div#teaser{
+background-image:none;
+height:auto !important;
+}
+
+
+div.dropshadow#content-main dl dt{
+font-size:100%;
+font-weight:bold;
+}
+div.dropshadow#content-main h5{
+font-size:120%;
+}

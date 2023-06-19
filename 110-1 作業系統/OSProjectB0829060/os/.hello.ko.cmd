@@ -1,0 +1,1 @@
+cmd_/home/xx8897/Desktop/os/hello.ko := ld -r -m elf_x86_64  --build-id=sha1  -T scripts/module.lds -o /home/xx8897/Desktop/os/hello.ko /home/xx8897/Desktop/os/hello.o /home/xx8897/Desktop/os/hello.mod.o;  true

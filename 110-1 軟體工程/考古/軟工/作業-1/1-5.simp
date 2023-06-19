@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sim-project version="11.80" multi-file="no" uid="simp74ea8eff8c9d441c884ea7b9438fbe82">
+  <meta>
+    <name>Project</name>
+    <authors> </authors>
+    <description />
+  </meta>
+  <counters models="1">
+    <entity-names>
+      <counter>
+        <item-type type-id="class" type="UmlClass" />
+        <value>13</value>
+      </counter>
+      <counter>
+        <item-type stereotype="struct" type-id="class" type="UmlClass" />
+        <value>2</value>
+      </counter>
+      <counter>
+        <item-type stereotype="table" type-id="class" type="UmlClass" />
+        <value>2</value>
+      </counter>
+      <counter>
+        <item-type type-id="package" type="UmlPackage" />
+        <value>1</value>
+      </counter>
+      <counter>
+        <item-type stereotype="interface" type-id="class" type="UmlClass" />
+        <value>1</value>
+      </counter>
+      <counter>
+        <item-type type-id="" type="DrawingItem" />
+        <value>3</value>
+      </counter>
+    </entity-names>
+    <entity-ids>
+      <counter>
+        <item-type type-id="" type="AbstractElementGroup" />
+        <value>239</value>
+      </counter>
+      <counter>
+        <item-type type-id="class" type="UmlClass" />
+        <value>18</value>
+      </counter>
+      <counter>
+        <item-type type-id="package" type="UmlPackage" />
+        <value>2</value>
+      </counter>
+      <counter>
+        <item-type type-id="containment" type="UmlContainment" />
+        <value>2</value>
+      </counter>
+      <counter>
+        <item-type type-id="dependency" type="UmlDependency" />
+        <value>2</value>
+      </counter>
+      <counter>
+        <item-type type-id="universal-connector" type="UniversalConnector" />
+        <value>8</value>
+      </counter>
+      <counter>
+        <item-type type-id="generalization" type="UmlGeneralization" />
+        <value>4</value>
+      </counter>
+      <counter>
+        <item-type type-id="relationship" type="UmlAssociation" />
+        <value>15</value>
+      </counter>
+      <counter>
+        <item-type type-id="uml-n-ary-association" type="UmlNaryAssociation" />
+        <value>2</value>
+      </counter>
+      <counter>
+        <item-type type-id="text" type="AbstractTextItem" />
+        <value>4</value>
+      </counter>
+    </entity-ids>
+    <diagrams>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.Diagrams.UmlDiagrams.UmlClassDiagram</type>
+        <value>1</value>
+      </counter>
+    </diagrams>
+    <fields>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.DiagramItems.Fields.AttributeField</type>
+        <value>31</value>
+      </counter>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.DiagramItems.Fields.OperationField</type>
+        <value>28</value>
+      </counter>
+    </fields>
+  </counters>
+  <alias-groups />
+  <management uid="md-9d314b3c08d8478f9d647bc7ffa799bb" name="" task-id-sequence="0">
+    <persons>
+      <person id="Pbd5a960a39d24934b9b4deb21fe40e00">
+        <first-name />
+        <last-name />
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
+      </person>
+    </persons>
+    <teams />
+    <sprints />
+    <projects />
+    <modules />
+    <tasks />
+    <to-dos />
+  </management>
+  <glossary id="glsr-577b4e84289c4435aab55a3a85b7d84f" />
+  <types default="UML">
+    <type-sets>
+      <type-set file="UmlTypes.xml" />
+    </type-sets>
+    <custom-types>
+      <type id="Int" tid="" name="Int" description="" />
+      <type id="List" tid="" name="List" description="" />
+      <type id="double" tid="" name="double" description="" />
+      <type id="int" tid="" name="int" description="" />
+      <type id="DataTime" tid="" name="DataTime" description="" />
+    </custom-types>
+  </types>
+  <items />
+  <models>
+    <model id="p6d7a768c166549aeacb777a7fad209aa_995603441" name="Model1" namespace="" order-index="1">
+      <meta>
+        <authors>
+          <author> </author>
+        </authors>
+        <description />
+        <creation-date>09/25/2018 21:00:59</creation-date>
+        <change-date>01/01/0001 00:00:00</change-date>
+        <revision-count>0</revision-count>
+        <version />
+      </meta>
+      <abstract-items />
+      <sub-models />
+      <diagram type="uml-class" id="p32db9a122a7342398afa186ae83426b3_841656264" name="ClassDiagram1" order-index="1" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-special-indicators="false" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false" view-location="-26,296">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="solid" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>09/25/2018 21:00:59</creation-date>
+          <change-date>09/25/2018 21:46:47</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <abstract-items>
+          <item id="a6d4d1fd21194cfd927e679bbd2b6e88" cid="C006" type="class" name="銀行" style-class="" visibility="package" change-tracking-state="added" creator="Pbd5a960a39d24934b9b4deb21fe40e00" creation-date="09/25/2018 21:05:25">
+            <style class="default" />
+            <attributes>
+              <attribute id="ac43dfa77f0964bb49757929490697548515" cid="ELEM001" name="銀行代碼" creation-date="01/01/0001 00:00:00" type="String" type-id="Uml.String" visibility="private">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" uid="scs-b5705528-972d-4460-a9ca-07d4cfc7042a" />
+                </source-codes>
+              </attribute>
+              <attribute id="a3d0edd4ede70499e8db0d149b416d2ec122" cid="ELEM002" name="銀行名稱" creation-date="01/01/0001 00:00:00" type="String" type-id="Uml.String" visibility="private">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" uid="scs-a170dcf9-a4e9-4d60-85d5-921f09360d7f" />
+                </source-codes>
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="ob34cc61ae36b48668a4a1448f60aa384259" cid="ELEM004" name="提款" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p8a0012ccf30e47a4afd72e72f65e5551" name="帳戶編號" type="" type-id="" />
+                  <parameter id="pc185163b06224514b1cba0afe44e8ec4" name="金額" type="" type-id="" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                </source-codes>
+              </operation>
+              <operation id="o3efd6dcee7d24c4eab51904e47a739c6682" cid="ELEM005" name="查尋帳戶餘額" creation-date="01/01/0001 00:00:00" type="double" type-id="double" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p08d504792da94d188838af66d2bd7bb5" name="帳戶編號" type="" type-id="" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                </source-codes>
+              </operation>
+              <operation id="o1f6c6bda2dd14bbd986454e5668ee597338" cid="ELEM006" name="取得過帳戶資料" creation-date="01/01/0001 00:00:00" type="List" type-id="List" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p3629c9c6acd64168985d600d52bc3cbe" name="客戶編號" type="" type-id="" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                </source-codes>
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="405bf7ea351f49ad8730dd380dfbe7c5" cid="C009" type="class" name="帳戶" style-class="" visibility="package" change-tracking-state="added" creator="Pbd5a960a39d24934b9b4deb21fe40e00" creation-date="09/25/2018 21:17:11">
+            <style class="default" />
+            <attributes>
+              <attribute id="a5aede49be6a84a0d9699b0f15be82e9c418" cid="ELEM007" name="帳號" creation-date="01/01/0001 00:00:00" type="String" type-id="Uml.String" visibility="private">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" uid="scs-185540f8-1010-4395-b204-40653ebfb772" />
+                </source-codes>
+              </attribute>
+              <attribute id="a0ddc7a2f725d4f8baae3d39e188b7175714" cid="ELEM008" name="帳戶餘額" creation-date="01/01/0001 00:00:00" type="double" type-id="double" visibility="private">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" uid="scs-95e036aa-c868-4b48-a3d0-98014a1b8901" />
+                </source-codes>
+              </attribute>
+              <attribute id="affa9f194e5524d05a9ee997ea4d50a9541" cid="ELEM009" name="金融卡卡號" creation-date="01/01/0001 00:00:00" type="String" type-id="Uml.String" visibility="private">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" uid="scs-7d224e29-0092-4498-8fa4-8fb7f4dec54f" />
+                </source-codes>
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="oa152855e76cf4557b9cfd097d910509c795" cid="ELEM010" name="取得帳戶餘額" creation-date="01/01/0001 00:00:00" type="double" type-id="double" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                </source-codes>
+              </operation>
+              <operation id="oba0c7e680d9a4402ae3b0d00e365a6f3770" cid="ELEM011" name="取得卡號" creation-date="01/01/0001 00:00:00" type="String" type-id="Uml.String" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                </source-codes>
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="c1585b0a4a5a438c900aefb92b5b22df" cid="C010" type="class" name="銀行客戶" style-class="" visibility="package" change-tracking-state="added" creator="Pbd5a960a39d24934b9b4deb21fe40e00" creation-date="09/25/2018 21:17:14">
+            <style class="default" />
+            <attributes>
+              <attribute id="a82dd70f126cf4b6e902d5e37b12f4a3b690" cid="ELEM012" name="客戶帳號" creation-date="01/01/0001 00:00:00" type="String" type-id="Uml.String" visibility="private">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" uid="scs-a9d6d6da-8de9-4fba-bb9b-146e4c94bee3" />
+                </source-codes>
+              </attribute>
+              <attribute id="ad199fc63cff3461694dbbaa8b66c7629498" cid="ELEM013" name="姓名" creation-date="01/01/0001 00:00:00" type="String" type-id="Uml.String" visibility="private">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" uid="scs-97264b91-7297-4f0c-9616-d56a2f1e6de0" />
+                </source-codes>
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="ofae1120b8ff2405eb36f8779fc8968bf450" cid="ELEM014" name="取得客戶編號" creation-date="01/01/0001 00:00:00" type="String" type-id="Uml.String" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                </source-codes>
+              </operation>
+              <operation id="od64a101e757f446693db2ac5c979c101770" cid="ELEM015" name="取得客戶姓名" creation-date="01/01/0001 00:00:00" type="String" type-id="Uml.String" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                </source-codes>
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="03cd00bbb3ae420c8e29b44bbed58af1" cid="C011" type="class" name="ATM" style-class="" visibility="package" change-tracking-state="added" creator="Pbd5a960a39d24934b9b4deb21fe40e00" creation-date="09/25/2018 21:22:52">
+            <style class="default" />
+            <attributes>
+              <attribute id="a253c78e4ecd54918aeef1856560762d1138" cid="ELEM016" name="編號" creation-date="01/01/0001 00:00:00" type="String" type-id="Uml.String" visibility="private">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" uid="scs-f03f9e29-fc6a-4669-9ae7-52c28bf76b19" />
+                </source-codes>
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="oe05546b0c51b4bb8a3717a47903b4783850" cid="ELEM017" name="提款" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                </source-codes>
+              </operation>
+              <operation id="ob22e5cbc53434c88a0a8333314d7c02e354" cid="ELEM018" name="查詢帳戶餘額" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                </source-codes>
+              </operation>
+              <operation id="o89b43841044d46d79ac3140e79d8708e666" cid="ELEM019" name="驗證密碼" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                </source-codes>
+              </operation>
+              <operation id="o59c7b4c6f06f494ca41abe834ac9c1f9915" cid="ELEM020" name="插入新卡片" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                </source-codes>
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="c1d13695b34a484fa48c94e95c7cfe28" cid="C014" type="class" name="現鈔分送器" style-class="" visibility="package" change-tracking-state="added" creator="Pbd5a960a39d24934b9b4deb21fe40e00" creation-date="09/25/2018 21:27:43">
+            <style class="default" />
+            <attributes>
+              <attribute id="a11ef70a5b950466e8ba5898612b0c0ae786" cid="ELEM025" name="可用現金" creation-date="01/01/0001 00:00:00" type="int" type-id="int" visibility="private">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" uid="scs-21ac86c9-f5ba-4120-b17b-bea44f347102" />
+                </source-codes>
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="o2ffeba8d346f4e88bd09bf74f310ce9898" cid="ELEM026" name="分派現鈔" creation-date="01/01/0001 00:00:00" type="int" type-id="int" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                </source-codes>
+              </operation>
+              <operation id="oc05e80def6ab4edba1547a554e399f2d789" cid="ELEM027" name="取得可用現金" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                </source-codes>
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="9e0f889494134cc0aaeaabead53b5130" cid="C013" type="class" name="讀卡機" style-class="" visibility="package" change-tracking-state="added" creator="Pbd5a960a39d24934b9b4deb21fe40e00" creation-date="09/25/2018 21:22:57">
+            <style class="default" />
+            <attributes>
+              <attribute id="aeab072c4d72c46bbbad8da1d179d970d754" cid="ELEM021" name="編號" creation-date="01/01/0001 00:00:00" type="String" type-id="Uml.String" visibility="private">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" uid="scs-0104e2b0-0ab0-49f4-aaad-8c7688003d76" />
+                </source-codes>
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="oc23b4dc302214b409e12fafa35cea1f8618" cid="ELEM022" name="取得卡號" creation-date="01/01/0001 00:00:00" type="String" type-id="Uml.String" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                </source-codes>
+              </operation>
+              <operation id="oe32612182dd9475fa0d7667b019bccb8114" cid="ELEM023" name="取得密碼" creation-date="01/01/0001 00:00:00" type="String" type-id="Uml.String" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                </source-codes>
+              </operation>
+              <operation id="oa184174224ad4cca8266a973244b8b2a711" cid="ELEM024" name="取得客戶密碼" creation-date="01/01/0001 00:00:00" type="String" type-id="Uml.String" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                </source-codes>
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="de4ecdb08f444287a4bdc8bf112230b3" cid="C015" type="class" name="交易" style-class="" visibility="package" change-tracking-state="added" creator="Pbd5a960a39d24934b9b4deb21fe40e00" creation-date="09/25/2018 21:30:23">
+            <style class="default" />
+            <attributes>
+              <attribute id="a7a72615755c94449bf59b67a1877e152498" cid="ELEM028" name="交易時間" creation-date="01/01/0001 00:00:00" type="DataTime" type-id="DataTime" visibility="private">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" uid="scs-4b663a20-aab8-43af-9d82-dda598e77a17" />
+                </source-codes>
+              </attribute>
+            </attributes>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="48ebf5f582f344b7b70296dae3c00f1f" cid="C016" type="class" name="存款" style-class="" visibility="package" change-tracking-state="added" creator="Pbd5a960a39d24934b9b4deb21fe40e00" creation-date="09/25/2018 21:30:25">
+            <style class="default" />
+            <attributes>
+              <attribute id="a901c6cb702a446e58eeb6c916ed1855a52" cid="ELEM029" name="金額" creation-date="01/01/0001 00:00:00" type="double" type-id="double" visibility="private">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" uid="scs-393def5d-f094-4642-8bc0-4fa883c86392" />
+                </source-codes>
+              </attribute>
+            </attributes>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="c904479d7722422087b8949de8c541d2" cid="C017" type="class" name="提款" style-class="" visibility="package" change-tracking-state="added" creator="Pbd5a960a39d24934b9b4deb21fe40e00" creation-date="09/25/2018 21:30:28">
+            <style class="default" />
+            <attributes>
+              <attribute id="a6c3af70fbef345cabbf7c09a46b45731367" cid="ELEM030" name="金額" creation-date="01/01/0001 00:00:00" type="double" type-id="double" visibility="private">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" uid="scs-16dfa8d1-0fea-417b-9dee-04b3516affd2" />
+                </source-codes>
+              </attribute>
+            </attributes>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="b88fd3b722124d3188de8e752cb7372f" cid="GNR002" type="generalization" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pbd5a960a39d24934b9b4deb21fe40e00" creation-date="09/25/2018 21:37:08" from="48ebf5f582f344b7b70296dae3c00f1f" to="de4ecdb08f444287a4bdc8bf112230b3">
+            <style class="default" />
+          </item>
+          <item id="306dfd5b3f944e25959a00ac9d34e682" cid="GNR003" type="generalization" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pbd5a960a39d24934b9b4deb21fe40e00" creation-date="09/25/2018 21:37:18" from="c904479d7722422087b8949de8c541d2" to="de4ecdb08f444287a4bdc8bf112230b3">
+            <style class="default" />
+          </item>
+          <item id="474ab29387d44c77b0d508b37ebb056b" cid="REL002" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pbd5a960a39d24934b9b4deb21fe40e00" creation-date="09/25/2018 21:38:01" from="a6d4d1fd21194cfd927e679bbd2b6e88" to="de4ecdb08f444287a4bdc8bf112230b3">
+            <style class="default" />
+            <relation from="a6d4d1fd21194cfd927e679bbd2b6e88" to="de4ecdb08f444287a4bdc8bf112230b3">
+              <start-role id="umlar-71ea99a0-2d52-47d2-837d-db08de227293" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-57d87b5d-b261-4567-ba41-e0ae963397c8" name="" multiplicity="*" navigability="yes" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="0c4e9cff3d534ec38ccfe8b7e3cb9faa" cid="REL004" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pbd5a960a39d24934b9b4deb21fe40e00" creation-date="09/25/2018 21:38:28" from="03cd00bbb3ae420c8e29b44bbed58af1" to="c1d13695b34a484fa48c94e95c7cfe28">
+            <style class="default" />
+            <relation from="03cd00bbb3ae420c8e29b44bbed58af1" to="c1d13695b34a484fa48c94e95c7cfe28">
+              <start-role id="umlar-cb8d1cd8-0640-4d16-81ca-c4899151fe99" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-0abacaa1-5804-49a4-87ba-155a8295e548" name="" multiplicity="1" navigability="yes" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="880cbe0c6a9d473fb3a9b29cac8a01a4" cid="REL005" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pbd5a960a39d24934b9b4deb21fe40e00" creation-date="09/25/2018 21:38:40" from="a6d4d1fd21194cfd927e679bbd2b6e88" to="03cd00bbb3ae420c8e29b44bbed58af1">
+            <style class="default" />
+            <relation from="a6d4d1fd21194cfd927e679bbd2b6e88" to="03cd00bbb3ae420c8e29b44bbed58af1">
+              <start-role id="umlar-c876c14b-2552-48f7-aadb-821095047c8f" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-f4dceb6f-2461-4619-9356-52e2cf1c12e1" name="" multiplicity="1..*" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="019ae266a780426b9d8605868dd33610" cid="REL006" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pbd5a960a39d24934b9b4deb21fe40e00" creation-date="09/25/2018 21:38:54" from="03cd00bbb3ae420c8e29b44bbed58af1" to="9e0f889494134cc0aaeaabead53b5130">
+            <style class="default" />
+            <relation from="03cd00bbb3ae420c8e29b44bbed58af1" to="9e0f889494134cc0aaeaabead53b5130">
+              <start-role id="umlar-4ebc75df-3cf2-4e54-aabf-1d3a40873652" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-1de484a8-85e8-423b-bbe7-fd6e40640a86" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="6602441e70784ef7b0284aff071bf3f6" cid="REL014" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pbd5a960a39d24934b9b4deb21fe40e00" creation-date="09/25/2018 21:42:17" from="a6d4d1fd21194cfd927e679bbd2b6e88" to="405bf7ea351f49ad8730dd380dfbe7c5">
+            <style class="default" />
+            <relation from="a6d4d1fd21194cfd927e679bbd2b6e88" to="405bf7ea351f49ad8730dd380dfbe7c5">
+              <start-role id="umlar-100ff8a7-61e8-4553-8416-b0f10c2059ce" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-6c510bb3-e3d1-4a29-878e-887ed57919b6" name="" multiplicity="1..*" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="bef0307a396b4614b3e2ced510f4894f" cid="REL009" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pbd5a960a39d24934b9b4deb21fe40e00" creation-date="09/25/2018 21:39:10" from="405bf7ea351f49ad8730dd380dfbe7c5" to="c1585b0a4a5a438c900aefb92b5b22df">
+            <style class="default" />
+            <relation from="405bf7ea351f49ad8730dd380dfbe7c5" to="c1585b0a4a5a438c900aefb92b5b22df">
+              <start-role id="umlar-d64c56e8-dfda-42a2-8de5-fe4f4fdeacb2" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-7b6acccb-6a17-4883-bc20-968efd2b19bf" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="d3d533736e3c4af8b4f504239176b35f" cid="REL012" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pbd5a960a39d24934b9b4deb21fe40e00" creation-date="09/25/2018 21:39:25" from="405bf7ea351f49ad8730dd380dfbe7c5" to="de4ecdb08f444287a4bdc8bf112230b3">
+            <style class="default" />
+            <relation from="405bf7ea351f49ad8730dd380dfbe7c5" to="de4ecdb08f444287a4bdc8bf112230b3">
+              <start-role id="umlar-69592f9b-7eef-4b7d-a335-657b4b920b82" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+              <end-role id="umlar-6b15b105-8d3b-43bb-bf65-be3b77f8eb96" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+        </abstract-items>
+        <layer id="a9c4a3eff5154656aace3508d4330e33" name="Default" visible="true" enabled="true" locked="false">
+          <item id="a6d4d1fd21194cfd927e679bbd2b6e88" iid="27fd9f6d46234c8f9224812a25226106" creation-date="09/25/2018 21:05:25" order-index="0" type="entity">
+            <layout ax="83" ay="104" awidth="224" aheight="160" x="83" y="104" width="224" height="160" />
+            <class />
+          </item>
+          <item id="405bf7ea351f49ad8730dd380dfbe7c5" iid="3e51cd18fa4e402f976f1325e552aa43" creation-date="09/25/2018 21:17:11" order-index="1" type="entity">
+            <layout ax="83" ay="340" awidth="224" aheight="160" x="83" y="340" width="224" height="160" />
+            <class />
+          </item>
+          <item id="c1585b0a4a5a438c900aefb92b5b22df" iid="4776e9f79e794887a555e58137c2685c" creation-date="09/25/2018 21:17:14" order-index="2" type="entity">
+            <layout ax="88.5" ay="576" awidth="213" aheight="160" x="88.5" y="576" width="213" height="160" />
+            <class />
+          </item>
+          <item id="03cd00bbb3ae420c8e29b44bbed58af1" iid="2138c21f53484e058012e164234baec4" creation-date="09/25/2018 21:22:52" order-index="3" type="entity">
+            <layout ax="511" ay="104" awidth="229" aheight="160" x="511" y="104" width="229" height="160" />
+            <class />
+          </item>
+          <item id="9e0f889494134cc0aaeaabead53b5130" iid="ce478be72cdf41958aa2d1e2eb3a1455" creation-date="09/25/2018 21:22:57" order-index="5" type="entity">
+            <layout ax="896" ay="104" awidth="175" aheight="160" x="896" y="104" width="175" height="160" />
+            <class />
+          </item>
+          <item id="c1d13695b34a484fa48c94e95c7cfe28" iid="5208bd9ea98b456db0a76730363c865e" creation-date="09/25/2018 21:27:43" order-index="6" type="entity">
+            <layout ax="854.5" ay="359" awidth="258" aheight="118" x="854.5" y="359" width="258" height="118" />
+            <class />
+          </item>
+          <item id="de4ecdb08f444287a4bdc8bf112230b3" iid="5f17c0817ea64ed694c2622906546283" creation-date="09/25/2018 21:30:23" order-index="7" type="entity">
+            <layout ax="530.5" ay="361" awidth="224" aheight="118" x="530.5" y="361" width="224" height="118" />
+            <class />
+          </item>
+          <item id="48ebf5f582f344b7b70296dae3c00f1f" iid="5398a723810e4292ad845c6dd6c097c6" creation-date="09/25/2018 21:30:25" order-index="8" type="entity">
+            <layout ax="420" ay="546" awidth="213" aheight="80" x="420" y="546" width="213" height="80" />
+            <class />
+          </item>
+          <item id="c904479d7722422087b8949de8c541d2" iid="fd5da4fbc2e84362b3671c0d8487c9ba" creation-date="09/25/2018 21:30:28" order-index="9" type="entity">
+            <layout ax="654" ay="546" awidth="223" aheight="80" x="654" y="546" width="223" height="80" />
+            <class />
+          </item>
+          <item id="b88fd3b722124d3188de8e752cb7372f" iid="a73d04d4b4a241bd8c1502b236ca9851" creation-date="09/25/2018 21:37:08" order-index="10" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="527" y1="546" x2="643" y2="479" start-border-pos="0.125586854460094" end-border-pos="0.624441966414452" name-position="0,0">
+              <points>
+                <point x="527" y="546" />
+                <point x="643" y="479" />
+              </points>
+            </layout>
+            <relation from="48ebf5f582f344b7b70296dae3c00f1f" from-iid="5398a723810e4292ad845c6dd6c097c6" to="de4ecdb08f444287a4bdc8bf112230b3" to-iid="5f17c0817ea64ed694c2622906546283" />
+          </item>
+          <item id="306dfd5b3f944e25959a00ac9d34e682" iid="5e69ef4a646248d9911395c8c0373152" creation-date="09/25/2018 21:37:18" order-index="11" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="765" y1="546" x2="662" y2="479" start-border-pos="0.124439461883408" end-border-pos="0.603236607142857" name-position="-14,6">
+              <points>
+                <point x="765" y="546" />
+                <point x="662" y="479" />
+              </points>
+            </layout>
+            <relation from="c904479d7722422087b8949de8c541d2" from-iid="fd5da4fbc2e84362b3671c0d8487c9ba" to="de4ecdb08f444287a4bdc8bf112230b3" to-iid="5f17c0817ea64ed694c2622906546283" />
+          </item>
+          <item id="474ab29387d44c77b0d508b37ebb056b" iid="7aaa9e6adb354c739ec8b9a9094f14e8" creation-date="09/25/2018 21:38:01" order-index="12" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="33.01789,-14.29793" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="307" y1="264" x2="531" y2="361" start-border-pos="0.5" end-border-pos="0.000558035714285714" name-position="0,0">
+              <points>
+                <point x="307" y="264" />
+                <point x="531" y="361" />
+              </points>
+            </layout>
+            <relation from="a6d4d1fd21194cfd927e679bbd2b6e88" from-iid="27fd9f6d46234c8f9224812a25226106" to="de4ecdb08f444287a4bdc8bf112230b3" to-iid="5f17c0817ea64ed694c2622906546283" />
+          </item>
+          <item id="0c4e9cff3d534ec38ccfe8b7e3cb9faa" iid="031a622bbbc4410bb57433418ba1b3c3" creation-date="09/25/2018 21:38:28" order-index="13" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="72.60018,-27.69885" end-multiplicity-position="84.77333,-16.2886" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="696" y1="264" x2="945" y2="359" start-border-pos="0.548034934497817" end-border-pos="0.0876937984496124" name-position="0,0">
+              <points>
+                <point x="696" y="264" />
+                <point x="945" y="359" />
+              </points>
+            </layout>
+            <relation from="03cd00bbb3ae420c8e29b44bbed58af1" from-iid="2138c21f53484e058012e164234baec4" to="c1d13695b34a484fa48c94e95c7cfe28" to-iid="5208bd9ea98b456db0a76730363c865e" />
+          </item>
+          <item id="880cbe0c6a9d473fb3a9b29cac8a01a4" iid="8f0dd62103f94e05a5807292b6e7c94a" creation-date="09/25/2018 21:38:40" order-index="14" type="relation">
+            <layout start-role-position="25,15" end-role-position="31.32325,17.93958" end-role-width="50" start-multiplicity-position="25,-15" end-multiplicity-position="30.59534,-26.30121" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="true" auto-path="" x1="307" y1="182" x2="511" y2="184" start-border-pos="0.37265625" end-border-pos="0.875" name-position="0,0">
+              <points>
+                <point x="307" y="182" />
+                <point x="511" y="184" />
+              </points>
+            </layout>
+            <relation from="a6d4d1fd21194cfd927e679bbd2b6e88" from-iid="27fd9f6d46234c8f9224812a25226106" from-field="ob34cc61ae36b48668a4a1448f60aa384259" to="03cd00bbb3ae420c8e29b44bbed58af1" to-iid="2138c21f53484e058012e164234baec4" />
+          </item>
+          <item id="019ae266a780426b9d8605868dd33610" iid="727a111657ca4359ae3c0427f76875d6" creation-date="09/25/2018 21:38:54" order-index="15" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,-16" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="740" y1="184" x2="896" y2="184" start-border-pos="0.375" end-border-pos="0.875" name-position="0,0">
+              <points>
+                <point x="740" y="184" />
+                <point x="896" y="184" />
+              </points>
+            </layout>
+            <relation from="03cd00bbb3ae420c8e29b44bbed58af1" from-iid="2138c21f53484e058012e164234baec4" to="9e0f889494134cc0aaeaabead53b5130" to-iid="ce478be72cdf41958aa2d1e2eb3a1455" />
+          </item>
+          <item id="bef0307a396b4614b3e2ced510f4894f" iid="519f6f101f4e42658068a40328c4b9a9" creation-date="09/25/2018 21:39:10" order-index="17" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="13,-26" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="195" y1="500" x2="195" y2="576" start-border-pos="0.625" end-border-pos="0.125" name-position="0,0">
+              <points>
+                <point x="195" y="500" />
+                <point x="195" y="576" />
+              </points>
+            </layout>
+            <relation from="405bf7ea351f49ad8730dd380dfbe7c5" from-iid="3e51cd18fa4e402f976f1325e552aa43" to="c1585b0a4a5a438c900aefb92b5b22df" to-iid="4776e9f79e794887a555e58137c2685c" />
+          </item>
+          <item id="d3d533736e3c4af8b4f504239176b35f" iid="2bef2bd775d2464ea8e6b57b23e7b955" creation-date="09/25/2018 21:39:25" order-index="18" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="27,-16" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="307" y1="420" x2="530" y2="420" start-border-pos="0.375" end-border-pos="0.875" name-position="0,0">
+              <points>
+                <point x="307" y="420" />
+                <point x="530" y="420" />
+              </points>
+            </layout>
+            <relation from="405bf7ea351f49ad8730dd380dfbe7c5" from-iid="3e51cd18fa4e402f976f1325e552aa43" to="de4ecdb08f444287a4bdc8bf112230b3" to-iid="5f17c0817ea64ed694c2622906546283" />
+          </item>
+          <item id="6602441e70784ef7b0284aff071bf3f6" iid="97e22cdbe72147929a3296193edc8b0f" creation-date="09/25/2018 21:42:17" order-index="20" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="17,-31" end-multiplicity-position="14,-28" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="195" y1="264" x2="195" y2="340" start-border-pos="0.625" end-border-pos="0.125" name-position="0,0">
+              <points>
+                <point x="195" y="264" />
+                <point x="195" y="340" />
+              </points>
+            </layout>
+            <relation from="a6d4d1fd21194cfd927e679bbd2b6e88" from-iid="27fd9f6d46234c8f9224812a25226106" to="405bf7ea351f49ad8730dd380dfbe7c5" to-iid="3e51cd18fa4e402f976f1325e552aa43" />
+          </item>
+        </layer>
+      </diagram>
+    </model>
+  </models>
+</sim-project>

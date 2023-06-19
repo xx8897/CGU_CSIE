@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+		  <meta charset="UTF-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		  <link href="./scroll.css" rel="external nofollow" rel="stylesheet" />
+		  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+		  <script src="./scroll.js"></script>
+		  
+		  <style type="text/css">	
+			.scroll-body{
+			 display: inline-block;
+			}
+			.scroll-container{
+			 text-align: center;
+			}
+			#scroll-table{
+			 border: 1px solid;
+			 border-collapse: collapse;
+			 width: 200px;
+			 height: 200px;
+			 overflow: auto;
+			 display: block;
+			}
+		</style>
+		
+		<title>Document</title>
+		
+		<script>
+			$(function () {
+			 $('#scroll-table').scroll(function (e) {
+			  var pagination = {
+			   page: 0,
+			   pageSize: 20
+			  };
+			  //滚动条位置 
+			  var scrollTop = $('#scroll-table').scrollTop();
+			 
+			  //可视窗口的高度 
+			  var viewportHeight = $('#scroll-table').height();
+			 
+			  //整个页面可以滚动的高度 
+			  var scrollHeight = $('#scroll-table')[0].scrollHeight;
+			 
+			  //“如果滚动条的位置”+“可视窗口的高度”=“整个页面可以滚动的高度”，那么就调用相应的函数加载数据 
+			  if (Math.round(scrollTop + viewportHeight) == scrollHeight) {
+			   var tr = $('<tr><td> good </td> <td> nice </td> /tr>');
+			   $('#scroll-tbody').append(tr);
+			 
+			   /*
+				* pagination.page += 1;
+				* dataAjax(pagination); //这里做第二页的数据请求并添加进表格 
+				*/
+			  }
+			 });
+			})
+		</script>
+		</head>
+	
+		<body>
+		  <div class="scroll-container">
+			<div class="scroll-body">
+			  <table id="scroll-table">
+				<thead>
+				  <tr>
+					<th>Months</th>
+					<th>Money</th>
+				  </tr>
+				</thead>
+				<tbody id="scroll-tbody">
+				  <tr>
+					<td>January</td>
+					<td>$100</td>
+				  </tr>
+				  <tr>
+					<td>January</td>
+					<td>$100</td>
+				  </tr>
+				  <tr>
+					<td>January</td>
+					<td>$100</td>
+				  </tr>
+				  <tr>
+					<td>January</td>
+					<td>$100</td>
+				  </tr>
+				  <tr>
+					<td>January</td>
+					<td>$100</td>
+				  </tr>
+				  <tr>
+					<td>January</td>
+					<td>$100</td>
+				  </tr>
+				  <tr>
+					<td>January</td>
+					<td>$100</td>
+				  </tr>
+				  <tr>
+					<td>January</td>
+					<td>$100</td>
+				  </tr>
+				  <tr>
+					<td>January</td>
+					<td>$100</td>
+				  </tr>
+				  <tr>
+					<td>January</td>
+					<td>$100</td>
+				  </tr>
+				</tbody>      
+			  </table>
+			</div>
+		  </div>
+		</body>
+	</html>

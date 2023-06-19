@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>註冊</title>
+		<style type="text/css">
+			header {font-weight:bold;
+					color:white;					
+					text-align:left;
+					height:21mm;
+					width:335mm;
+					background-color:darkslategray;
+					line-height:80px;}
+					
+			div p.in	{position:relative;
+						top:85px;
+						left:510px;}
+							
+			.login_button{position:absolute;
+						top:610px;
+						left:670px;}
+						
+			.space	{position:absolute;
+					left:470px;
+					top:650px; }			
+			body {
+				padding: 0px;
+				margin: 0px;
+				background-attachment:fixed;
+			}
+			nav > ul {
+				background-color: #DEDEDE;
+				list-style: none;   /* 移除項目符號 */
+				margin: 0;
+				padding: 0;
+			}
+
+			nav a {
+				color: inherit; /* 移除超連結顏色 */
+				display: block; /* 讓 <a> 填滿 <li> */
+				font-size: 1.2rem;
+				padding: 20px;
+				text-decoration: none;  /* 移除超連結底線 */
+			}
+
+			/* 滑鼠移到 <a> 時變成深底淺色 */
+			nav li:hover {
+				background-color: rgb(115, 115, 115);
+				color: white;
+			}
+
+			.flex-nav {
+				position:fixed;
+				display: flex;
+				justify-content: space-evenly;
+				width:1265px;
+				z-index:3;
+				top:0px;
+			}
+			
+			div p{font-size:20px;
+				font-weight:bold;
+				color:white;}
+			
+			div p.title {position:relative;
+					font-weight:bold;
+					color:white;					
+					left:600px;
+					top:80px;   
+					font-size:1cm;}
+			
+			.area	{width:500px;}
+			
+
+
+		</style>
+	</head>
+	
+	<body background="./background.png">
+		<nav>
+            <ul class="flex-nav">
+                <li><a href="home.html">首頁</a></li>
+                <li><a href="movie_list.html">電影介紹</a></li>
+                <li><a href="showingTime.html">場次查詢</a></li>
+                <li><a href="buy.html">會員專區</a></li>
+				<li><a href="login.html">登入/註冊</a></li>
+            </ul>
+        </nav>
+		<div class="area">
+			<p class="title">註冊</p>
+			<form name="Register" action="Register.php" method="POST">
+				<p class="in"><font color="#FF0000">*</font>姓名 &nbsp <input type="text" name="name" class="text_field" size="17" 
+					style="font-size:10px; padding:10px;" placeholder="王X明"  required="required"/></p>
+				<p class="in"><font color="#FF0000">*</font>性別 &nbsp <input type="text" name="gender" class="text_field" size="17" 
+					style="font-size:10px; padding:10px;" placeholder="生理性別 ( 男 / 女 )" maxlength="1" required="required"/></p>
+				<p class="in"><font color="#FF0000">*</font>生日 &nbsp <input type="date" name="birth" class="text_field" size="50" 
+					style="font-size:10px; padding:10px;" required="required"/></p>
+				<p class="in"><font color="#FF0000">*</font>電話 &nbsp <input type="tel" name="phone" class="text_field" size="17" 
+					style="font-size:10px; padding:10px;" placeholder="(##)########" required="required"/></p>
+				<p class="in"><font color="#FF0000">*</font>信箱 &nbsp <input type="email" name="email" class="text_field" size="17" 
+					style="font-size:10px; padding:10px;" placeholder="name@domain.com" required="required"/></p>
+				<p class="in"><font color="#FF0000">*</font>銀行 &nbsp <input type="text" name="pay" class="text_field" size="17" 
+					style="font-size:10px; padding:10px;" placeholder="xxxxxxxxxxxxxxxx" required="required"/></p>
+				<p class="in"><font color="#FF0000">*</font>帳號 &nbsp <input type="text" name="account" class="text_field" size="17" 
+					style="font-size:10px; padding:10px;" required="required"/></p>
+				<p class="in"><font color="#FF0000">*</font>密碼 &nbsp <input type="password" name="password" class="text_field" size="17" 
+					style="font-size:10px; padding:10px;" required="required"/></p>
+				<p class="login_button"><br><br><input type="submit" value="確定" style="width:60px;height:30px;"/></p>
+				<p class="space"> &nbsp </p>
+			</form>
+		</div>
+		<br><br>
+	</body>
+
+</html>
