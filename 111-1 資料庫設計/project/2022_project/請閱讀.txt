@@ -1,0 +1,1 @@
+用rstdio執行firstrun.R 再執行server.R

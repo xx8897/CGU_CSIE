@@ -1,0 +1,21 @@
+
+
+```{r}
+#install.packages("ggplot2")
+library(ggplot2)
+library(leaflet)
+library(magrittr)
+
+gift<-read.csv("xmas.txt",header=FALSE)
+#print(gift$V1)
+leaflet() %>%
+addTiles() %>%
+addMarkers(as.numeric(as.character(gift$V3)),as.numeric(as.character(gift$V4)),clusterOptions = markerClusterOptions())
+
+```
+
+```{r}
+gift$count<-d
+```
+
+
