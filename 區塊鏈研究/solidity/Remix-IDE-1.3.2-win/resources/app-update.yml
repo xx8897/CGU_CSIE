@@ -1,0 +1,4 @@
+owner: ethereum
+repo: remix-desktop
+provider: github
+updaterCacheDirName: remix-ide-updater
